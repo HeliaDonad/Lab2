@@ -27,8 +27,10 @@ if(!empty($_POST)){
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="../css/signup.css">
 </head>
 <body>
+<div class="container">
     <main>
         <form action="" method="post">
             <h2>Maak een account aan.</h2>
@@ -52,5 +54,8 @@ if(!empty($_POST)){
             <a href="#">Ik heb al een account</a>
         </form>
     </main>  
+    <div class="image">
+            <img src="../images/afbeelding1.svg" alt="Afbeelding">
+    </div>
 </body>
 </html>
