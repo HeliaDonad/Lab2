@@ -28,5 +28,6 @@
     <div class="action-icon"><i class="material-icons">account_circle</i></div>
 </div>
 </header>
+    <a href="/LAB2/signin_login_logout/logout.php">Log Out</a>
 </body>
 </html>
