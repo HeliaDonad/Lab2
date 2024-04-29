@@ -3,21 +3,28 @@ include_once(__DIR__ . DIRECTORY_SEPARATOR . "../classes/Db.php");
 
 if(!empty($_POST)){
     $email = $_POST['email'];
-    // e-mailadres geldig?
-    if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-        // Als het e-mailadres niet geldig is, foutmelding 
-        $error = "Ongeldig e-mailadres";
+    $password = $_POST['password'];
+    $confirmPassword = $_POST['confirm_password']; 
+
+    if ($password !== $confirmPassword) {
+        $error = "Wachtwoorden komen niet overeen";
     } else {
-        $options = [
-            'cost' => 15
-        ];
-        $password = password_hash($_POST['password'], PASSWORD_DEFAULT, $options);
-        $conn = Db::getConnection();
-        $query = "insert into users (email, password) values ('" . $email . "', '" . $password . "')";
-        session_start();
-        $_SESSION['loggedin'] = true;
-        $result = $conn->query($query);
-        header("Location: ../index.php");
+        // e-mailadres geldig?
+        if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+            // Als het e-mailadres niet geldig is, foutmelding 
+            $error = "Ongeldig e-mailadres";
+        } else {
+            $options = [
+                'cost' => 15
+            ];
+            $passwordHash = password_hash($password, PASSWORD_DEFAULT, $options);
+            $conn = Db::getConnection();
+            $query = "INSERT INTO users (email, password) VALUES ('$email', '$passwordHash')";
+            session_start();
+            $_SESSION['loggedin'] = true;
+            $result = $conn->query($query);
+            header("Location: ../index.php");
+        }
     }
 }
 ?>
@@ -27,7 +34,7 @@ if(!empty($_POST)){
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="../css/signup.css">
+    <link rel="stylesheet" href="../css/signup2.css">
 </head>
 <body>
 <div class="container">
@@ -47,11 +54,15 @@ if(!empty($_POST)){
                 <label for="Password">Wachtwoord</label>
                 <input type="password" name="password">
             </div>
+            <div class="form__field">
+                <label for="ConfirmPassword">Bevestig wachtwoord</label>
+                <input type="password" name="confirm_password"> 
+            </div>
 
             <div class="form__field">
                 <input type="submit" value="Aanmelden" class="btn btn--primary">   
             </div>
-            <a href="#">Ik heb al een account</a>
+            <a href="login.php">Ik heb al een account</a>
         </form>
     </main>  
     <div class="image">

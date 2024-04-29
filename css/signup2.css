@@ -86,8 +86,13 @@ a {
     margin-top: 10px;
     color: #0056b3;
     text-decoration: none;
+    font-size: 12px;
 }
 
 a:hover {
     text-decoration: underline;
+}
+
+.btn{
+    font-size: 18px;
 }
