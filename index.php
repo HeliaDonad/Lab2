@@ -34,6 +34,7 @@
 </header>
     <a href="/LAB2/signin_login_logout/logout.php">Log Out</a>
 
+    <h2>Mensenrechten</h2>
     <div class="container">
     <div class="button-bar">
         <div class="button wegwijzer">
