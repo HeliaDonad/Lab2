@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+}
+
+.burger {
+    position: absolute;
+    top: 18px;
+    right: 20px;
+    color: #fff; 
+    font-size: 24px; 
+}
+
+#burger {
+    display: none;
+    color: #fff;
+}
+
+#burger:checked ~ .subnav {
+    display: flex;
+    left: 0;
+}
+
+.subnav {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    background-color: #062b65;
+    width: 100%;
+    left: -100%;
+    transition: all 0.2s ease-in;
+    padding-top: 20px;
+}
+
+.subnav li{
+    border-top: 1px solid #E0E0E0;
+}
+
+.subnav a{
+    text-decoration: none;
+    color: #f8f9fa; 
+    display: inline-block;
+    padding: 0.6em;
+    text-decoration: none;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #062b65;
+}
+
+.logo img {
+    width: 220px; 
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+li {
+    margin: 0;
+    margin-right: 20px; 
+}
+
+.actions {
+    display: none;
+}
+
+.action-icon {
+    width: 30px; 
+    height: 30px; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f8f9fa ; 
+    border-radius: 50%; 
+    color: #062b65;
+    margin-right: 15px; 
+}
+
+@media only screen and (min-width: 768px){
+
+}
+
+
+@media only screen and (min-width: 1025px) {
+    .burger {
+        display: none;
+    }
+
+    .subnav {
+        position: static;
+        flex-direction: row;
+        width: auto;
+        margin-left: 15px;
+        margin-right: -10px;
+        padding-top: 0px;
+    }
+
+    .subnav a{
+        border: none;
+        padding: 0; 
+        font-size: 14px;
+    }
+
+    nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0.7em;
+    }
+
+    .actions {
+        display: flex;
+    }
+
+    .subnav li{
+        border-top: 0px;
+    }
+ }
+
