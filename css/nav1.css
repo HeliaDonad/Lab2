@@ -14,14 +14,14 @@ body {
     position: absolute;
     top: 18px;
     right: 20px;
-    color: #fff; 
+    color: #062b65; 
     font-size: 24px; 
     cursor: pointer;
 }
 
 #burger {
     display: none;
-    color: #fff;
+    color: #062b65;
 }
 
 #burger:checked ~ .subnav {
@@ -33,20 +33,21 @@ body {
     display: flex;
     flex-direction: column;
     position: absolute;
-    background-color: #062b65;
+    background-color: #fff;
     width: 100%;
     left: -100%;
     transition: all 0.2s ease-in;
     padding-top: 20px;
+    border-bottom: 1px solid #062b65;
 }
 
 .subnav li{
-    border-top: 1px solid #E0E0E0;
+    border-top: 1px solid #062b65;
 }
 
 .subnav a{
     text-decoration: none;
-    color: #f8f9fa; 
+    color: #062b65; 
     display: inline-block;
     padding: 0.6em;
     text-decoration: none;
@@ -57,11 +58,12 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 10px;
-    background-color: #062b65;
+    background-color: #fff;
+    box-shadow: 0px 4px 2px -2px rgba(0, 0, 0, 0.1);
 }
 
 .logo img {
-    width: 220px; 
+    width: 100px; 
 }
 
 ul {
@@ -86,9 +88,9 @@ li {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #f8f9fa ; 
+    background-color: #062b65 ; 
     border-radius: 50%; 
-    color: #062b65;
+    color: #fff;
     margin-right: 15px; 
 }
 
@@ -109,6 +111,7 @@ li {
         margin-left: 15px;
         margin-right: -15px;
         padding-top: 0px;
+        border-bottom: 0px;
     }
 
     .subnav a{

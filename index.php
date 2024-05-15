@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>federaalinstituutmensenrechten</title>
-    <link rel="stylesheet" href="css/nav.css">
+    <link rel="stylesheet" href="css/nav1.css">
     <link rel="stylesheet" href="css/dashboard.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 </head>
@@ -15,7 +15,7 @@
     <input type="checkbox" id="burger">
 
     <a class="logo" href="#">
-        <img src="images/logo2.svg" alt="logo">
+        <img src="images/logo3.svg" alt="logo">
     </a>
     <ul class="subnav">
         <li><a href="#">Mijn mensenrechten</a></li>
