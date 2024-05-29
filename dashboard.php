@@ -4,20 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>federaalinstituutmensenrechten</title>
-    <link rel="stylesheet" href="css/nav.css">
-    <link rel="stylesheet" href="css/dashboard.css">
-    <link rel="stylesheet" href="css/shared.css">
+    <link rel="stylesheet" href="css/nav2.css">
+    <link rel="stylesheet" href="css/dashboard2.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 </head>
 <body>
 <header class="header">
 <nav>
-    <label class="burger" for="burger">&#9776;</label>
-    <input type="checkbox" id="burger">
-
     <a class="logo" href="#">
         <img src="images/general/logo.svg" alt="logo">
     </a>
+    <label class="burger" for="burger">&#9776;</label>
+    <label class="close" for="burger">&times;</label>
+    <input type="checkbox" id="burger">
     <ul class="subnav">
         <li><a href="#">Mijn mensenrechten</a></li>
         <li><a href="#">Thema's</a></li>
@@ -35,7 +34,7 @@
 </header>
     <a href="/LAB2/signin_login_logout/logout.php">Log Out</a>
 
-    <h1>Mensenrechten</h1>
+    <h2>Mensenrechten</h2>
     <div class="container">
     <div class="button-bar">
         <div class="button wegwijzer">
@@ -104,5 +103,6 @@
         </div>
     </div>
 </div>
+<script src="button.js"></script>
 </body>
 </html>
