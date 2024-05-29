@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>federaalinstituutmensenrechten</title>
     <link rel="stylesheet" href="css/nav2.css">
-    <link rel="stylesheet" href="css/dashboard2.css">
+    <link rel="stylesheet" href="css/dashboard3.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 </head>
 <body>
