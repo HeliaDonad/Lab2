@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 </head>
 <body>
-<header class="header">
+<header>
 <nav>
     <a class="logo" href="#">
         <img src="images/general/logo.svg" alt="logo">
@@ -103,6 +103,6 @@
         </div>
     </div>
 </div>
-<script src="button.js"></script>
+<script src="button1.js"></script>
 </body>
 </html>
