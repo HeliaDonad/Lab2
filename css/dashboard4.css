@@ -16,7 +16,7 @@ body {
     display: flex;
     flex-direction: column;
     width: 420px;
-    margin-bottom: 50px;
+    margin-bottom: 100px;
 }
 
 .button {
@@ -45,8 +45,10 @@ body {
     height: 20px;
 }
 
-h1 {
-    margin-left: -230px;
+h3 {
+    margin-top: 100px;
+    margin-bottom: 20px;
+    color: var(--main-color);
     text-align: center;
 }
 
@@ -67,10 +69,6 @@ h1 {
     .button img {
         width: 40px; 
         height: 40px; 
-    }
-    
-    h1 {
-        margin-left: -590px;
     }
 
     .button .text {
@@ -106,12 +104,6 @@ h1 {
         height: 60px;
         margin-bottom: 10px;
         margin-top: 15px;
-    }
-    
-    h1 {
-        text-align: center;
-        margin-bottom: 20px;
-        margin-left: -795px;
     }
     
 }

@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>federaalinstituutmensenrechten</title>
     <link rel="stylesheet" href="css/nav2.css">
-    <link rel="stylesheet" href="css/dashboard3.css">
+    <link rel="stylesheet" href="css/dashboard4.css">
+    <link rel="stylesheet" href="css/shared.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 </head>
 <body>
@@ -34,7 +35,8 @@
 </header>
     <a href="/LAB2/signin_login_logout/logout.php">Log Out</a>
 
-    <h2>Mensenrechten</h2>
+    <h3>Eerste Hulp Bij Mensenrechten</h3>
+
     <div class="container">
     <div class="button-bar">
         <div class="button wegwijzer">
