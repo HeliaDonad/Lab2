@@ -6,6 +6,7 @@
     <title>federaalinstituutmensenrechten</title>
     <link rel="stylesheet" href="css/nav.css">
     <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet" href="css/shared.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 </head>
 <body>

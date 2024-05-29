@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* shared.css */
+
+:root {
+    --main-color: #062B65;
+    --detail-color: #739FEF;
+    --third-color: #0047AB;
+    --background-color: #fdfdfd;
+    --color-black: #000000;
+
+    --font-size-h1: 2rem;
+    --font-size-h2: 1.75rem;
+    --font-size-h3: 1.5rem;
+    --font-size-h4: 1.25rem;
+    --font-size-h5: 1rem;
+    --font-size-body: 1rem;
+    --font-size-small: 0.875rem;
+
+    --margin-small: 0.5rem;
+    --margin-medium: 1rem;
+    --margin-large: 2rem;
+
+    --padding-small: 0.5rem;
+    --padding-medium: 1rem;
+    --padding-large: 2rem;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    background-color: var(--background-color);
+    color: var(--color-black);
+    font-size: var(--font-size-body);
+}
+
+h1 {
+    font-size: var(--font-size-h1);
+}
+
+h2 {
+    font-size: var(--font-size-h2);
+}
+
+h3 {
+    font-size: var(--font-size-h3);
+}
+
+h4 {
+    font-size: var(--font-size-h4);
+}
+
+h5 {
+    font-size: var(--font-size-h5);
+}
+
+a, label {
+    font-size: var(--font-size-small);
+    color: var(--main-color);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.btn {
+    background-color: var(--main-color);
+    color: var(--background-color);
+    border: none;
+    padding: var(--padding-large);
+    cursor: pointer;
+    font-weight: bold;
+    font-size: var(--font-size-h5);
+}
+
+.btn:hover {
+    background-color: var(--main-color);
+}

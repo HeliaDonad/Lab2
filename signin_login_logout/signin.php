@@ -35,12 +35,13 @@ if(!empty($_POST)){
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="../css/signin_login.css">
+    <link rel="stylesheet" href="../css/shared.css">
 </head>
 <body>
 <div class="container">
     <main>
         <form action="" method="post">
-            <h2>Maak een account aan.</h2>
+            <h1>Maak een account aan.</h1>
             <?php if(isset($error)): ?>
             <div class="form__error">
                 <p><?php echo $error; ?></p>
