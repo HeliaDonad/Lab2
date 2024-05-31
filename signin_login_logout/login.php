@@ -34,7 +34,7 @@ if(!empty($_POST)){
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="../css/signin_login.css">
+    <link rel="stylesheet" href="../css/signin_login.css?1234">
     <link rel="stylesheet" href="../css/shared.css?23454">
 </head>
 <body>
@@ -63,7 +63,7 @@ if(!empty($_POST)){
         </form>
     </main>  
     <div class="image">
-            <img src="../images/login-signin/afbeelding1.svg" alt="afbeelding">
+            <img src="" alt="afbeelding">
     </div>
 </body>
 </html>

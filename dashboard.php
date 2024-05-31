@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>federaalinstituutmensenrechten</title>
-    <link rel="stylesheet" href="css/nav2.css">
-    <link rel="stylesheet" href="css/dashboards.css">
+    <link rel="stylesheet" href="css/nav.css?12345">
+    <link rel="stylesheet" href="css/dashboard.css?12345">
     <link rel="stylesheet" href="css/shared.css?12345">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 </head>

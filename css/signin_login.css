@@ -97,7 +97,7 @@ a:hover {
     }
 
     .image img {
-        content: url('../images/login-signin/afbeelding2.svg');
+        content: url('../images/signin_login/afbeelding2.svg');
     }
 }
 
@@ -107,6 +107,6 @@ a:hover {
     }
 
     .image img {
-        content: url('../images/login-signin/afbeelding1.svg');
+        content: url('../images/signin_login/afbeelding1.svg');
     }
 }
