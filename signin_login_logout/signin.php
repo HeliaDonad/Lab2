@@ -67,7 +67,7 @@ if(!empty($_POST)){
         </form>
     </main>  
     <div class="image">
-            <img src="../images/login_signin/afbeelding1.svg" alt="login_signin/afbeelding">
+            <img src="../images/login-signin/afbeelding1.svg" alt="afbeelding">
     </div>
 </body>
 </html>
