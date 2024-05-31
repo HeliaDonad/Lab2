@@ -34,13 +34,14 @@ if(!empty($_POST)){
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="../css/signin_login.css?12345">
+    <link rel="stylesheet" href="../css/signin_login.css?12385">
     <link rel="stylesheet" href="../css/shared.css?12345">
 </head>
 <body>
 <div class="container">
     <main>
         <form action="" method="post">
+        <img class="logoL" src="../images/general/LogoL.svg" alt="logo">
             <h1>Maak een account aan.</h1>
             <?php if(isset($error)): ?>
             <div class="form__error">
