@@ -48,7 +48,7 @@
             <img src="images/iconen/discriminatie.svg" alt="Discriminatie">
         </div>
         <div class="button">
-            <span class="text">Persoongegevens</span>
+            <span class="text">Persoonsgegevens</span>
             <img src="images/iconen/persoongegevens.svg" alt="Persoongegevens">
         </div>
         <div class="button">
@@ -102,6 +102,22 @@
         <div class="button">
             <span class="text">Frans-Duitse gemeenschap</span>
             <img src="images/iconen/frans_duitse_gemeenschap.svg" alt="Frans-Duitse gemeenschap">
+        </div>
+        <div class="button">
+            <span class="text">Gezondheid</span>
+            <img src="images/iconen/gezondheid.svg" alt="Gezondheid">
+        </div>
+        <div class="button">
+            <span class="text">Klimaat</span>
+            <img src="images/iconen/klimaat.svg" alt="Klimaat">
+        </div>
+        <div class="button">
+            <span class="text">NGO's en Verenigingen</span>
+            <img src="images/iconen/ngo's_en_verenigingen.svg" alt="NGO's en Verenigingen">
+        </div>
+        <div class="button">
+            <span class="text">Onderwijs</span>
+            <img src="images/iconen/onderwijs.svg" alt="Onderwijs">
         </div>
     </div>
 </div>
