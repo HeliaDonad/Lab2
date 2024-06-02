@@ -23,9 +23,10 @@ h1 {
     color: var(--main-color);
 }
 
-.form__error {
+.form__error p{
     color: red;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
+    font-size: var(--font-size-small);
 }
 
 .form__field {

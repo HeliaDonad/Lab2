@@ -1,4 +1,13 @@
-<!DOCTYPE html>
+<?php 
+include_once(__DIR__ . DIRECTORY_SEPARATOR . "./classes/Db.php");
+
+	session_start();
+  if(isset($_SESSION['loggedin']) && $_SESSION['loggedin'] === true ){
+
+  } else {
+    exit("NO SESSION");
+  }
+?><!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
