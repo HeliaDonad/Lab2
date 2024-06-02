@@ -70,7 +70,7 @@ $organisaties = $stmt->fetchAll(PDO::FETCH_ASSOC);
     <h2><?php echo htmlspecialchars($thema['naam']); ?></h2>
     <ul>
         <?php foreach ($organisaties as $organisatie): ?>
-            <li><a href="organisatie_detail.php?id=<?php echo htmlspecialchars($organisatie['id']); ?>"><?php echo htmlspecialchars($organisatie['naam']); ?></a></li>
+            <li><a href="#?id=<?php echo htmlspecialchars($organisatie['id']); ?>"><?php echo htmlspecialchars($organisatie['naam']); ?></a></li>
         <?php endforeach; ?>
     </ul>
 </div>
