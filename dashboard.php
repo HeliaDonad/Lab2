@@ -7,15 +7,16 @@ include_once(__DIR__ . DIRECTORY_SEPARATOR . "./classes/Db.php");
   } else {
     exit("NO SESSION");
   }
-?><!DOCTYPE html>
+?>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>federaalinstituutmensenrechten</title>
     <link rel="stylesheet" href="css/nav.css?12395">
-    <link rel="stylesheet" href="css/dashboard.css?17345">
-    <link rel="stylesheet" href="css/shared.css?12345">
+    <link rel="stylesheet" href="css/dashboard.css?15345">
+    <link rel="stylesheet" href="css/shared.css?17345">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 </head>
 <body>
@@ -35,18 +36,34 @@ include_once(__DIR__ . DIRECTORY_SEPARATOR . "./classes/Db.php");
         <li><a href="#">Activiteiten</a></li>
         <li><a href="#">Contact</a></li>
     </ul>
-    </nav>
-    <div class="actions">
+</nav>
+<div class="actions">
     <div class="action-icon"><i class="material-icons">notifications</i></div>
     <div class="action-icon"><i class="material-icons">settings</i></div>
     <div class="action-icon"><i class="material-icons">account_circle</i></div>
 </div>
 </header>
-    <a href="/LAB2/signin_login_logout/logout.php">Log Out</a>
+<a href="/LAB2/signin_login_logout/logout.php">Log Out</a>
 
+<!-- Filter Section -->
+<div class="filter-container">
+    <div class="search-box">
+        <input type="text" placeholder="Zoeken...">
+    </div>
+    <div class="select-box">
+        <select>
+            <option value="">Kies een functie...</option>
+            <option value="Schendingen & klachten">Schendingen & klachten</option>
+            <option value="Hulpverlening">Hulpverlening</option>
+            <option value="Informatie & Monitoring">Informatie & Monitoring</option>
+            <option value="Beleidsbeïnvloeding & Actie">Beleidsbeïnvloeding & Actie</option>
+        </select>
+    </div>
+    <button class="save-button">Opslaan</button>
+</div>
+
+<div class="container">
     <h2>Eerste Hulp Bij Mensenrechten</h2>
-
-    <div class="container">
     <div class="button-bar">
         <div class="button wegwijzer">
             <span class="text">Mijn wegwijzer</span>
@@ -58,7 +75,7 @@ include_once(__DIR__ . DIRECTORY_SEPARATOR . "./classes/Db.php");
         </div>
         <div class="button">
             <span class="text">Persoonsgegevens</span>
-            <img src="images/iconen/persoongegevens.svg" alt="Persoongegevens">
+            <img src="images/iconen/persoongegevens.svg" alt="Persoonsgegevens">
         </div>
         <div class="button">
             <span class="text">Kinderrechten</span>
