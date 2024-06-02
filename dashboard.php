@@ -16,7 +16,7 @@ include_once(__DIR__ . DIRECTORY_SEPARATOR . "./classes/Db.php");
     <title>federaalinstituutmensenrechten</title>
     <link rel="stylesheet" href="css/nav.css?12395">
     <link rel="stylesheet" href="css/dashboard.css?15345">
-    <link rel="stylesheet" href="css/shared.css?17345">
+    <link rel="stylesheet" href="css/shared.css?11345">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 </head>
 <body>
