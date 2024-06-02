@@ -20,7 +20,10 @@ $stmt->bindParam(":thema_id", $thema_id, PDO::PARAM_INT);
 $stmt->execute();
 $thema = $stmt->fetch(PDO::FETCH_ASSOC);
 
-$query = "SELECT naam FROM organisaties WHERE thema_id = :thema_id";
+$query = "SELECT organisaties.id, organisaties.naam 
+          FROM organisaties 
+          JOIN thema_organisatie ON organisaties.id = thema_organisatie.organisatie_id 
+          WHERE thema_organisatie.thema_id = :thema_id";
 $stmt = $conn->prepare($query);
 $stmt->bindParam(":thema_id", $thema_id, PDO::PARAM_INT);
 $stmt->execute();
@@ -64,10 +67,10 @@ $organisaties = $stmt->fetchAll(PDO::FETCH_ASSOC);
 <a href="/LAB2/signin_login_logout/logout.php">Log Out</a>
 
 <div class="container">
-    <h2>Organisaties voor <?php echo htmlspecialchars($thema['naam']); ?></h2>
+    <h2><?php echo htmlspecialchars($thema['naam']); ?></h2>
     <ul>
         <?php foreach ($organisaties as $organisatie): ?>
-            <li><?php echo htmlspecialchars($organisatie['naam']); ?></li>
+            <li><a href="organisatie_detail.php?id=<?php echo htmlspecialchars($organisatie['id']); ?>"><?php echo htmlspecialchars($organisatie['naam']); ?></a></li>
         <?php endforeach; ?>
     </ul>
 </div>
