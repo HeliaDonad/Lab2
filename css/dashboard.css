@@ -25,6 +25,7 @@
 
 .button-bar a {
     text-decoration: none; 
+    color: var(--background-color);
 }
 
 .button .text {
