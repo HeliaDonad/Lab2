@@ -1,12 +1,17 @@
-<?php 
+<?php
 include_once(__DIR__ . DIRECTORY_SEPARATOR . "./classes/Db.php");
 
-	session_start();
-  if(isset($_SESSION['loggedin']) && $_SESSION['loggedin'] === true ){
-
-  } else {
+session_start();
+if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
     exit("NO SESSION");
-  }
+}
+
+$conn = Db::getConnection();
+
+$query = "SELECT * FROM themas";
+$result = $conn->query($query);
+$themas = $result->fetchAll(PDO::FETCH_ASSOC);
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -15,7 +20,7 @@ include_once(__DIR__ . DIRECTORY_SEPARATOR . "./classes/Db.php");
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>federaalinstituutmensenrechten</title>
     <link rel="stylesheet" href="css/nav.css?12395">
-    <link rel="stylesheet" href="css/dashboard.css?15345">
+    <link rel="stylesheet" href="css/dashboard.css?555778899">
     <link rel="stylesheet" href="css/shared.css?11345">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 </head>
@@ -65,88 +70,19 @@ include_once(__DIR__ . DIRECTORY_SEPARATOR . "./classes/Db.php");
 <div class="container">
     <h2>Eerste Hulp Bij Mensenrechten</h2>
     <div class="button-bar">
-        <div class="button wegwijzer">
+        <a href="#" class="button wegwijzer"> 
             <span class="text">Mijn wegwijzer</span>
             <img src="images/iconen/mijnwegwijzer.svg" alt="Mijn wegwijzer">
-        </div>
-        <div class="button">
-            <span class="text">Discriminatie</span>
-            <img src="images/iconen/discriminatie.svg" alt="Discriminatie">
-        </div>
-        <div class="button">
-            <span class="text">Persoonsgegevens</span>
-            <img src="images/iconen/persoongegevens.svg" alt="Persoonsgegevens">
-        </div>
-        <div class="button">
-            <span class="text">Kinderrechten</span>
-            <img src="images/iconen/kinderrechten.svg" alt="Kinderrechten">
-        </div>
-        <div class="button">
-            <span class="text">Publieke en private ombudsmannen</span>
-            <img src="images/iconen/publieke_en_private_ombudsmannen.svg" alt="Publieke en private ombudsmannen">
-        </div>
-        <div class="button">
-            <span class="text">Migranten</span>
-            <img src="images/iconen/migranten.svg" alt="Migranten">
-        </div>
-        <div class="button">
-            <span class="text">Gevangenis</span>
-            <img src="images/iconen/gevangenis.svg" alt="Gevangenis">
-        </div>
-        <div class="button">
-            <span class="text">Politie</span>
-            <img src="images/iconen/politie.svg" alt="Politie">
-        </div>
-        <div class="button">
-            <span class="text">Mindervaliden</span>
-            <img src="images/iconen/mindervaliden.svg" alt="Mindervaliden">
-        </div>
-        <div class="button">
-            <span class="text">Ouderen</span>
-            <img src="images/iconen/ouderen.svg" alt="Ouderen">
-        </div>
-        <div class="button">
-            <span class="text">Gendergelijkheid</span>
-            <img src="images/iconen/gendergelijkheid.svg" alt="Gendergelijkheid">
-        </div>
-        <div class="button">
-            <span class="text">Armoede</span>
-            <img src="images/iconen/armoede.svg" alt="Armoede">
-        </div>
-        <div class="button">
-            <span class="text">Wonen</span>
-            <img src="images/iconen/wonen.svg" alt="Wonen">
-        </div>
-        <div class="button">
-            <span class="text">LGBTI+</span>
-            <img src="images/iconen/lgbti+.svg" alt="LGBTI+">
-        </div>
-        <div class="button">
-            <span class="text">Daklozen</span>
-            <img src="images/iconen/daklozen.svg" alt="Daklozen">
-        </div>
-        <div class="button">
-            <span class="text">Frans-Duitse gemeenschap</span>
-            <img src="images/iconen/frans_duitse_gemeenschap.svg" alt="Frans-Duitse gemeenschap">
-        </div>
-        <div class="button">
-            <span class="text">Gezondheid</span>
-            <img src="images/iconen/gezondheid.svg" alt="Gezondheid">
-        </div>
-        <div class="button">
-            <span class="text">Klimaat</span>
-            <img src="images/iconen/klimaat.svg" alt="Klimaat">
-        </div>
-        <div class="button">
-            <span class="text">NGO's en Verenigingen</span>
-            <img src="images/iconen/ngo's_en_verenigingen.svg" alt="NGO's en Verenigingen">
-        </div>
-        <div class="button">
-            <span class="text">Onderwijs</span>
-            <img src="images/iconen/onderwijs.svg" alt="Onderwijs">
-        </div>
+        </a>
+        <?php foreach ($themas as $thema): ?>
+            <a href="detail.php?thema_id=<?php echo $thema['id']; ?>" class="button"> 
+                <span class="text"><?php echo htmlspecialchars($thema['naam']); ?></span>
+                <img src="images/iconen/<?php echo strtolower(str_replace(' ', '_', $thema['naam'])); ?>.svg" alt="<?php echo htmlspecialchars($thema['naam']); ?>">
+            </a>
+        <?php endforeach; ?>
     </div>
 </div>
+
 <script src="button1.js"></script>
 </body>
 </html>
