@@ -20,7 +20,7 @@ $themas = $result->fetchAll(PDO::FETCH_ASSOC);
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>federaalinstituutmensenrechten</title>
     <link rel="stylesheet" href="css/nav.css?12395">
-    <link rel="stylesheet" href="css/dashboard.css?555778899">
+    <link rel="stylesheet" href="css/dashboard.css?57849">
     <link rel="stylesheet" href="css/shared.css?11345">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 </head>
@@ -55,7 +55,7 @@ $themas = $result->fetchAll(PDO::FETCH_ASSOC);
             <img src="images/iconen/mijnwegwijzer.svg" alt="Mijn wegwijzer">
         </a>
         <?php foreach ($themas as $thema): ?>
-            <a href="detail.php?thema_id=<?php echo $thema['id']; ?>" class="button"> 
+            <a href="./pages/detail.php?thema_id=<?php echo $thema['id']; ?>" class="button"> 
                 <span class="text"><?php echo htmlspecialchars($thema['naam']); ?></span>
                 <img src="images/iconen/<?php echo strtolower(str_replace(' ', '_', $thema['naam'])); ?>.svg" alt="<?php echo htmlspecialchars($thema['naam']); ?>">
             </a>

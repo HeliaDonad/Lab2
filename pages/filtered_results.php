@@ -1,5 +1,5 @@
 <?php
-include_once(__DIR__ . DIRECTORY_SEPARATOR . "./classes/Db.php");
+include_once(__DIR__ . DIRECTORY_SEPARATOR . "../classes/Db.php");
 
 session_start();
 if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {

@@ -1,5 +1,5 @@
 <?php
-include_once(__DIR__ . DIRECTORY_SEPARATOR . "./classes/Db.php");
+include_once(__DIR__ . DIRECTORY_SEPARATOR . "../classes/Db.php");
 
 session_start();
 if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
@@ -35,14 +35,14 @@ $organisaties = $stmt->fetchAll(PDO::FETCH_ASSOC);
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?php echo htmlspecialchars($thema['naam']); ?> - Organisaties</title>
-    <link rel="stylesheet" href="../css/nav.css">
-    <link rel="stylesheet" href="../css/dashboard.css?15345">
-    <link rel="stylesheet" href="../css/shared.css?11345">
+    <link rel="stylesheet" href="../css/nav.css?49977">
+    <link rel="stylesheet" href="../css/detail.css?15345">
+    <link rel="stylesheet" href="../css/shared.css?14445">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 </head>
 <body>
 
-<?php include_once("../components/header.inc.php"); ?>
+<?php include_once("../components/headerPages.inc.php"); ?>
 
 <div class="container">
     <h2><?php echo htmlspecialchars($thema['naam']); ?></h2>
