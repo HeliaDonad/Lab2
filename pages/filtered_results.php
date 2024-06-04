@@ -38,7 +38,6 @@ $gegevens = $stmt->fetchAll(PDO::FETCH_ASSOC);
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gefilterde resultaten</title>
-    <!-- Voeg hier je CSS-bestanden toe -->
 </head>
 <body>
 <h1>Gefilterde resultaten voor: <?php echo htmlspecialchars($filter['naam']); ?></h1>
@@ -51,6 +50,6 @@ $gegevens = $stmt->fetchAll(PDO::FETCH_ASSOC);
         </li>
     <?php endforeach; ?>
 </ul>
-<!-- Voeg hier je JavaScript-bestanden toe -->
+
 </body>
 </html>

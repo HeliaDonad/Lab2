@@ -35,36 +35,14 @@ $organisaties = $stmt->fetchAll(PDO::FETCH_ASSOC);
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?php echo htmlspecialchars($thema['naam']); ?> - Organisaties</title>
-    <link rel="stylesheet" href="css/nav.css?12395">
-    <link rel="stylesheet" href="css/dashboard.css?15345">
-    <link rel="stylesheet" href="css/shared.css?11345">
+    <link rel="stylesheet" href="../css/nav.css">
+    <link rel="stylesheet" href="../css/dashboard.css?15345">
+    <link rel="stylesheet" href="../css/shared.css?11345">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 </head>
 <body>
-<header>
-<nav>
-    <a class="logo" href="#">
-        <img src="images/general/logo.svg" alt="logo">
-    </a>
-    <label class="burger" for="burger">&#9776;</label>
-    <label class="close" for="burger">&times;</label>
-    <input type="checkbox" id="burger">
-    <ul class="subnav">
-        <li><a href="#">Mijn mensenrechten</a></li>
-        <li><a href="#">Thema's</a></li>
-        <li><a href="#">Zittingen</a></li>
-        <li><a href="#">Vrijwilligerswerk</a></li>
-        <li><a href="#">Activiteiten</a></li>
-        <li><a href="#">Contact</a></li>
-    </ul>
-</nav>
-<div class="actions">
-    <div class="action-icon"><i class="material-icons">notifications</i></div>
-    <div class="action-icon"><i class="material-icons">settings</i></div>
-    <div class="action-icon"><i class="material-icons">account_circle</i></div>
-</div>
-</header>
-<a href="/LAB2/signin_login_logout/logout.php">Log Out</a>
+
+<?php include_once("../components/header.inc.php"); ?>
 
 <div class="container">
     <h2><?php echo htmlspecialchars($thema['naam']); ?></h2>
