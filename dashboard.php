@@ -9,11 +9,20 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
 
 $conn = Db::getConnection();
 
+// Query voor het ophalen van thema's
 $query = "SELECT * FROM themas";
 $result = $conn->query($query);
 $themas = [];
 while ($row = $result->fetch(PDO::FETCH_ASSOC)) {
     $themas[] = new Thema($row['id'], $row['naam'], $row['icoon']); 
+}
+
+// Query voor het ophalen van filters
+$query_filters = "SELECT * FROM filters";
+$result_filters = $conn->query($query_filters);
+$filters = [];
+while ($row_filter = $result_filters->fetch(PDO::FETCH_ASSOC)) {
+    $filters[] = $row_filter;
 }
 ?>
 <!DOCTYPE html>
@@ -41,12 +50,9 @@ while ($row = $result->fetch(PDO::FETCH_ASSOC)) {
     <div class="select-box">
         <select>
             <option value="">Kies een functie...</option>
-            <option value="Schendingen & klachten">Schendingen & klachten</option>
-            <option value="Hulpverlening">Hulpverlening</option>
-            <option value="Informatie & Monitoring">Informatie & Monitoring</option>
-            <option value="Beleidsbeïnvloeding & Actie">Beleidsbeïnvloeding & Actie</option>
-            <option value="Onderzoek en rapportage">Onderzoek en rapportage</option>
-            <option value="Educatie en bewustmaking">Educatie en bewustmaking</option>
+            <?php foreach ($filters as $filter): ?>
+                <option value="<?php echo htmlspecialchars($filter['id']); ?>"><?php echo htmlspecialchars($filter['naam']); ?></option>
+            <?php endforeach; ?>
         </select>
     </div>
     <button class="save-button">Opslaan</button>
