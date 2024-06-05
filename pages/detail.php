@@ -24,8 +24,8 @@ $stmt->execute();
 $row = $stmt->fetch(PDO::FETCH_ASSOC);
 $thema = new Thema($row['id'], $row['naam'], null);
 
-//ThemaOrganisatie & Organisatie classes
-$query = "SELECT organisaties.id, organisaties.naam, organisaties.url 
+// Update the query to fetch additional fields
+$query = "SELECT organisaties.id, organisaties.naam, organisaties.url, organisaties.body_tekst, organisaties.knop_url, organisaties.knop_tekst, organisaties.contact_tekst 
           FROM organisaties 
           JOIN thema_organisatie ON organisaties.id = thema_organisatie.organisatie_id 
           WHERE thema_organisatie.thema_id = :thema_id";
@@ -34,9 +34,10 @@ $stmt->bindParam(":thema_id", $thema_id, PDO::PARAM_INT);
 $stmt->execute();
 $organisaties = [];
 while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
-    $organisaties[] = new Organisatie($row['id'], $row['naam'], $row['url']);
+    $organisaties[] = new Organisatie($row['id'], $row['naam'], $row['url'], $row['body_tekst'], $row['knop_url'], $row['knop_tekst'], $row['contact_tekst']);
 }
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -44,8 +45,8 @@ while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?php echo htmlspecialchars($thema->getNaam()); ?> - Organisaties</title>
     <link rel="stylesheet" href="../css/nav.css?49977">
-    <link rel="stylesheet" href="../css/detail.css?19345">
-    <link rel="stylesheet" href="../css/shared.css?14445">
+    <link rel="stylesheet" href="../css/detail.css?19765">
+    <link rel="stylesheet" href="../css/shared.css?14845">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 </head>
 <body>
@@ -54,11 +55,21 @@ while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
 
 <div class="container">
     <h2><?php echo htmlspecialchars($thema->getNaam()); ?></h2>
-    <ul>
+<div>
+    <div class="button-bar">
         <?php foreach ($organisaties as $organisatie): ?>
-            <li><a href="<?php echo htmlspecialchars($organisatie->getUrl()); ?>" target="_blank"><?php echo htmlspecialchars($organisatie->getNaam()); ?></a></li>
+            <div class="button">
+            <a href="<?php echo htmlspecialchars($organisatie->getUrl()); ?>"> 
+                <span class="text1"><?php echo htmlspecialchars($organisatie->getNaam()); ?></span>
+            </a>
+            <p><?php echo htmlspecialchars($organisatie->getBodyTekst()); ?></p>
+            <a href="<?php echo htmlspecialchars($organisatie->getKnopUrl()); ?>" class="button2">
+                <span class="text2"><?php echo htmlspecialchars($organisatie->getKnopTekst()); ?></span>
+            </a>
+            <p><?php echo htmlspecialchars($organisatie->getContactTekst()); ?></p>
+            </div>
         <?php endforeach; ?>
-    </ul>
+    </div>
 </div>
 </body>
 </html>
