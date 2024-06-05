@@ -13,7 +13,7 @@ $query = "SELECT * FROM themas";
 $result = $conn->query($query);
 $themas = [];
 while ($row = $result->fetch(PDO::FETCH_ASSOC)) {
-    $themas[] = new Thema($row['id'], $row['naam']);
+    $themas[] = new Thema($row['id'], $row['naam'], null);
 }
 ?>
 <!DOCTYPE html>

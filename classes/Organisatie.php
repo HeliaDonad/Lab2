@@ -6,13 +6,13 @@ class Organisatie {
     private $id;
     private $naam;
     private $url;
-    private $icoon;
 
-    public function __construct($id, $naam, $url, $icoon) {
+
+    public function __construct($id, $naam, $url) {
         $this->id = $id;
         $this->naam = $naam;
         $this->url = $url;
-        $this->icoon = $icoon;
+
     }
 
     public function getId() {
@@ -27,7 +27,4 @@ class Organisatie {
         return $this->url;
     }
 
-    public function getIcoon() {
-        return $this->icoon;
-    }
 }

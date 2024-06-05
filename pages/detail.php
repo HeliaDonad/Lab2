@@ -17,15 +17,14 @@ $thema_id = intval($_GET['thema_id']);
 
 $conn = Db::getConnection();
 
-// Fetch theme details using Thema class
 $query = "SELECT * FROM themas WHERE id = :thema_id";
 $stmt = $conn->prepare($query);
 $stmt->bindParam(":thema_id", $thema_id, PDO::PARAM_INT);
 $stmt->execute();
 $row = $stmt->fetch(PDO::FETCH_ASSOC);
-$thema = new Thema($row['id'], $row['naam']);
+$thema = new Thema($row['id'], $row['naam'], null);
 
-// Fetch related organizations using ThemaOrganisatie and Organisatie classes
+//ThemaOrganisatie & Organisatie classes
 $query = "SELECT organisaties.id, organisaties.naam, organisaties.url 
           FROM organisaties 
           JOIN thema_organisatie ON organisaties.id = thema_organisatie.organisatie_id 
@@ -35,7 +34,7 @@ $stmt->bindParam(":thema_id", $thema_id, PDO::PARAM_INT);
 $stmt->execute();
 $organisaties = [];
 while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
-    $organisaties[] = new Organisatie($row['id'], $row['naam'], $row['url'], null);
+    $organisaties[] = new Organisatie($row['id'], $row['naam'], $row['url']);
 }
 ?>
 <!DOCTYPE html>
