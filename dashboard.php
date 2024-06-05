@@ -13,7 +13,7 @@ $query = "SELECT * FROM themas";
 $result = $conn->query($query);
 $themas = [];
 while ($row = $result->fetch(PDO::FETCH_ASSOC)) {
-    $themas[] = new Thema($row['id'], $row['naam'], null);
+    $themas[] = new Thema($row['id'], $row['naam'], $row['icoon']); 
 }
 ?>
 <!DOCTYPE html>
@@ -62,7 +62,7 @@ while ($row = $result->fetch(PDO::FETCH_ASSOC)) {
         <?php foreach ($themas as $thema): ?>
             <a href="./pages/detail.php?thema_id=<?php echo $thema->getId(); ?>" class="button"> 
                 <span class="text"><?php echo htmlspecialchars($thema->getNaam()); ?></span>
-                <img src="images/iconen/<?php echo strtolower(str_replace(' ', '_', $thema->getNaam())); ?>.svg" alt="<?php echo htmlspecialchars($thema->getNaam()); ?>">
+                <img src="data:image/svg+xml;base64,<?php echo base64_encode($thema->getIcoonData()); ?>" alt="<?php echo htmlspecialchars($thema->getNaam()); ?>"> 
             </a>
         <?php endforeach; ?>
     </div>
