@@ -1,5 +1,8 @@
 <?php
 include_once(__DIR__ . DIRECTORY_SEPARATOR . "../classes/Db.php");
+include_once(__DIR__ . DIRECTORY_SEPARATOR . "../classes/Thema.php");
+include_once(__DIR__ . DIRECTORY_SEPARATOR . "../classes/Organisatie.php");
+include_once(__DIR__ . DIRECTORY_SEPARATOR . "../classes/Thema_Organisatie.php");
 
 session_start();
 if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
@@ -14,27 +17,33 @@ $thema_id = intval($_GET['thema_id']);
 
 $conn = Db::getConnection();
 
-$query = "SELECT naam FROM themas WHERE id = :thema_id";
+// Fetch theme details using Thema class
+$query = "SELECT * FROM themas WHERE id = :thema_id";
 $stmt = $conn->prepare($query);
 $stmt->bindParam(":thema_id", $thema_id, PDO::PARAM_INT);
 $stmt->execute();
-$thema = $stmt->fetch(PDO::FETCH_ASSOC);
+$row = $stmt->fetch(PDO::FETCH_ASSOC);
+$thema = new Thema($row['id'], $row['naam']);
 
-$query = "SELECT organisaties.id, organisaties.naam 
+// Fetch related organizations using ThemaOrganisatie and Organisatie classes
+$query = "SELECT organisaties.id, organisaties.naam, organisaties.url 
           FROM organisaties 
           JOIN thema_organisatie ON organisaties.id = thema_organisatie.organisatie_id 
           WHERE thema_organisatie.thema_id = :thema_id";
 $stmt = $conn->prepare($query);
 $stmt->bindParam(":thema_id", $thema_id, PDO::PARAM_INT);
 $stmt->execute();
-$organisaties = $stmt->fetchAll(PDO::FETCH_ASSOC);
+$organisaties = [];
+while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
+    $organisaties[] = new Organisatie($row['id'], $row['naam'], $row['url'], null);
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><?php echo htmlspecialchars($thema['naam']); ?> - Organisaties</title>
+    <title><?php echo htmlspecialchars($thema->getNaam()); ?> - Organisaties</title>
     <link rel="stylesheet" href="../css/nav.css?49977">
     <link rel="stylesheet" href="../css/detail.css?15345">
     <link rel="stylesheet" href="../css/shared.css?14445">
@@ -45,10 +54,10 @@ $organisaties = $stmt->fetchAll(PDO::FETCH_ASSOC);
 <?php include_once("../components/headerPages.inc.php"); ?>
 
 <div class="container">
-    <h2><?php echo htmlspecialchars($thema['naam']); ?></h2>
+    <h2><?php echo htmlspecialchars($thema->getNaam()); ?></h2>
     <ul>
         <?php foreach ($organisaties as $organisatie): ?>
-            <li><a href="#?id=<?php echo htmlspecialchars($organisatie['id']); ?>"><?php echo htmlspecialchars($organisatie['naam']); ?></a></li>
+            <li><a href="<?php echo htmlspecialchars($organisatie->getUrl()); ?>" target="_blank"><?php echo htmlspecialchars($organisatie->getNaam()); ?></a></li>
         <?php endforeach; ?>
     </ul>
 </div>

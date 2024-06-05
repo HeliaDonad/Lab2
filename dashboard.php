@@ -1,5 +1,6 @@
 <?php
 include_once(__DIR__ . DIRECTORY_SEPARATOR . "./classes/Db.php");
+include_once(__DIR__ . DIRECTORY_SEPARATOR . "./classes/Thema.php");
 
 session_start();
 if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
@@ -10,8 +11,10 @@ $conn = Db::getConnection();
 
 $query = "SELECT * FROM themas";
 $result = $conn->query($query);
-$themas = $result->fetchAll(PDO::FETCH_ASSOC);
-
+$themas = [];
+while ($row = $result->fetch(PDO::FETCH_ASSOC)) {
+    $themas[] = new Thema($row['id'], $row['naam']);
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -42,6 +45,8 @@ $themas = $result->fetchAll(PDO::FETCH_ASSOC);
             <option value="Hulpverlening">Hulpverlening</option>
             <option value="Informatie & Monitoring">Informatie & Monitoring</option>
             <option value="Beleidsbeïnvloeding & Actie">Beleidsbeïnvloeding & Actie</option>
+            <option value="Onderzoek en rapportage">Onderzoek en rapportage</option>
+            <option value="Educatie en bewustmaking">Educatie en bewustmaking</option>
         </select>
     </div>
     <button class="save-button">Opslaan</button>
@@ -55,9 +60,9 @@ $themas = $result->fetchAll(PDO::FETCH_ASSOC);
             <img src="images/iconen/mijnwegwijzer.svg" alt="Mijn wegwijzer">
         </a>
         <?php foreach ($themas as $thema): ?>
-            <a href="./pages/detail.php?thema_id=<?php echo $thema['id']; ?>" class="button"> 
-                <span class="text"><?php echo htmlspecialchars($thema['naam']); ?></span>
-                <img src="images/iconen/<?php echo strtolower(str_replace(' ', '_', $thema['naam'])); ?>.svg" alt="<?php echo htmlspecialchars($thema['naam']); ?>">
+            <a href="./pages/detail.php?thema_id=<?php echo $thema->getId(); ?>" class="button"> 
+                <span class="text"><?php echo htmlspecialchars($thema->getNaam()); ?></span>
+                <img src="images/iconen/<?php echo strtolower(str_replace(' ', '_', $thema->getNaam())); ?>.svg" alt="<?php echo htmlspecialchars($thema->getNaam()); ?>">
             </a>
         <?php endforeach; ?>
     </div>
