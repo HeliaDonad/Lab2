@@ -1,3 +1,4 @@
+<!--<link rel="stylesheet" href="../css/nav.css">-->
 <header>
 <nav>
     <a class="logo" href="../dashboard.php">
