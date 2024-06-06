@@ -1,5 +1,6 @@
 <?php
 include_once(__DIR__ . DIRECTORY_SEPARATOR . "../classes/Db.php");
+include_once(__DIR__ . DIRECTORY_SEPARATOR . "../classes/Thema.php");
 include_once(__DIR__ . DIRECTORY_SEPARATOR . "../classes/Organisatie.php");
 include_once(__DIR__ . DIRECTORY_SEPARATOR . "../classes/Thema_Organisatie.php");
 
@@ -17,21 +18,26 @@ $filter_id = intval($_GET['filter_id']);
 
 $conn = Db::getConnection();
 
-// Query om alleen de gefilterde organisaties op te halen
-$query = "SELECT organisaties.id, organisaties.naam, organisaties.url 
+$query = "SELECT * FROM themas WHERE id = :thema_id";
+$stmt = $conn->prepare($query);
+$stmt->bindParam(":thema_id", $thema_id, PDO::PARAM_INT);
+$stmt->execute();
+$row = $stmt->fetch(PDO::FETCH_ASSOC);
+$thema = new Thema($row['id'], $row['naam'], null);
+
+//ThemaOrganisatie & Organisatie classes
+$query = "SELECT organisaties.id, organisaties.naam, organisaties.url, organisaties.body_tekst, organisaties.knop_url, organisaties.knop_tekst, organisaties.contact_tekst
           FROM organisaties 
-          JOIN thema_organisatie ON organisaties.id = thema_organisatie.organisatie_id 
-          WHERE thema_organisatie.thema_id = :thema_id 
-          AND organisaties.id IN (
-              SELECT organisatie_id FROM organisatie_filters WHERE filter_id = :filter_id
-          )";
+          JOIN thema_organisatie to2 ON organisaties.id = to2.organisatie_id 
+          JOIN organisatie_filters ofil ON organisaties.id = ofil.organisatie_id 
+          WHERE to2.thema_id = :thema_id AND ofil.filter_id = :filter_id";
 $stmt = $conn->prepare($query);
 $stmt->bindParam(":thema_id", $thema_id, PDO::PARAM_INT);
 $stmt->bindParam(":filter_id", $filter_id, PDO::PARAM_INT);
 $stmt->execute();
 $organisaties = [];
 while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
-    $organisaties[] = new Organisatie($row['id'], $row['naam'], $row['url']);
+    $organisaties[] = new Organisatie($row['id'], $row['naam'], $row['url'], $row['body_tekst'], $row['knop_url'], $row['knop_tekst'], $row['contact_tekst']);
 }
 ?>
 <!DOCTYPE html>
@@ -39,10 +45,10 @@ while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gefilterde Organisaties</title>
-    <link rel="stylesheet" href="../css/nav.css?49977">
-    <link rel="stylesheet" href="../css/detail.css?19345">
-    <link rel="stylesheet" href="../css/shared.css?14445">
+    <title><?php echo htmlspecialchars($thema->getNaam()); ?> - Organisaties</title>
+    <link rel="stylesheet" href="../css/nav.css?43777">
+    <link rel="stylesheet" href="../css/detail.css?17765">
+    <link rel="stylesheet" href="../css/shared.css?16845">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 </head>
 <body>
@@ -50,12 +56,22 @@ while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
 <?php include_once("../components/headerPages.inc.php"); ?>
 
 <div class="container">
-    <h2>Gefilterde Organisaties</h2>
-    <ul>
+    <h2><?php echo htmlspecialchars($thema->getNaam()); ?></h2>
+<div>
+    <div class="button-bar">
         <?php foreach ($organisaties as $organisatie): ?>
-            <li><a href="<?php echo htmlspecialchars($organisatie->getUrl()); ?>" target="_blank"><?php echo htmlspecialchars($organisatie->getNaam()); ?></a></li>
+            <div class="button">
+            <a href="<?php echo htmlspecialchars($organisatie->getUrl()); ?>"> 
+                <span class="text1"><?php echo htmlspecialchars($organisatie->getNaam()); ?></span>
+            </a>
+            <p><?php echo htmlspecialchars($organisatie->getBodyTekst()); ?></p>
+            <a href="<?php echo htmlspecialchars($organisatie->getKnopUrl()); ?>" class="button2">
+                <span class="text2"><?php echo htmlspecialchars($organisatie->getKnopTekst()); ?></span>
+            </a>
+            <p><?php echo htmlspecialchars($organisatie->getContactTekst()); ?></p>
+            </div>
         <?php endforeach; ?>
-    </ul>
+    </div>
 </div>
 </body>
 </html>

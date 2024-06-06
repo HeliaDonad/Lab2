@@ -24,11 +24,11 @@ $stmt->execute();
 $row = $stmt->fetch(PDO::FETCH_ASSOC);
 $thema = new Thema($row['id'], $row['naam'], null);
 
-// Update the query to fetch additional fields
-$query = "SELECT organisaties.id, organisaties.naam, organisaties.url, organisaties.body_tekst, organisaties.knop_url, organisaties.knop_tekst, organisaties.contact_tekst 
+// ThemaOrganisatie & Organisatie classes
+$query = "SELECT organisaties.id, organisaties.naam, organisaties.url, organisaties.body_tekst, organisaties.knop_url, organisaties.knop_tekst, organisaties.contact_tekst
           FROM organisaties 
-          JOIN thema_organisatie ON organisaties.id = thema_organisatie.organisatie_id 
-          WHERE thema_organisatie.thema_id = :thema_id";
+          JOIN thema_organisatie to2 ON organisaties.id = to2.organisatie_id 
+          WHERE to2.thema_id = :thema_id";
 $stmt = $conn->prepare($query);
 $stmt->bindParam(":thema_id", $thema_id, PDO::PARAM_INT);
 $stmt->execute();
@@ -37,7 +37,6 @@ while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
     $organisaties[] = new Organisatie($row['id'], $row['naam'], $row['url'], $row['body_tekst'], $row['knop_url'], $row['knop_tekst'], $row['contact_tekst']);
 }
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>

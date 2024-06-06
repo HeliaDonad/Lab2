@@ -86,6 +86,11 @@ h2 {
     width: 150px;
 }
 
+.form-buttons {
+    display: flex;
+    align-items: center;
+}
+
 .save-button {
     padding: 8px 16px;
     font-size: 14px;
