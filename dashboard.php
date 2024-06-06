@@ -21,6 +21,23 @@ $selectedFilterId = null;
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['selectedFilterId'])) {
     $selectedFilterId = $_POST['selectedFilterId'];
 
+    // Redirect naar dezelfde pagina om te voorkomen dat de browser wordt gevraagd om gegevens opnieuw in te dienen
+    header("Location: dashboard.php?filter_id=" . $selectedFilterId);
+    exit();
+} elseif (isset($_GET['filter_id'])) {
+    $selectedFilterId = $_GET['filter_id'];
+}
+
+// Query voor het ophalen van themas
+if ($selectedFilterId === null || $selectedFilterId === '') {
+    // Als er geen filter is geselecteerd, haal alle thema's op
+    $query_themas = "SELECT * FROM themas ORDER BY sort_order";
+    $result_themas = $conn->query($query_themas);
+    $themas = [];
+    while ($row = $result_themas->fetch(PDO::FETCH_ASSOC)) {
+        $themas[] = new Thema($row['id'], $row['naam'], $row['icoon']);
+    }
+} else {
     // Query voor het ophalen van gefilterde thema's
     $query = "SELECT t.id, t.naam, t.icoon 
               FROM themas t 
@@ -37,16 +54,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['selectedFilterId'])) 
     while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
         $themas[] = new Thema($row['id'], $row['naam'], $row['icoon']);
     }
-} else {
-    // Als er geen filter is geselecteerd, haal alle thema's op
-    $query_themas = "SELECT * FROM themas ORDER BY sort_order";
-    $result_themas = $conn->query($query_themas);
-    $themas = [];
-    while ($row = $result_themas->fetch(PDO::FETCH_ASSOC)) {
-        $themas[] = new Thema($row['id'], $row['naam'], $row['icoon']);
-    }
 }
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -81,8 +91,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['selectedFilterId'])) 
         <button type="submit" class="save-button">Opslaan</button>
     </form>
 </div>
-
-
 
 <div class="container">
     <h2>Eerste Hulp Bij Mensenrechten</h2>
