@@ -115,6 +115,6 @@ if ($selectedFilterId === null || $selectedFilterId === '') {
     </div>
 </div>
 
-<script src="button1.js"></script>
+<script src="button.js"></script>
 </body>
 </html>
