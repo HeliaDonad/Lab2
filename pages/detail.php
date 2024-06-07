@@ -43,8 +43,8 @@ while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?php echo htmlspecialchars($thema->getNaam()); ?> - Organisaties</title>
-    <link rel="stylesheet" href="../css/nav.css?45977">
-    <link rel="stylesheet" href="../css/detail.css?19765">
+    <link rel="stylesheet" href="../css/nav.css?48977">
+    <link rel="stylesheet" href="../css/detail.css?89095">
     <link rel="stylesheet" href="../css/shared.css?18845">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 </head>
@@ -53,19 +53,22 @@ while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
 <?php include_once("../components/headerPages.inc.php"); ?>
 
 <div class="container">
-    <h2><?php echo htmlspecialchars($thema->getNaam()); ?></h2>
-<div>
+<a href="#" class="wegwijzer-button"> 
+    <img src="../images/iconen/mijnwegwijzer.svg" alt="Mijn wegwijzer">
+    <span class="button-text">Mijn wegwijzer</span>
+</a>
+        <h2><?php echo htmlspecialchars($thema->getNaam()); ?></h2>
     <div class="button-bar">
         <?php foreach ($organisaties as $organisatie): ?>
             <div class="button">
-            <a href="<?php echo htmlspecialchars($organisatie->getUrl()); ?>"> 
-                <span class="text1"><?php echo htmlspecialchars($organisatie->getNaam()); ?></span>
-            </a>
-            <p><?php echo htmlspecialchars($organisatie->getBodyTekst()); ?></p>
-            <a href="<?php echo htmlspecialchars($organisatie->getKnopUrl()); ?>" class="button2">
-                <span class="text2"><?php echo htmlspecialchars($organisatie->getKnopTekst()); ?></span>
-            </a>
-            <p><?php echo htmlspecialchars($organisatie->getContactTekst()); ?></p>
+                <a href="<?php echo htmlspecialchars($organisatie->getUrl()); ?>"> 
+                    <span class="text1"><?php echo htmlspecialchars($organisatie->getNaam()); ?></span>
+                </a>
+                <p><?php echo htmlspecialchars($organisatie->getBodyTekst()); ?></p>
+                <a href="<?php echo htmlspecialchars($organisatie->getKnopUrl()); ?>" class="button2">
+                    <span class="text2"><?php echo htmlspecialchars($organisatie->getKnopTekst()); ?></span>
+                </a>
+                <p><?php echo htmlspecialchars($organisatie->getContactTekst()); ?></p>
             </div>
         <?php endforeach; ?>
     </div>
