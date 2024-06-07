@@ -76,9 +76,9 @@ if ($selectedFilterId === null || $selectedFilterId === '') {
 
 <!-- Filter Section -->
 <div class="filter-container">
-    <div class="search-box">
+    <!--<div class="search-box">
         <input type="text" placeholder="Zoeken...">
-    </div>
+    </div>-->
     <form method="post" class="form-buttons">
         <div class="select-box">
             <select name="selectedFilterId">
