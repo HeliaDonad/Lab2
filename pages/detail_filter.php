@@ -23,7 +23,7 @@ $stmt = $conn->prepare($query);
 $stmt->bindParam(":thema_id", $thema_id, PDO::PARAM_INT);
 $stmt->execute();
 $row = $stmt->fetch(PDO::FETCH_ASSOC);
-$thema = new Thema($row['id'], $row['naam'], null);
+$thema = new Thema($row['id'], $row['naam'], null, $row['uitleg']);
 
 //ThemaOrganisatie & Organisatie classes
 $query = "SELECT organisaties.id, organisaties.naam, organisaties.url, organisaties.body_tekst, organisaties.knop_url, organisaties.knop_tekst, organisaties.contact_tekst
@@ -56,7 +56,7 @@ while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
 <?php include_once("../components/headerPages.inc.php"); ?>
 
 <div class="container">
-<a href="#" class="wegwijzer-button"> 
+<a href="./wegwijzer.php" class="wegwijzer-button"> 
     <img src="../images/iconen/mijnwegwijzer.svg" alt="Mijn wegwijzer">
     <span class="button-text">Mijn wegwijzer</span>
 </a>

@@ -9,7 +9,7 @@
     <input type="checkbox" id="burger">
     <ul class="subnav">
         <li><a href="./dashboard.php">Mijn mensenrechten</a></li>
-        <li><a href="./pages/thema.php">Thema's</a></li>
+        <li><a href="./pages/thema2.php">Thema's</a></li>
         <li><a href="#">Zittingen</a></li>
         <li><a href="#">Vrijwilligerswerk</a></li>
         <li><a href="#">Activiteiten</a></li>

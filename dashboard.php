@@ -35,7 +35,7 @@ if ($selectedFilterId === null || $selectedFilterId === '') {
     $result_themas = $conn->query($query_themas);
     $themas = [];
     while ($row = $result_themas->fetch(PDO::FETCH_ASSOC)) {
-        $themas[] = new Thema($row['id'], $row['naam'], $row['icoon']);
+        $themas[] = new Thema($row['id'], $row['naam'], $row['icoon'], null);
     }
 } else {
     // Query voor het ophalen van gefilterde thema's
@@ -52,7 +52,7 @@ if ($selectedFilterId === null || $selectedFilterId === '') {
     $stmt->execute();
     $themas = [];
     while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
-        $themas[] = new Thema($row['id'], $row['naam'], $row['icoon']);
+        $themas[] = new Thema($row['id'], $row['naam'], $row['icoon'], null);
     }
 }
 ?>
@@ -64,7 +64,7 @@ if ($selectedFilterId === null || $selectedFilterId === '') {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Eerste Hulp Bij Mensenrechten</title>
     <link rel="stylesheet" href="css/nav.css?15395">
-    <link rel="stylesheet" href="css/dashboard.css?55849">
+    <link rel="stylesheet" href="css/dashboard.css?75849">
     <link rel="stylesheet" href="css/shared.css?18385">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 </head>
@@ -94,6 +94,7 @@ if ($selectedFilterId === null || $selectedFilterId === '') {
 
 <div class="container">
     <h2>Eerste Hulp Bij Mensenrechten</h2>
+    <p>Weet u niet bij welke mensenrechtenorganisatie u terecht kan? Maak gebruik van onze wegwijzer om u naar de juiste organisatie te laten leiden.</p>
     <div class="button-bar">
         <a href="#" class="button wegwijzer"> 
             <span class="text">Mijn wegwijzer</span>
