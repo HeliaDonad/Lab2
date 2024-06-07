@@ -10,7 +10,7 @@
 .button-bar {
     display: flex;
     flex-direction: column;
-    width: 420px;
+    width: 385px;
     margin-bottom: 100px;
 }
 
@@ -75,14 +75,14 @@ h2 {
     top: 80px;
 }
 
-.search-box input {
+/*.search-box input {
     padding: 8px;
     font-size: 14px;
     border: 1px solid #ccc;
     border-radius: 4px;
     margin-right: 10px;
     width: 150px;
-}
+}*/
 
 .select-box select {
     padding: 8px;

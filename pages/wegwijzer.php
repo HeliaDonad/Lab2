@@ -28,7 +28,7 @@ $thema = new Thema($row['id'], $row['naam'], null, $row['uitleg']);
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?php echo htmlspecialchars($thema->getNaam()); ?> - Wegwijzer</title>
-    <link rel="stylesheet" href="../css/nav.css?48907">
+    <link rel="stylesheet" href="../css/nav.css?48987">
     <link rel="stylesheet" href="../css/wegwijzer.css?89095">
     <link rel="stylesheet" href="../css/shared.css?18845">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">

@@ -46,7 +46,7 @@ while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?php echo htmlspecialchars($thema->getNaam()); ?> - Organisaties</title>
-    <link rel="stylesheet" href="../css/nav.css?43007">
+    <link rel="stylesheet" href="../css/nav.css?43907">
     <link rel="stylesheet" href="../css/detail.css?19785">
     <link rel="stylesheet" href="../css/shared.css?18845">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">

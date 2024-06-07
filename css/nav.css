@@ -88,15 +88,17 @@ header {
     margin-top: 68px;
 }
 
+
 .subnav li {
     border-top: 1px solid var(--main-color);
+    padding: 2em;
 }
 
 .subnav a {
     text-decoration: none;
     color: var(--main-color); 
     display: inline-block; 
-    padding: 0.6em;
+    width: 100%;
 }
 
 ul {
@@ -128,6 +130,14 @@ li {
     margin-right: 15px; 
 }
 
+.subnav li:hover,
+.subnav li:hover a {
+    background-color: var(--main-color);
+    color: var(--background-color);
+}
+
+
+
 @media only screen and (min-width: 1025px) {
     .burger {
         display: none;
@@ -153,6 +163,7 @@ li {
         border-radius: 50px; 
         border: 2px solid transparent; 
         font-size: 14px;
+        width: auto;
     }
 
     nav {
@@ -167,6 +178,7 @@ li {
 
     .subnav li {
         border-top: 0px;
+        padding: 0em;
     }
 
     .subnav a.active {
@@ -181,5 +193,11 @@ li {
         color: white;
         background-color: var(--main-color);
         border-radius: 50px;
+    }
+
+    .subnav li:hover,
+    .subnav a:hover {
+        color: var(--main-color);
+        background-color: transparent;
     }
 }
