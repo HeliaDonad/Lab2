@@ -91,7 +91,7 @@ header {
 
 .subnav li {
     border-top: 1px solid var(--main-color);
-    padding: 2em;
+    padding: 1.68em;
 }
 
 .subnav a {
@@ -130,13 +130,12 @@ li {
     margin-right: 15px; 
 }
 
-.subnav li:hover,
+/*.subnav li:hover,
 .subnav li:hover a {
     background-color: var(--main-color);
-    color: var(--background-color);
+    color: var(--background-color); 
 }
-
-
+*/
 
 @media only screen and (min-width: 1025px) {
     .burger {
@@ -195,9 +194,11 @@ li {
         border-radius: 50px;
     }
 
-    .subnav li:hover,
+    /*.subnav li:hover,
+    .subnav li:hover a,
     .subnav a:hover {
+        background-color: initial; 
         color: var(--main-color);
-        background-color: transparent;
-    }
+    } */
+    
 }
