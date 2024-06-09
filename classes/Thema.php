@@ -14,6 +14,20 @@ class Thema {
         $this->uitleg = $uitleg;
     }
 
+    public static function getThemaById($thema_id) {
+        $conn = Db::getConnection();
+        $query = "SELECT * FROM themas WHERE id = :thema_id";
+        $stmt = $conn->prepare($query);
+        $stmt->bindParam(":thema_id", $thema_id, PDO::PARAM_INT);
+        $stmt->execute();
+        $row = $stmt->fetch(PDO::FETCH_ASSOC);
+        if ($row) {
+            return new Thema($row['id'], $row['naam'], $row['icoon'], $row['uitleg']);
+        } else {
+            return null; // Als het thema niet wordt gevonden, retourneer null
+        }
+    }
+
     public function getId() {
         return $this->id;
     }
@@ -23,7 +37,7 @@ class Thema {
     }
 
     public function getIcoon() {
-        return $this->naam;
+        return $this->icoon;
     }
 
     public function getIcoonData() {
