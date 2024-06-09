@@ -45,9 +45,10 @@ if ($action) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?php echo htmlspecialchars($thema->getNaam()); ?> - Wegwijzer</title>
-    <link rel="stylesheet" href="../css/nav.css?48987">
-    <link rel="stylesheet" href="../css/wegwijzer.css?89795">
-    <link rel="stylesheet" href="../css/shared.css?18845">
+    <link rel="stylesheet" href="../css/nav.css">
+    <link rel="stylesheet" href="../css/wegwijzer.css">
+    <link rel="stylesheet" href="../css/shared.css">
+    <link rel="stylesheet" href="../css/styles.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 </head>
 <body>
@@ -55,9 +56,9 @@ if ($action) {
     <div class="container">
         <h3>Mijn wegwijzer</h3>
         <h2><?php echo htmlspecialchars($thema->getNaam()); ?></h2>
-        <div  class="blauwe-kader" id="vraag-container">
+        <div class="blauwe-kader" id="vraag-container" style="<?php echo $action ? 'display: none;' : ''; ?>">
             <?php if ($vraag): ?>
-                <div class="vraag-content">
+                <div class="vraag-content" id="vraag-content">
                     <p><?php echo htmlspecialchars($vraag['vraag_tekst']); ?></p>
                     <?php if ($antwoorden): ?>
                         <form id="antwoord-form">
@@ -78,53 +79,54 @@ if ($action) {
                     <?php endif; ?>
                 </div>
             <?php endif; ?>
+        </div>
 
+        <div class="blauwe-kader" id="antwoord-container" style="<?php echo $action ? '' : 'display: none;'; ?>">
             <?php if ($action_instructies): ?>
                 <div class="antwoord-content">
-                <p><?php echo htmlspecialchars($action_instructies); ?></p>
-                <a href="<?php echo htmlspecialchars($knop_url); ?>" class="button2">
-                    <span class="text2"><?php echo htmlspecialchars($knop_tekst); ?></span>
-                </a>
-                <p><?php echo htmlspecialchars($contact_tekst); ?></p>
-                <?php if ($organisaties): ?>
-                    <ul>
-                        <?php foreach ($organisaties as $organisatie): ?>
-                            <li>
-                                <a href="<?php echo htmlspecialchars($organisatie->getKnopUrl()); ?>" class="button2">
-                                    <span class="text2"><?php echo htmlspecialchars($organisatie->getKnopTekst()); ?></span>
-                                </a>
-                                <p><?php echo htmlspecialchars($organisatie->getContactTekst()); ?></p>
-                            </li>
-                        <?php endforeach; ?>
-                    </ul>
-                <?php endif; ?>
-                <button onclick="location.href='wegwijzer.php?thema_id=<?php echo $thema_id; ?>'">Mijn wegwijzer</button>
-                <button onclick="location.href='../dashboard.php'">Beginscherm</button>
+                    <p><?php echo htmlspecialchars($action_instructies); ?></p>
+                    <a href="<?php echo htmlspecialchars($knop_url); ?>" class="button2">
+                        <span class="text2"><?php echo htmlspecialchars($knop_tekst); ?></span>
+                    </a>
+                    <p><?php echo htmlspecialchars($contact_tekst); ?></p>
+                    <?php if ($organisaties): ?>
+                        <ul>
+                            <?php foreach ($organisaties as $organisatie): ?>
+                                <li>
+                                    <a href="<?php echo htmlspecialchars($organisatie->getKnopUrl()); ?>" class="button2">
+                                        <span class="text2"><?php echo htmlspecialchars($organisatie->getKnopTekst()); ?></span>
+                                    </a>
+                                    <p><?php echo htmlspecialchars($organisatie->getContactTekst()); ?></p>
+                                </li>
+                            <?php endforeach; ?>
+                        </ul>
+                    <?php endif; ?>
+                    <button onclick="location.href='wegwijzer.php?thema_id=<?php echo $thema_id; ?>'">Mijn wegwijzer</button>
+                    <button onclick="location.href='../dashboard.php'">Beginscherm</button>
                 </div>
             <?php endif; ?>
         </div>
     </div>
     <script>
-    document.addEventListener("DOMContentLoaded", function() {
-        const volgendeBtn = document.getElementById('volgende-btn');
-        const antwoordForm = document.getElementById('antwoord-form');
+        document.addEventListener("DOMContentLoaded", function() {
+            const volgendeBtn = document.getElementById('volgende-btn');
+            const antwoordForm = document.getElementById('antwoord-form');
 
-        antwoordForm.addEventListener('change', function() {
-            volgendeBtn.disabled = false;
-            volgendeBtn.classList.add('volgende-btn');
-        });
+            antwoordForm.addEventListener('change', function() {
+                volgendeBtn.disabled = false;
+                volgendeBtn.classList.add('volgende-btn');
+            });
 
-        volgendeBtn.addEventListener('click', function(event) {
-            event.preventDefault();
-            const selectedAntwoord = antwoordForm.querySelector('input[name="antwoord"]:checked');
-            if (selectedAntwoord) {
-                const queryParams = `?thema_id=<?php echo $thema_id; ?>${selectedAntwoord.value}`;
-                window.location.href = `wegwijzer.php${queryParams}`;
-            } else {
-                alert('Selecteer eerst een antwoord.');
-            }
+            volgendeBtn.addEventListener('click', function(event) {
+                event.preventDefault();
+                const selectedAntwoord = antwoordForm.querySelector('input[name="antwoord"]:checked');
+                if (selectedAntwoord) {
+                    window.location.href = `wegwijzer.php?thema_id=<?php echo $thema_id; ?>${selectedAntwoord.value}`;
+                } else {
+                    alert('Selecteer eerst een antwoord.');
+                }
+            });
         });
-    });
     </script>
 </body>
 </html>
