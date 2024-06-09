@@ -93,10 +93,7 @@ if ($action) {
                         <ul>
                             <?php foreach ($organisaties as $organisatie): ?>
                                 <li>
-                                    <a href="<?php echo htmlspecialchars($organisatie->getKnopUrl()); ?>" class="button2">
-                                        <span class="text2"><?php echo htmlspecialchars($organisatie->getKnopTekst()); ?></span>
-                                    </a>
-                                    <p><?php echo htmlspecialchars($organisatie->getContactTekst()); ?></p>
+                                    <a href="<?php echo htmlspecialchars($organisatie['url']); ?>"><?php echo htmlspecialchars($organisatie['naam']); ?></a>
                                 </li>
                             <?php endforeach; ?>
                         </ul>
