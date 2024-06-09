@@ -39,7 +39,7 @@ if ($action) {
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta naam="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?php echo htmlspecialchars($thema->getNaam()); ?> - Wegwijzer</title>
     <link rel="stylesheet" href="../css/nav.css?48987">
     <link rel="stylesheet" href="../css/wegwijzer.css?89095">
@@ -53,20 +53,24 @@ if ($action) {
         <h2><?php echo htmlspecialchars($thema->getNaam()); ?></h2>
         <div id="vraag-container">
             <?php if ($vraag): ?>
-                <p><?php echo htmlspecialchars($vraag['vraag_tekst']); ?></p>
-                <?php if ($antwoorden): ?>
-                    <?php foreach ($antwoorden as $antwoord): ?>
-                        <?php
-                            $volgende_vraag_id = $antwoord['volgende_vraag_id'] ? '&vraag_id=' . $antwoord['volgende_vraag_id'] : '';
-                            $action_param = $antwoord['action'] ? '&action=' . $antwoord['action'] : '';
-                        ?>
-                        <button class="antwoord-button" onclick="location.href='wegwijzer.php?thema_id=<?php echo $thema_id . $volgende_vraag_id . $action_param; ?>'">
-                            <?php echo htmlspecialchars($antwoord['antwoord_tekst']); ?>
-                        </button>
-                    <?php endforeach; ?>
-                <?php else: ?>
-                    <p>Geen verdere vragen beschikbaar.</p>
-                <?php endif; ?>
+                <div class="blauwe-kader">
+                    <p><?php echo htmlspecialchars($vraag['vraag_tekst']); ?></p>
+                    <?php if ($antwoorden): ?>
+                        <form id="antwoord-form">
+                            <?php foreach ($antwoorden as $antwoord): ?>
+                                <?php
+                                    $volgende_vraag_id = $antwoord['volgende_vraag_id'] ? '&vraag_id=' . $antwoord['volgende_vraag_id'] : '';
+                                    $action_param = $antwoord['action'] ? '&action=' . $antwoord['action'] : '';
+                                ?>
+                                <input type="radio" id="antwoord-<?php echo $antwoord['id']; ?>" class="antwoord-selector" name="antwoord" value="<?php echo $volgende_vraag_id . $action_param; ?>">
+                                <label for="antwoord-<?php echo $antwoord['id']; ?>" class="antwoord-label"><?php echo htmlspecialchars($antwoord['antwoord_tekst']); ?></label><br>
+                            <?php endforeach; ?>
+                        </form>
+                        <button id="volgende-btn" disabled>Volgende</button>
+                    <?php else: ?>
+                        <p>Geen verdere vragen beschikbaar.</p>
+                    <?php endif; ?>
+                </div>
             <?php endif; ?>
 
             <?php if ($action_instructies): ?>
@@ -81,5 +85,27 @@ if ($action) {
             <?php endif; ?>
         </div>
     </div>
+    <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const volgendeBtn = document.getElementById('volgende-btn');
+        const antwoordForm = document.getElementById('antwoord-form');
+
+        antwoordForm.addEventListener('change', function() {
+            volgendeBtn.disabled = false;
+            volgendeBtn.style.backgroundColor = 'green'; // Change button color when an answer is selected
+        });
+
+        volgendeBtn.addEventListener('click', function(event) {
+            event.preventDefault();
+            const selectedAntwoord = antwoordForm.querySelector('input[name="antwoord"]:checked');
+            if (selectedAntwoord) {
+                const queryParams = `?thema_id=<?php echo $thema_id; ?>${selectedAntwoord.value}`;
+                window.location.href = `wegwijzer.php${queryParams}`;
+            } else {
+                alert('Selecteer eerst een antwoord.');
+            }
+        });
+    });
+    </script>
 </body>
 </html>

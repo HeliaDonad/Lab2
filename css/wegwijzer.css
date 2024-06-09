@@ -29,46 +29,26 @@ p {
     margin-bottom: 40px;
 }
 
-#vraag-container {
-    background-color: var(--third-color);
-    color: white;
-    padding: 20px;
-    border-radius: 10px;
-    margin-bottom: 20px;
-    opacity: 0.5;
+.blauwe-kader {
+    border: 2px solid #0047AB;
+    padding: 10px;
+    margin-bottom: 10px;
 }
-
-/* Button styling */
-.antwoord-button {
-    background-color: white;
-    color: var(--third-color);
-    border: 2px solid var(--third-color);
-    border-radius: 5px;
-    padding: 10px 20px;
-    margin: 10px 0;
+.antwoord-selector {
+    display: none;
+}
+.antwoord-selector:checked + label {
+    background-color: #0047AB;
+    color: white;
+}
+.antwoord-label {
+    display: inline-block;
+    padding: 8px 16px;
+    border: 2px solid #0047AB;
+    border-radius: 50%;
     cursor: pointer;
+    margin-right: 10px;
 }
-
-.antwoord-button:hover {
-    background-color: var(--third-color);
-    color: white;
-}
-
-/* Next button styling */
-.next-button {
-    background-color: var(--third-color);
-    color: white;
-    border: none;
-    border-radius: 5px;
-    padding: 10px 20px;
-    cursor: pointer;
-    margin-top: 20px;
-}
-
-.next-button:hover {
-    background-color: #003A8C;
-}
-
 
 @media only screen and (min-width: 768px) {
     h2 {
