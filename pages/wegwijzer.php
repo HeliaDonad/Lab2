@@ -69,6 +69,8 @@ if ($action) {
                         <button id="volgende-btn" disabled>Volgende</button>
                     <?php else: ?>
                         <p>Geen verdere vragen beschikbaar.</p>
+                        <button onclick="location.href='wegwijzer.php?thema_id=<?php echo $thema_id; ?>'">Mijn wegwijzer</button>
+                        <button onclick="location.href='index.php'">Beginscherm</button>
                     <?php endif; ?>
                 </div>
             <?php endif; ?>
@@ -82,6 +84,8 @@ if ($action) {
                         <?php endforeach; ?>
                     </ul>
                 <?php endif; ?>
+                <button onclick="location.href='wegwijzer.php?thema_id=<?php echo $thema_id; ?>'">Mijn wegwijzer</button>
+                <button onclick="location.href='index.php'">Beginscherm</button>
             <?php endif; ?>
         </div>
     </div>
