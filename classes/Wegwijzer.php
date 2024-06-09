@@ -24,13 +24,12 @@ class Wegwijzer {
 
     public static function getActionInstructiesByAction($action) {
         $conn = Db::getConnection();
-        $query = "SELECT action_instructies FROM antwoorden WHERE action = :action";
+        $query = "SELECT action_instructies, knop_tekst, contact_tekst, knop_url FROM antwoorden WHERE action = :action";
         $stmt = $conn->prepare($query);
         $stmt->bindParam(":action", $action, PDO::PARAM_STR);
         $stmt->execute();
-        $result = $stmt->fetch(PDO::FETCH_ASSOC);
-        return $result['action_instructies'];
-    }
+        return $stmt->fetch(PDO::FETCH_ASSOC);
+    }    
 
     public static function getDiscriminatieOrganisaties() {
         $conn = Db::getConnection();

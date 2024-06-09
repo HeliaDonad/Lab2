@@ -25,7 +25,11 @@ $action_instructies = null;
 $organisaties = null;
 
 if ($action) {
-    $action_instructies = Wegwijzer::getActionInstructiesByAction($action, $conn);
+    $action_info = Wegwijzer::getActionInstructiesByAction($action, $conn);
+    $action_instructies = $action_info['action_instructies'];
+    $knop_tekst = $action_info['knop_tekst'];
+    $contact_tekst = $action_info['contact_tekst'];
+    $knop_url = $action_info['knop_url'];
 
     switch ($action) {
         case 'CONTACT_ORGANIZATIONS':
@@ -77,11 +81,18 @@ if ($action) {
 
             <?php if ($action_instructies): ?>
                 <p><?php echo htmlspecialchars($action_instructies); ?></p>
+                <a href="<?php echo htmlspecialchars($knop_url); ?>" class="button2">
+                    <span class="text2"><?php echo htmlspecialchars($knop_tekst); ?></span>
+                </a>
+                <p><?php echo htmlspecialchars($contact_tekst); ?></p>
                 <?php if ($organisaties): ?>
                     <ul>
                         <?php foreach ($organisaties as $organisatie): ?>
                             <li>
-                                <a href="<?php echo htmlspecialchars($organisatie['url']); ?>"><?php echo htmlspecialchars($organisatie['naam']); ?></a>
+                                <a href="<?php echo htmlspecialchars($organisatie->getKnopUrl()); ?>" class="button2">
+                                    <span class="text2"><?php echo htmlspecialchars($organisatie->getKnopTekst()); ?></span>
+                                </a>
+                                <p><?php echo htmlspecialchars($organisatie->getContactTekst()); ?></p>
                             </li>
                         <?php endforeach; ?>
                     </ul>
