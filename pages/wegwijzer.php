@@ -55,9 +55,9 @@ if ($action) {
     <div class="container">
         <h3>Mijn wegwijzer</h3>
         <h2><?php echo htmlspecialchars($thema->getNaam()); ?></h2>
-        <div id="vraag-container">
+        <div  class="blauwe-kader" id="vraag-container">
             <?php if ($vraag): ?>
-                <div class="blauwe-kader">
+                <div class="vraag-content">
                     <p><?php echo htmlspecialchars($vraag['vraag_tekst']); ?></p>
                     <?php if ($antwoorden): ?>
                         <form id="antwoord-form">
@@ -80,6 +80,7 @@ if ($action) {
             <?php endif; ?>
 
             <?php if ($action_instructies): ?>
+                <div class="antwoord-content">
                 <p><?php echo htmlspecialchars($action_instructies); ?></p>
                 <a href="<?php echo htmlspecialchars($knop_url); ?>" class="button2">
                     <span class="text2"><?php echo htmlspecialchars($knop_tekst); ?></span>
@@ -99,6 +100,7 @@ if ($action) {
                 <?php endif; ?>
                 <button onclick="location.href='wegwijzer.php?thema_id=<?php echo $thema_id; ?>'">Mijn wegwijzer</button>
                 <button onclick="location.href='../dashboard.php'">Beginscherm</button>
+                </div>
             <?php endif; ?>
         </div>
     </div>
