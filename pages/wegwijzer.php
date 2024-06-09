@@ -42,7 +42,7 @@ if ($action) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?php echo htmlspecialchars($thema->getNaam()); ?> - Wegwijzer</title>
     <link rel="stylesheet" href="../css/nav.css?48987">
-    <link rel="stylesheet" href="../css/wegwijzer.css?89095">
+    <link rel="stylesheet" href="../css/wegwijzer.css?89795">
     <link rel="stylesheet" href="../css/shared.css?18845">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 </head>
@@ -87,7 +87,7 @@ if ($action) {
                     </ul>
                 <?php endif; ?>
                 <button onclick="location.href='wegwijzer.php?thema_id=<?php echo $thema_id; ?>'">Mijn wegwijzer</button>
-                <button onclick="location.href='index.php'">Beginscherm</button>
+                <button onclick="location.href='../dashboard.php'">Beginscherm</button>
             <?php endif; ?>
         </div>
     </div>
@@ -98,7 +98,7 @@ if ($action) {
 
         antwoordForm.addEventListener('change', function() {
             volgendeBtn.disabled = false;
-            volgendeBtn.style.backgroundColor = 'green'; // Change button color when an answer is selected
+            volgendeBtn.classList.add('volgende-btn');
         });
 
         volgendeBtn.addEventListener('click', function(event) {
