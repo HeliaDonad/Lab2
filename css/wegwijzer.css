@@ -53,6 +53,9 @@ button {
     margin-bottom: 20px;
     cursor: pointer;
     font-weight: bold;
+    position: absolute; 
+    right: 20px; 
+    bottom: 20px; 
 }
 
 /* Stijlen voor de inactieve staat van de 'Volgende' knop */
@@ -62,7 +65,6 @@ button {
     justify-content: center;
     background-color: #EFF0F1; 
     color: #B1B1B1; 
-    /*opacity: 0.2;*/
     border: none; 
     border-radius: 5px;
     padding: 10px 20px;
@@ -70,6 +72,9 @@ button {
     margin-bottom: 20px;
     cursor: not-allowed; 
     font-weight: bold;
+    position: absolute; 
+    right: 20px; 
+    bottom: 20px; 
 }
 
 .blauwe-kader {
@@ -78,6 +83,7 @@ button {
     padding: 20px;
     border-radius: 20px;
     margin-bottom: 40px;
+    position: relative; 
 }
 
 .vraag-content{
@@ -90,8 +96,12 @@ button {
 
 label.antwoord-label{
     color: white;
+    margin-bottom: 50px; 
 }
 
+input.antwoord-selector {
+    margin-bottom: 20px; 
+}
 
 @media only screen and (min-width: 768px) {
     h2 {
