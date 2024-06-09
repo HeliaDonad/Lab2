@@ -80,7 +80,9 @@ if ($action) {
                 <?php if ($organisaties): ?>
                     <ul>
                         <?php foreach ($organisaties as $organisatie): ?>
-                            <li><?php echo htmlspecialchars($organisatie['naam']); ?>: <a href="<?php echo htmlspecialchars($organisatie['url']); ?>"><?php echo htmlspecialchars($organisatie['url']); ?></a></li>
+                            <li>
+                                <a href="<?php echo htmlspecialchars($organisatie['url']); ?>"><?php echo htmlspecialchars($organisatie['naam']); ?></a>
+                            </li>
                         <?php endforeach; ?>
                     </ul>
                 <?php endif; ?>
