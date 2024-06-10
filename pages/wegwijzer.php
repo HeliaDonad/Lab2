@@ -48,7 +48,6 @@ if ($action) {
     <link rel="stylesheet" href="../css/nav.css">
     <link rel="stylesheet" href="../css/wegwijzer.css">
     <link rel="stylesheet" href="../css/shared.css">
-    <link rel="stylesheet" href="../css/styles.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 </head>
 <body>

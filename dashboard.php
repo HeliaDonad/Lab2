@@ -96,7 +96,7 @@ if ($selectedFilterId === null || $selectedFilterId === '') {
     <h2>Eerste Hulp Bij Mensenrechten</h2>
     <p>Weet u niet bij welke mensenrechtenorganisatie u terecht kan? Maak gebruik van onze wegwijzer om u naar de juiste organisatie te laten leiden.</p>
     <div class="button-bar">
-        <a href="#" class="button wegwijzer"> 
+        <a href="./pages/grote_wegwijzer.php" class="button wegwijzer"> 
             <span class="text">Mijn wegwijzer</span>
             <img src="images/iconen/mijnwegwijzer.svg" alt="Mijn wegwijzer">
         </a>
