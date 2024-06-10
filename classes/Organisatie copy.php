@@ -69,4 +69,4 @@ class Organisatie {
         return $organisaties;
     }
 }
-?>
+

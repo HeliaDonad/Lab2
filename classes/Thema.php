@@ -55,4 +55,4 @@ class Thema {
         return $this->uitleg;
     }
 }
-?>
+

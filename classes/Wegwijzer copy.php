@@ -37,4 +37,4 @@ class Wegwijzer {
         return Organisatie::getSpecificOrganisaties($conn);
     }
 }
-?>
+

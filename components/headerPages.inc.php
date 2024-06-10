@@ -10,9 +10,9 @@
     <ul class="subnav">
         <li><a href="../dashboard.php">Mijn mensenrechten</a></li>
         <li><a href="../pages/thema2.php">Thema's</a></li>
-        <li><a href="#">Zittingen</a></li>
-        <li><a href="#">Vrijwilligerswerk</a></li>
-        <li><a href="#">Activiteiten</a></li>
+        <li><a href="../pages/zittingen.php">Zittingen</a></li>
+        <li><a href="../pages/vrijwilligerswerk.php">Vrijwilligerswerk</a></li>
+        <li><a href="../pages/activiteiten.php">Activiteiten</a></li>
         <li><a href="#">Contact</a></li>
     </ul>
 </nav>

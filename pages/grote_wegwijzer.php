@@ -21,13 +21,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if (empty($vraag2)) {
         $showVraag2 = true;
     } else {
-        // Voeg het thema-ID direct toe aan de URL
         header("Location: wegwijzer.php?thema_id=1");
         exit;
     }
 }
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>

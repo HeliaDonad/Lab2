@@ -35,4 +35,4 @@ class Thema2 {
         return $result['icoon'];
     }
 }
-?>
+
