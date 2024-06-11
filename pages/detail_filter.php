@@ -26,7 +26,7 @@ $row = $stmt->fetch(PDO::FETCH_ASSOC);
 $thema = new Thema($row['id'], $row['naam'], null, $row['uitleg']);
 
 //ThemaOrganisatie & Organisatie classes
-$query = "SELECT organisaties.id, organisaties.naam, organisaties.url, organisaties.body_tekst, organisaties.knop_url, organisaties.knop_tekst, organisaties.contact_tekst
+$query = "SELECT organisaties.id, organisaties.naam, organisaties.url, organisaties.body_tekst, organisaties.knop_url, organisaties.knop_tekst, organisaties.contact_tekst, organisaties.contact_url
           FROM organisaties 
           JOIN thema_organisatie to2 ON organisaties.id = to2.organisatie_id 
           JOIN organisatie_filters ofil ON organisaties.id = ofil.organisatie_id 
@@ -37,7 +37,7 @@ $stmt->bindParam(":filter_id", $filter_id, PDO::PARAM_INT);
 $stmt->execute();
 $organisaties = [];
 while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
-    $organisaties[] = new Organisatie($row['id'], $row['naam'], $row['url'], $row['body_tekst'], $row['knop_url'], $row['knop_tekst'], $row['contact_tekst']);
+    $organisaties[] = new Organisatie($row['id'], $row['naam'], $row['url'], $row['body_tekst'], $row['knop_url'], $row['knop_tekst'], $row['contact_tekst'], $row['contact_url']);
 }
 ?>
 <!DOCTYPE html>
@@ -72,7 +72,9 @@ while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
             <a href="<?php echo htmlspecialchars($organisatie->getKnopUrl()); ?>" class="button2">
                 <span class="text2"><?php echo htmlspecialchars($organisatie->getKnopTekst()); ?></span>
             </a>
-            <p><?php echo htmlspecialchars($organisatie->getContactTekst()); ?></p>
+            <a href="<?php echo htmlspecialchars($organisatie->getContactUrl()); ?>">
+                <p><?php echo htmlspecialchars($organisatie->getContactTekst()); ?></p>
+            </a>
             </div>
         <?php endforeach; ?>
     </div>
