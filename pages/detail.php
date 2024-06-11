@@ -34,7 +34,7 @@ $stmt->bindParam(":thema_id", $thema_id, PDO::PARAM_INT);
 $stmt->execute();
 $organisaties = [];
 while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
-    $organisaties[] = new Organisatie($row['id'], $row['naam'], $row['url'], $row['body_tekst'], $row['knop_url'], $row['knop_tekst'], $row['contact_tekst']);
+    $organisaties[] = new Organisatie($row['id'], $row['naam'], $row['url'], $row['body_tekst'], $row['knop_url'], $row['knop_tekst'], $row['contact_tekst'], $row['contact_url']);
 }
 ?>
 <!DOCTYPE html>
@@ -69,7 +69,9 @@ while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
                 <a href="<?php echo htmlspecialchars($organisatie->getKnopUrl()); ?>" class="button2">
                     <span class="text2"><?php echo htmlspecialchars($organisatie->getKnopTekst()); ?></span>
                 </a>
-                <p><?php echo htmlspecialchars($organisatie->getContactTekst()); ?></p>
+                <a href="<?php echo htmlspecialchars($organisatie->getContactUrl()); ?>">
+                    <p><?php echo htmlspecialchars($organisatie->getContactTekst()); ?></p>
+                </a>
             </div>
         <?php endforeach; ?>
     </div>

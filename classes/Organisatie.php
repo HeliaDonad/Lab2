@@ -10,8 +10,9 @@ class Organisatie {
     private $knop_url;
     private $knop_tekst;
     private $contact_tekst;
+    private $contact_url;
 
-    public function __construct($id, $naam, $url, $body_tekst, $knop_url, $knop_tekst, $contact_tekst) {
+    public function __construct($id, $naam, $url, $body_tekst, $knop_url, $knop_tekst, $contact_tekst, $contact_url) {
         $this->id = $id;
         $this->naam = $naam;
         $this->url = $url;
@@ -19,6 +20,7 @@ class Organisatie {
         $this->knop_url = $knop_url;
         $this->knop_tekst = $knop_tekst;
         $this->contact_tekst = $contact_tekst;
+        $this->contact_url = $contact_url;
     }
 
     public function getId() {
@@ -47,5 +49,9 @@ class Organisatie {
 
     public function getContactTekst() {
         return $this->contact_tekst;
+    }
+
+    public function getContactUrl() {
+        return $this->contact_url;
     }
 }
