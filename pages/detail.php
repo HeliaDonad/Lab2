@@ -25,7 +25,7 @@ $row = $stmt->fetch(PDO::FETCH_ASSOC);
 $thema = new Thema($row['id'], $row['naam'], null, $row['uitleg']);
 
 // ThemaOrganisatie & Organisatie classes
-$query = "SELECT organisaties.id, organisaties.naam, organisaties.url, organisaties.body_tekst, organisaties.knop_url, organisaties.knop_tekst, organisaties.contact_tekst
+$query = "SELECT organisaties.id, organisaties.naam, organisaties.url, organisaties.body_tekst, organisaties.knop_url, organisaties.knop_tekst, organisaties.contact_tekst, organisaties.contact_url
           FROM organisaties 
           JOIN thema_organisatie to2 ON organisaties.id = to2.organisatie_id 
           WHERE to2.thema_id = :thema_id";
@@ -70,7 +70,7 @@ while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
                     <span class="text2"><?php echo htmlspecialchars($organisatie->getKnopTekst()); ?></span>
                 </a>
                 <a href="<?php echo htmlspecialchars($organisatie->getContactUrl()); ?>">
-                    <span><?php echo htmlspecialchars($organisatie->getContactTekst()); ?></span>
+                    <p><?php echo htmlspecialchars($organisatie->getContactTekst()); ?></p>
                 </a>
             </div>
         <?php endforeach; ?>
