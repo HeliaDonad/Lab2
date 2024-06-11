@@ -70,7 +70,7 @@ while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
                     <span class="text2"><?php echo htmlspecialchars($organisatie->getKnopTekst()); ?></span>
                 </a>
                 <a href="<?php echo htmlspecialchars($organisatie->getContactUrl()); ?>">
-                    <p><?php echo htmlspecialchars($organisatie->getContactTekst()); ?></p>
+                    <span><?php echo htmlspecialchars($organisatie->getContactTekst()); ?></span>
                 </a>
             </div>
         <?php endforeach; ?>
