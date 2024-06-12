@@ -35,9 +35,10 @@ $currentFile = basename($_SERVER['SCRIPT_FILENAME'], '.php');
         <div class="action-icon"><i class="material-icons">notifications</i></div>
         <!--<div class="action-icon"><i class="material-icons">settings</i></div>-->
         <div class="action-icon"><i class="material-icons">account_circle</i></div>
-        <a href="/LAB2/signin_login_logout/logout.php">Log Out</a>
+        <a href="../signin_login_logout/logout.php">Log Out</a>
     <?php else: ?>
-        <a href="/LAB2/signin_login_logout/login.php">Log In</a>
+        <a class="login-button" href="../signin_login_logout/login.php">Log In</a>
+        <a class="signin-button" href="../signin_login_logout/signin.php">Aanmelden</a>
     <?php endif; ?>
 </div>
 </header>

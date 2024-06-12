@@ -91,7 +91,7 @@ header {
 
 .subnav li {
     border-top: 1px solid var(--main-color);
-    padding: 1.68em;
+    padding: 1.2em;
 }
 
 .subnav a {
@@ -136,6 +136,24 @@ li {
     color: var(--background-color); 
 }
 */
+
+.login-button,
+.signin-button {
+    padding: 10px 20px;
+    background-color: white;
+    color: var(--main-color);
+    text-decoration: none;
+    border-radius: 20px;
+    margin-right: 10px;
+    border: 2px solid var(--main-color);
+}
+
+.login-button:hover,
+.signin-button:hover {
+    background-color: var(--main-color);
+    color: white;
+}
+
 
 @media only screen and (min-width: 1025px) {
     .burger {

@@ -24,7 +24,7 @@ while ($row = $result_themas->fetch(PDO::FETCH_ASSOC)) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Eerste Hulp Bij Mensenrechten</title>
-    <link rel="stylesheet" href="../css/nav.css?17395">
+    <link rel="stylesheet" href="../css/nav.css?55677">
     <link rel="stylesheet" href="../css/dashboard.css?95849">
     <link rel="stylesheet" href="../css/shared.css?18385">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
