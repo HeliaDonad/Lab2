@@ -5,8 +5,8 @@ $currentFile = basename($_SERVER['SCRIPT_FILENAME'], '.php');
 <!--<link rel="stylesheet" href="../css/nav.css">-->
 <header>
 <nav>
-    <a class="logo" href="./dashboard.php">
-        <img src="images/general/logo.svg" alt="logo">
+    <a class="logo" href="../dashboard.php">
+        <img src="../images/general/logo.svg" alt="logo">
     </a>
     <label class="burger" for="burger">&#9776;</label>
     <label class="close" for="burger">&times;</label>
