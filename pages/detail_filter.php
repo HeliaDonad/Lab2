@@ -23,7 +23,7 @@ $stmt = $conn->prepare($query);
 $stmt->bindParam(":thema_id", $thema_id, PDO::PARAM_INT);
 $stmt->execute();
 $row = $stmt->fetch(PDO::FETCH_ASSOC);
-$thema = new Thema($row['id'], $row['naam'], null, $row['uitleg']);
+$thema = new Thema($row['id'], $row['naam'], null, $row['uitleg'], null);
 
 // ThemaOrganisatie & Organisatie classes
 $query = "SELECT organisaties.id, organisaties.naam, organisaties.url, organisaties.body_tekst, organisaties.knop_url, organisaties.knop_tekst, organisaties.contact_tekst, organisaties.contact_url

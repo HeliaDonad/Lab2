@@ -157,6 +157,8 @@ h2 {
         align-items: center;
         justify-content: center;
         padding: 20px;
+        transition: transform 0.6s;
+        transform-style: preserve-3d;
     }
     
     .button .text {
@@ -170,6 +172,42 @@ h2 {
         margin-bottom: 10px;
         margin-top: 15px;
     }
+
+.button:not(.wegwijzer)::before {
+    content: attr(data-hover); /* Gebruik de waarde van data-hover als inhoud van ::before */
+    font-size: 8px;
+    position: absolute;
+    height: 85%;
+    display: none; /* Verberg het pseudo-element standaard */
+    align-items: center;
+    justify-content: center;
+    padding: 10px 20px;
+    background-color: var(--background-color);
+    border-radius: 10px;
+    backface-visibility: hidden;
+    font-weight: 500;
+    color: var(--main-color);
+    transition: transform 0.6s;
+    /*transform: rotateY(0deg);*/
+    z-index: 1; /* Zorg ervoor dat de hover-text bovenop de text wordt weergegeven */
+    visibility: hidden; /* Verberg het pseudo-element standaard */
+    opacity: 0;
+    font-size: 10px;
+    margin: 10px 0px;
+    text-align: center;
+}
+
+.button:not(.wegwijzer):hover::before {
+    display: flex; /* Toon het pseudo-element bij hover */
+    visibility: visible; /* Toon het pseudo-element bij hover */
+    opacity: 1; /* Maak het pseudo-element volledig zichtbaar */
+}
+
+/*.button:not(.wegwijzer):hover {
+    transform: rotateY(360deg);
+}*/
+
+
 }
 
 @media only screen and (max-width: 499px){

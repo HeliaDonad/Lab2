@@ -6,12 +6,14 @@ class Thema {
     private $naam;
     private $icoon;
     private $uitleg;
+    private $hover;
 
-    public function __construct($id, $naam, $icoon, $uitleg) {
+    public function __construct($id, $naam, $icoon, $uitleg, $hover) {
         $this->id = $id;
         $this->naam = $naam;
         $this->icoon = $icoon;
         $this->uitleg = $uitleg;
+        $this->hover = $hover;
     }
 
     public static function getThemaById($thema_id) {
@@ -22,7 +24,7 @@ class Thema {
         $stmt->execute();
         $row = $stmt->fetch(PDO::FETCH_ASSOC);
         if ($row) {
-            return new Thema($row['id'], $row['naam'], $row['icoon'], $row['uitleg']);
+            return new Thema($row['id'], $row['naam'], $row['icoon'], $row['uitleg'], $row['hover']);
         } else {
             return null; // Als het thema niet wordt gevonden, retourneer null
         }
@@ -53,6 +55,10 @@ class Thema {
 
     public function getUitleg() {
         return $this->uitleg;
+    }
+
+    public function getHover() {
+        return $this->hover;
     }
 }
 

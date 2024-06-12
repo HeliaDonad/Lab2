@@ -2,11 +2,6 @@
 include_once(__DIR__ . DIRECTORY_SEPARATOR . "./classes/Db.php");
 include_once(__DIR__ . DIRECTORY_SEPARATOR . "./classes/Thema.php");
 
-/*session_start();
-if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
-    exit("NO SESSION");
-}*/
-
 $conn = Db::getConnection();
 
 // Query voor het ophalen van filters
@@ -35,11 +30,11 @@ if ($selectedFilterId === null || $selectedFilterId === '') {
     $result_themas = $conn->query($query_themas);
     $themas = [];
     while ($row = $result_themas->fetch(PDO::FETCH_ASSOC)) {
-        $themas[] = new Thema($row['id'], $row['naam'], $row['icoon'], null);
+        $themas[] = new Thema($row['id'], $row['naam'], $row['icoon'], null, $row['hover']);
     }
 } else {
     // Query voor het ophalen van gefilterde thema's
-    $query = "SELECT t.id, t.naam, t.icoon 
+    $query = "SELECT t.id, t.naam, t.icoon, t.hover 
               FROM themas t 
               LEFT JOIN thema_organisatie to2 ON t.id = to2.thema_id 
               LEFT JOIN organisatie_filters ofil ON to2.organisatie_id = ofil.organisatie_id 
@@ -52,11 +47,10 @@ if ($selectedFilterId === null || $selectedFilterId === '') {
     $stmt->execute();
     $themas = [];
     while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
-        $themas[] = new Thema($row['id'], $row['naam'], $row['icoon'], null);
+        $themas[] = new Thema($row['id'], $row['naam'], $row['icoon'], null, $row['hover']);
     }
 }
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -64,7 +58,7 @@ if ($selectedFilterId === null || $selectedFilterId === '') {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Eerste Hulp Bij Mensenrechten</title>
     <link rel="stylesheet" href="css/nav.css?18935">
-    <link rel="stylesheet" href="css/dashboard.css?75849">
+    <link rel="stylesheet" href="css/dashboard.css?65849">
     <link rel="stylesheet" href="css/shared.css?18385">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 </head>
@@ -76,9 +70,6 @@ if ($selectedFilterId === null || $selectedFilterId === '') {
 
 <!-- Filter Section -->
 <div class="filter-container">
-    <!--<div class="search-box">
-        <input type="text" placeholder="Zoeken...">
-    </div>-->
     <form method="post" class="form-buttons">
         <div class="select-box">
             <select name="selectedFilterId">
@@ -102,14 +93,14 @@ if ($selectedFilterId === null || $selectedFilterId === '') {
         </a>
         <?php foreach ($themas as $thema): ?>
             <?php if ($selectedFilterId): ?>
-                <a href="./pages/detail_filter.php?thema_id=<?php echo $thema->getId(); ?>&filter_id=<?php echo $selectedFilterId; ?>" class="button"> 
+                <a href="./pages/detail_filter.php?thema_id=<?php echo $thema->getId(); ?>&filter_id=<?php echo $selectedFilterId; ?>" class="button" data-hover="<?php echo htmlspecialchars($thema->getHover()); ?>"> 
                     <span class="text"><?php echo htmlspecialchars($thema->getNaam()); ?></span>
                     <img src="data:image/svg+xml;base64,<?php echo base64_encode($thema->getIcoonData()); ?>" alt="<?php echo htmlspecialchars($thema->getNaam()); ?>"> 
                 </a>
             <?php else: ?>
-                <a href="./pages/detail.php?thema_id=<?php echo $thema->getId(); ?>" class="button"> 
+                <a href="./pages/detail.php?thema_id=<?php echo $thema->getId(); ?>" class="button" data-hover="<?php echo htmlspecialchars($thema->getHover()); ?>"> 
                     <span class="text"><?php echo htmlspecialchars($thema->getNaam()); ?></span>
-                    <img src="data:image/svg+xml;base64,<?php echo base64_encode($thema->getIcoonData()); ?>" alt="<?php echo htmlspecialchars($thema->getNaam()); ?>"> 
+                    <img src="data:image/svg+xml;base64,<?php echo base64_encode($thema->getIcoonData()); ?>" alt="<?php echo htmlspecialchars($thema->getNaam()); ?>">
                 </a>
             <?php endif; ?>
         <?php endforeach; ?>
