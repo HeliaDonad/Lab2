@@ -2,10 +2,10 @@
 include_once(__DIR__ . DIRECTORY_SEPARATOR . "./classes/Db.php");
 include_once(__DIR__ . DIRECTORY_SEPARATOR . "./classes/Thema.php");
 
-session_start();
+/*session_start();
 if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
     exit("NO SESSION");
-}
+}*/
 
 $conn = Db::getConnection();
 

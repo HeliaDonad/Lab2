@@ -4,10 +4,10 @@ include_once(__DIR__ . DIRECTORY_SEPARATOR . "../classes/Thema.php");
 include_once(__DIR__ . DIRECTORY_SEPARATOR . "../classes/Organisatie.php");
 include_once(__DIR__ . DIRECTORY_SEPARATOR . "../classes/Thema_Organisatie.php");
 
-session_start();
+/*session_start();
 if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
     exit("NO SESSION");
-}
+}*/
 
 if (!isset($_GET['thema_id']) || !isset($_GET['filter_id'])) {
     exit("Thema ID of filter ID niet opgegeven");

@@ -1,10 +1,10 @@
 <?php
 include_once(__DIR__ . DIRECTORY_SEPARATOR . "../classes/Db.php");
 
-session_start();
+/*session_start();
 if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
     exit("NO SESSION");
-}
+}*/
 
 $showVraag2 = false;
 
