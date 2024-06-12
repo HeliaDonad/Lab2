@@ -8,16 +8,29 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
     exit("NO SESSION");
 }
 
-if (!isset($_GET['thema_id']) || !isset($_GET['filter_id'])) {
-    exit("Thema ID of filter ID niet opgegeven");
+if (!isset($_GET['thema_id'])) {
+    exit("Thema ID niet opgegeven");
 }
 
 $thema_id = intval($_GET['thema_id']);
-$filter_id = intval($_GET['filter_id']);
-$vraag_id = isset($_GET['vraag_id']) ? intval($_GET['vraag_id']) : 1;
 
 $conn = Db::getConnection();
 $thema = Thema::getThemaById($thema_id);
+
+// Haal het filter-id op uit de database
+$query = "SELECT filter_id FROM organisatie_filters WHERE id = 1"; // Aanpassen aan jouw situatie
+$stmt = $conn->prepare($query);
+$stmt->execute();
+$filter_row = $stmt->fetch(PDO::FETCH_ASSOC);
+
+// Controleer of het filter-id gelijk is aan 1
+if (!$filter_row || $filter_row['filter_id'] != 1) {
+    exit("Filter ID is niet geldig");
+}
+
+$filter_id = 1; // Als het filter-id overeenkomt, stel het filter-id handmatig in op 1
+
+$vraag_id = isset($_GET['vraag_id']) ? intval($_GET['vraag_id']) : 1;
 
 $vraag = Wegwijzer::getVraagByIdAndThemaId($vraag_id, $thema_id, $filter_id);
 $antwoorden = Wegwijzer::getAntwoordenByVraagId($vraag_id, $filter_id);
