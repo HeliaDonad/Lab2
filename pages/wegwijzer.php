@@ -23,12 +23,11 @@ $stmt = $conn->prepare($query);
 $stmt->execute();
 $filter_row = $stmt->fetch(PDO::FETCH_ASSOC);
 
-// Controleer of het filter-id gelijk is aan 1
-if (!$filter_row || $filter_row['filter_id'] != 1) {
+// Controleer of het filter-id in de database overeenkomt met het filter-id in de URL
+$filter_id = isset($_GET['filter_id']) ? intval($_GET['filter_id']) : null;
+if (!$filter_row || $filter_row['filter_id'] != $filter_id) {
     exit("Filter ID is niet geldig");
 }
-
-$filter_id = 1; // Als het filter-id overeenkomt, stel het filter-id handmatig in op 1
 
 $vraag_id = isset($_GET['vraag_id']) ? intval($_GET['vraag_id']) : 1;
 
