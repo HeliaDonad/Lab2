@@ -8,12 +8,12 @@
     <label class="close" for="burger">&times;</label>
     <input type="checkbox" id="burger">
     <ul class="subnav">
-        <li><a href="../dashboard.php">Mijn mensenrechten</a></li>
-        <li><a href="../pages/thema2.php">Thema's</a></li>
-        <li><a href="../pages/zittingen.php">Zittingen</a></li>
-        <li><a href="../pages/vrijwilligerswerk.php">Vrijwilligerswerk</a></li>
-        <li><a href="../pages/activiteiten.php">Activiteiten</a></li>
-        <li><a href="#">Contact</a></li>
+    <li <?php if (strpos($_SERVER['REQUEST_URI'], 'dashboard.php') !== false) echo 'class="active"'; ?>><a href="../dashboard.php">Mijn mensenrechten</a></li>
+            <li <?php if (strpos($_SERVER['REQUEST_URI'], 'thema2.php') !== false) echo 'class="active"'; ?>><a href="../pages/thema2.php">Thema's</a></li>
+            <li <?php if (strpos($_SERVER['REQUEST_URI'], 'zittingen.php') !== false) echo 'class="active"'; ?>><a href="../pages/zittingen.php">Zittingen</a></li>
+            <li <?php if (strpos($_SERVER['REQUEST_URI'], 'vrijwilligerswerk.php') !== false) echo 'class="active"'; ?>><a href="../pages/vrijwilligerswerk.php">Vrijwilligerswerk</a></li>
+            <li <?php if (strpos($_SERVER['REQUEST_URI'], 'activiteiten.php') !== false) echo 'class="active"'; ?>><a href="../pages/activiteiten.php">Activiteiten</a></li>
+            <li><a href="#">Contact</a></li>
     </ul>
 </nav>
 <div class="actions">
