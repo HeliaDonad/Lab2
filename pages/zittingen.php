@@ -18,9 +18,9 @@ while ($row = $result_zittingen->fetch(PDO::FETCH_ASSOC)) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wegwijzer - Grote Wegwijzer</title>
+    <title>Zittingen</title>
     <link rel="stylesheet" href="../css/nav.css?48593">
-    <link rel="stylesheet" href="../css/zittingen.css?29498">
+    <link rel="stylesheet" href="../css/zittingen.css?29998">
     <link rel="stylesheet" href="../css/shared.css?88988">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 </head>
