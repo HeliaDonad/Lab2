@@ -8,17 +8,19 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
     exit("NO SESSION");
 }
 
-if (!isset($_GET['thema_id'])) {
-    exit("Thema ID niet opgegeven");
+if (!isset($_GET['thema_id']) || !isset($_GET['filter_id'])) {
+    exit("Thema ID of filter ID niet opgegeven");
 }
 
 $thema_id = intval($_GET['thema_id']);
+$filter_id = intval($_GET['filter_id']);
+$vraag_id = isset($_GET['vraag_id']) ? intval($_GET['vraag_id']) : 1;
+
 $conn = Db::getConnection();
 $thema = Thema::getThemaById($thema_id);
 
-$vraag_id = isset($_GET['vraag_id']) ? intval($_GET['vraag_id']) : 1; // Start with the first vraag
-$vraag = Wegwijzer::getVraagByIdAndThemaId($vraag_id, $thema_id);
-$antwoorden = Wegwijzer::getAntwoordenByVraagId($vraag_id, $conn);
+$vraag = Wegwijzer::getVraagByIdAndThemaId($vraag_id, $thema_id, $filter_id);
+$antwoorden = Wegwijzer::getAntwoordenByVraagId($vraag_id, $filter_id);
 
 $action = isset($_GET['action']) ? $_GET['action'] : null;
 $action_instructies = null;
@@ -38,7 +40,6 @@ if ($action) {
     }
 }
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -66,14 +67,14 @@ if ($action) {
                                     $volgende_vraag_id = $antwoord['volgende_vraag_id'] ? '&vraag_id=' . $antwoord['volgende_vraag_id'] : '';
                                     $action_param = $antwoord['action'] ? '&action=' . $antwoord['action'] : '';
                                 ?>
-                                <input type="radio" id="antwoord-<?php echo $antwoord['id']; ?>" class="antwoord-selector" name="antwoord" value="<?php echo $volgende_vraag_id . $action_param; ?>">
+                                <input type="radio" id="antwoord-<?php echo $antwoord['id']; ?>" class="antwoord-selector" name="antwoord" value="<?php echo $volgende_vraag_id . $action_param . '&filter_id=' . $filter_id; ?>">
                                 <label for="antwoord-<?php echo $antwoord['id']; ?>" class="antwoord-label"><?php echo htmlspecialchars($antwoord['antwoord_tekst']); ?></label><br>
                             <?php endforeach; ?>
                         </form>
                         <button id="volgende-btn" disabled>Volgende</button>
                     <?php else: ?>
                         <p>Geen verdere vragen beschikbaar.</p>
-                        <button onclick="location.href='wegwijzer.php?thema_id=<?php echo $thema_id; ?>'">Mijn wegwijzer</button>
+                        <button onclick="location.href='wegwijzer.php?thema_id=<?php echo $thema_id; ?>&filter_id=<?php echo $filter_id; ?>'">Mijn wegwijzer</button>
                         <button onclick="location.href='index.php'">Beginscherm</button>
                     <?php endif; ?>
                 </div>
@@ -97,7 +98,7 @@ if ($action) {
                             <?php endforeach; ?>
                         </ul>
                     <?php endif; ?>
-                    <button onclick="location.href='wegwijzer.php?thema_id=<?php echo $thema_id; ?>'">Mijn wegwijzer</button>
+                    <button onclick="location.href='wegwijzer.php?thema_id=<?php echo $thema_id; ?>&filter_id=<?php echo $filter_id; ?>'">Mijn wegwijzer</button>
                     <button onclick="location.href='../dashboard.php'">Beginscherm</button>
                 </div>
             <?php endif; ?>
@@ -117,7 +118,7 @@ if ($action) {
                 event.preventDefault();
                 const selectedAntwoord = antwoordForm.querySelector('input[name="antwoord"]:checked');
                 if (selectedAntwoord) {
-                    window.location.href = `wegwijzer.php?thema_id=<?php echo $thema_id; ?>${selectedAntwoord.value}`;
+                    window.location.href = `wegwijzer.php?thema_id=<?php echo $thema_id; ?>&filter_id=<?php echo $filter_id; ?>${selectedAntwoord.value}`;
                 } else {
                     alert('Selecteer eerst een antwoord.');
                 }

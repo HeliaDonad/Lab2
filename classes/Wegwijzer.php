@@ -11,7 +11,7 @@ class Wegwijzer {
         $stmt->bindParam(":thema_id", $thema_id, PDO::PARAM_INT);
         $stmt->execute();
         return $stmt->fetch(PDO::FETCH_ASSOC);
-    }    
+    }
 
     public static function getAntwoordenByVraagId($vraag_id) {
         $conn = Db::getConnection();
@@ -39,4 +39,3 @@ class Wegwijzer {
         return $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
 }
-
