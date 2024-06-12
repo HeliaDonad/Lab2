@@ -13,7 +13,7 @@
     --font-size-h1: 2rem;
     --font-size-h2: 1.5rem;
     --font-size-h3: 1.25rem;
-    --font-size-body: 1rem;
+    /*--font-size-body: 1rem;*/
     --font-size-small: 0.875rem;
 
     --font-size-h1-mobile: 2rem;
@@ -47,9 +47,9 @@ h1 {
     font-size: var(--font-size-h2);
 }*/
 
-h3 {
+/*h3 {
     font-size: var(--font-size-h3);
-}
+}*/
 
 h4 {
     font-size: var(--font-size-h4);

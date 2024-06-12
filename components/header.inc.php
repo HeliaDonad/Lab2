@@ -35,7 +35,7 @@ $currentFile = basename($_SERVER['SCRIPT_FILENAME'], '.php');
         <div class="action-icon"><i class="material-icons">notifications</i></div>
         <!--<div class="action-icon"><i class="material-icons">settings</i></div>-->
         <div class="action-icon"><i class="material-icons">account_circle</i></div>
-        <a href="./signin_login_logout/logout.php">Log Out</a>
+        <a class="logout-button" href="./signin_login_logout/logout.php">Log Out</a>
     <?php else: ?>
         <a class="login-button" href="./signin_login_logout/login.php">Log In</a>
         <a class="signin-button" href="./signin_login_logout/signin.php">Aanmelden</a>
