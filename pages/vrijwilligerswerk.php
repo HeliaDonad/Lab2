@@ -38,11 +38,33 @@
         </div>
 
         <div id="interesses-filter" class="filter-content">
-            <!-- Interests filter content will be populated with JavaScript -->
-        <div class="form-buttons">
-            <button class="save-button">Opslaan</button>
-        </div>
-        </div>
+    <label><input type="checkbox" name="interesses" value="1"> Discriminatie</label>
+    <label><input type="checkbox" name="interesses" value="2"> Racisme</label>
+    <label><input type="checkbox" name="interesses" value="3"> Persoonsgegevens</label>
+    <label><input type="checkbox" name="interesses" value="4"> Kinderrechten</label>
+    <label><input type="checkbox" name="interesses" value="5"> Publieke en private ombudsmannen</label>
+    <label><input type="checkbox" name="interesses" value="6"> Migranten</label>
+    <label><input type="checkbox" name="interesses" value="7"> Gevangenis</label>
+    <label><input type="checkbox" name="interesses" value="8"> Politie</label>
+    <label><input type="checkbox" name="interesses" value="9"> Mindervaliden</label>
+    <label><input type="checkbox" name="interesses" value="10"> Ouderen</label>
+    <label><input type="checkbox" name="interesses" value="11"> Gendergelijkheid</label>
+    <label><input type="checkbox" name="interesses" value="12"> Armoede</label>
+    <label><input type="checkbox" name="interesses" value="13"> Wonen</label>
+    <label><input type="checkbox" name="interesses" value="14"> LGBTI(QIA)+</label>
+    <label><input type="checkbox" name="interesses" value="15"> Daklozen</label>
+    <label><input type="checkbox" name="interesses" value="16"> Frans-Duitse gemeenschap</label>
+    <label><input type="checkbox" name="interesses" value="17"> Gezondheid</label>
+    <label><input type="checkbox" name="interesses" value="18"> Klimaat & Milieu</label>
+    <label><input type="checkbox" name="interesses" value="19"> NGO's en Verenigingen</label>
+    <label><input type="checkbox" name="interesses" value="20"> Justitie</label>
+    <label><input type="checkbox" name="interesses" value="21"> Politiek</label>
+    <label><input type="checkbox" name="interesses" value="22"> Andere</label>
+    <label><input type="checkbox" name="interesses" value="24"> Juridisch</label>
+    <div class="form-buttons">
+        <button class="save-button">Opslaan</button>
+    </div>
+</div>
 
         <div id="locatie-filter" class="filter-content">
             <label for="postcode">Postcode of gemeente:</label>
