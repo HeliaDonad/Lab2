@@ -39,6 +39,9 @@
 
         <div id="interesses-filter" class="filter-content">
             <!-- Interests filter content will be populated with JavaScript -->
+        <div class="form-buttons">
+            <button class="save-button">Opslaan</button>
+        </div>
         </div>
 
         <div id="locatie-filter" class="filter-content">
@@ -51,6 +54,9 @@
             <label for="afstand">Maximale afstand:</label>
             <input type="range" id="afstand" name="afstand" min="0" max="50" value="0">
             <span id="afstand-waarde">0km</span>
+            <div class="form-buttons">
+                <button class="save-button">Opslaan</button>
+            </div>
         </div>
 
         <div id="engagement-filter" class="filter-content">
@@ -58,6 +64,9 @@
             <label><input type="checkbox" name="engagement" value="periode"> Bepaalde periode of tijdelijk werken</label>
             <label><input type="checkbox" name="engagement" value="terugkerend"> Terugkerend engagement</label>
             <label><input type="checkbox" name="engagement" value="af-te-spreken"> Af te spreken</label>
+            <div class="form-buttons">
+                <button class="save-button">Opslaan</button>
+            </div>
         </div>
 
         <div id="meer-filters" class="filter-content">
@@ -83,6 +92,9 @@
 
             <label for="datums">Wanneer wil je vrijwilligen?</label>
             <input type="date" id="datums" name="datums">
+            <div class="form-buttons">
+                <button class="save-button">Opslaan</button>
+            </div>
         </div>
     </div>
 

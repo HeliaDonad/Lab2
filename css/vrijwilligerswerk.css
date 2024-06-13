@@ -79,6 +79,7 @@ h2 {
     border-radius: 4px;
     background-color: white;
     margin-bottom: 50px;
+    position: relative; 
 }
 
 .filter-content label {
@@ -91,7 +92,7 @@ h2 {
 .filter-content input[type="range"],
 .filter-content input[type="date"],
 .filter-content select {
-    width: calc(100% - 20px); 
+    width: calc(100% - 10px); 
     padding: 5px;
     margin-bottom: 10px;
     font-size: 12px;
@@ -131,10 +132,25 @@ h2 {
     border: none;
     border-radius: 4px;
     cursor: pointer;
+    text-align: center;
 }
 
 .save-button:hover {
     background-color: var(--main-color-hover);
+}
+
+.filter-content .filter-content-inner {
+    position: relative;
+}
+
+.filter-content .form-buttons .save-button {
+    position: absolute;
+    bottom: 20px; 
+    right: 20px; 
+}
+
+.filter-content .form-buttons{
+    margin-top: 50px;
 }
 
 @media only screen and (min-width: 768px){
