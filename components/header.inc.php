@@ -28,6 +28,13 @@ $currentFile = basename($_SERVER['SCRIPT_FILENAME'], '.php');
             <a href="./pages/activiteiten.php">Activiteiten</a>
         </li>
         <li><a href="#">Contact</a></li>
+
+    <?php if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] === true): ?>
+        <li><a class="logout-button" href="./signin_login_logout/logout.php">Log Out</a></li>
+<?php else: ?>
+    <!-- Hier kunnen eventueel andere links komen voor ingelogd zijn -->
+<?php endif; ?>
+
     </ul>
 </nav>
 <div class="actions">
@@ -35,7 +42,7 @@ $currentFile = basename($_SERVER['SCRIPT_FILENAME'], '.php');
         <div class="action-icon"><i class="material-icons">notifications</i></div>
         <!--<div class="action-icon"><i class="material-icons">settings</i></div>-->
         <div class="action-icon"><i class="material-icons">account_circle</i></div>
-        <a class="logout-button" href="./signin_login_logout/logout.php">Log Out</a>
+        <!-- <a class="logout-button" href="./signin_login_logout/logout.php">Log Out</a> -->
     <?php else: ?>
         <a class="login-button" href="./signin_login_logout/login.php">Log In</a>
         <a class="signin-button" href="./signin_login_logout/signin.php">Aanmelden</a>

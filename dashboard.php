@@ -57,7 +57,7 @@ if ($selectedFilterId === null || $selectedFilterId === '') {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Eerste Hulp Bij Mensenrechten</title>
-    <link rel="stylesheet" href="css/nav.css?18935">
+    <link rel="stylesheet" href="css/nav.css?18938">
     <link rel="stylesheet" href="css/dashboard.css?65849">
     <link rel="stylesheet" href="css/shared.css?18385">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
