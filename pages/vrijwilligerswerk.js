@@ -47,8 +47,28 @@ function fetchInterests() {
         // Mock data, replace with actual AJAX call to fetch data from server
         resolve([
             { id: 1, naam: 'Discriminatie' },
-            { id: 2, naam: 'Milieu' },
-            { id: 3, naam: 'Gezondheid' },
+            { id: 2, naam: 'Racisme' },
+            { id: 3, naam: 'Persoonsgegevens' },
+            { id: 4, naam: 'Kinderrechten' },
+            { id: 5, naam: 'Publieke en private ombudsmannen' },
+            { id: 6, naam: 'Migranten' },
+            { id: 7, naam: 'Gevangenis' },
+            { id: 8, naam: 'Politie' },
+            { id: 9, naam: 'Mindervaliden' },
+            { id: 10, naam: 'Ouderen' },
+            { id: 11, naam: 'Gendergelijkheid' },
+            { id: 12, naam: 'Armoede' },
+            { id: 13, naam: 'Wonen' },
+            { id: 14, naam: 'LGBTI(QIA)+' },
+            { id: 15, naam: 'Daklozen' },
+            { id: 16, naam: 'Frans-Duitse gemeenschap' },
+            { id: 17, naam: 'Gezondheid' },
+            { id: 18, naam: 'Klimaat & Milieu' },
+            { id: 19, naam: 'NGO\'s en Verenigingen' },
+            { id: 20, naam: 'Justitie' },
+            { id: 21, naam: 'Politiek' },
+            { id: 22, naam: 'Andere' },
+            { id: 24, naam: 'Juridisch' },
         ]);
     });
 }
