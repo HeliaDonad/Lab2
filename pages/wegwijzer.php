@@ -18,7 +18,7 @@ $conn = Db::getConnection();
 $thema = Thema::getThemaById($thema_id);
 
 // Haal het filter-id op uit de database
-$query = "SELECT filter_id FROM organisatie_filters WHERE id = 1"; // Aanpassen aan jouw situatie
+$query = "SELECT filter_id FROM organisatie_filters WHERE id = 1"; 
 $stmt = $conn->prepare($query);
 $stmt->execute();
 $filter_row = $stmt->fetch(PDO::FETCH_ASSOC);
