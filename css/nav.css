@@ -47,35 +47,37 @@ header {
 }
 
 #burger:checked ~ .burger {
-  opacity: 0; /* Verberg hamburger */
+    opacity: 0; /* Verberg hamburger */
 }
 
 #burger:checked ~ .close {
-  display: inline-block; /* Toon kruis */
+    display: inline-block; /* Toon kruis */
 }
 
 #burger:not(:checked) ~ .burger {
-  display: inline-block; /* Toon hamburger */
+    display: inline-block; /* Toon hamburger */
 }
 
 #burger:not(:checked) ~ .close {
-  opacity: 0; /* Verberg kruis */
+    opacity: 0; /* Verberg kruis */
 }
 
 /* Overgangseffecten */
 .burger,
 .close {
-  transition: opacity 0.3s;
+    transition: opacity 0.3s;
 }
 
 #burger {
-  display: none;
+    display: none;
 }
 
 #burger:checked ~ .subnav {
-  display: flex;
-  left: 0;
+    display: flex;
+    left: 0;
 }
+
+
 
 .subnav {
     display: flex;
@@ -90,7 +92,7 @@ header {
 }
 
 .subnav li {
-    padding: 1.2em;
+    padding: 0.2em;
 }
 
 
@@ -109,7 +111,7 @@ ul {
 }
 
 li {
-    margin: 0;
+    margin-left: 24px;
     margin-right: 20px; 
 }
 
@@ -142,6 +144,7 @@ li {
     border-radius: 20px;
     border: 2px solid var(--main-color);
     margin-right: 10px; 
+    text-align: center;
 }
 
 .login-button:hover,
@@ -150,6 +153,7 @@ li {
     background-color: var(--main-color);
     color: white;
 }
+
 
 
 @media only screen and (min-width: 1024px) {
@@ -189,6 +193,7 @@ li {
         border-radius: 50px;
     }
 
+
     nav {
         display: flex;
         align-items: center;
@@ -203,7 +208,7 @@ li {
 
     .subnav li {
         border-top: 0px;
-        padding: 0em;
+        padding: 0;
     }
 
     .subnav a.active {
@@ -234,6 +239,7 @@ li {
     .login-button:hover,
     .signin-button:hover {
         background-color: var(--main-color);
+       
         color: white;
     }
 }
@@ -259,11 +265,21 @@ li {
         background-color: var(--main-color);
         color: white;
     }
+
+    .logout-mobile {
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+
+    .actions .logout-button {
+        display: none;
+    }
 }
 
 @media only screen and (max-width: 768px) {
     .subnav {
-        width: 80%;
+        width: 100%;
         left: -100%;
     }
 
@@ -278,7 +294,6 @@ li {
     .subnav a:hover {
         background-color: var(--main-color);
         color: white;
-
     }
 
     .login-button,
@@ -290,7 +305,6 @@ li {
         border-radius: 20px;
         border: 2px solid var(--main-color);
         margin-right: 10px;
-
     }
 
     .login-button:hover,
@@ -298,4 +312,17 @@ li {
         background-color: var(--main-color);
         color: white;
     }
+
+    .logout-button {
+        font-size: var(--font-size-h3-mobile);
+        margin-left: 6%;
+        margin-bottom: 20%;
+        padding: 1em;
+    }
+
+    #logout {
+        margin-top: 40%;
+    }
+
+
 }
