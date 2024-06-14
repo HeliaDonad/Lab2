@@ -40,7 +40,7 @@ while ($row = $result_themas->fetch(PDO::FETCH_ASSOC)) {
     <p>Iedereen heeft mensenrechten, altijd en overal. Hieronder komt u meer te weten over uw rechten en die van anderen in specifieke situaties. </p>
     <div class="button-bar">
         <?php foreach ($themas as $thema): ?>
-            <a href="./pages/detail_thema2.php?thema_id=<?php echo $thema->getId(); ?>" class="button"> 
+            <a href="./detail_thema2.php?thema_id=<?php echo $thema->getId(); ?>" class="button"> 
                 <span class="text"><?php echo htmlspecialchars($thema->getNaam()); ?></span>
                 <img src="data:image/svg+xml;base64,<?php echo base64_encode($thema->getIcoonData()); ?>" alt="<?php echo htmlspecialchars($thema->getNaam()); ?>"> 
             </a>
