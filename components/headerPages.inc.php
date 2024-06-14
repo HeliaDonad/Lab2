@@ -14,7 +14,7 @@ $currentFile = basename($_SERVER['SCRIPT_FILENAME'], '.php');
     <ul class="subnav">
         <li <?php if (strpos($_SERVER['REQUEST_URI'], 'dashboard.php') !== false) echo 'class="active"'; ?>>
             <a href="../dashboard.php">
-                <img src="../images/iconen/mijn-mensenrechten.png" alt="Mijn mensenrechten" class="nav-icon" id="icoon-display"> Mijn mensenrechten
+                <img src="../images/iconen/mensenrechten.svg" alt="Mijn mensenrechten" class="nav-icon" id="icoon-display"> Mijn mensenrechten
             </a>
         </li>
         <li <?php if (strpos($_SERVER['REQUEST_URI'], 'thema2.php') !== false) echo 'class="active"'; ?>>
@@ -24,24 +24,24 @@ $currentFile = basename($_SERVER['SCRIPT_FILENAME'], '.php');
             <a href="../pages/zittingen.php"><img src="../images/iconen/zittingen.svg" alt="Zittingen" class="nav-icon" id="icoon-display"> Zittingen</a>
         </li>
         <li <?php if (strpos($_SERVER['REQUEST_URI'], 'vrijwilligerswerk.php') !== false) echo 'class="active"'; ?>>
-            <a href="../pages/vrijwilligerswerk.php"><img src="../images/iconen/vrijwilligerswerk.svg" alt="Vrijwilligerswerk" class="nav-icon" id="icoon-display"> Vrijwilligerswerk</a>
+            <a href="../pages/vrijwilligerswerk.php"><img src="../images/iconen/vrijwilligerswerk_icon.svg" alt="Vrijwilligerswerk" class="nav-icon" id="icoon-display"> Vrijwilligerswerk</a>
         </li>
         <li <?php if (strpos($_SERVER['REQUEST_URI'], 'activiteiten.php') !== false) echo 'class="active"'; ?>>
-            <a href="../pages/activiteiten.php"><img src="../images/iconen/activiteiten.svg" alt="Activiteiten" class="nav-icon" id="icoon-display"> Activiteiten</a>
+            <a href="../pages/activiteiten.php"><img src="../images/iconen/activiteiten_icon.svg" alt="Activiteiten" class="nav-icon" id="icoon-display"> Activiteiten</a>
         </li>
         <li>
-            <a href="#"><img src="../images/iconen/contact.svg" alt="Contact" class="nav-icon" id="icoon-display"> Contact</a>
+            <a href="#"><img src="../images/iconen/contact_icon.svg" alt="Contact" class="nav-icon" id="icoon-display"> Contact</a>
         </li>
         <?php if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] === true): ?>
             <li>
         <a href="#">
-            <img src="../images/iconen/notification.svg" alt="notificatie" class="nav-icon" id="icoon-display">
+            <img src="../images/iconen/meldingen_icon.svg" alt="notificatie" class="nav-icon" id="icoon-display">
             <span class="hidden-text">Meldingen</span>
         </a>
     </li>
     <li>
         <a href="#">
-            <img src="../images/iconen/profile.svg" alt="Profiel" class="nav-icon" id="icoon-display">
+            <img src="../images/iconen/profile_icon.svg" alt="Profiel" class="nav-icon" id="icoon-display">
             <span class="hidden-text">Account</span>
         </a>
     </li>
