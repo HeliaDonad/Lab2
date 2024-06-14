@@ -83,15 +83,19 @@ header {
     flex-direction: column;
     position: absolute;
     background-color: var(--background-color);
-    width: 70%;
+    width: 50%;
     left: -100%;
     transition: all 0.2s ease-in;
-    border-bottom: 1px solid var(--main-color);
+    /*border-bottom: 2px solid var(--main-color);
+    border-right: 2px solid var(--main-color);*/
     margin-top: 68.4px;
+    border-radius: 0px 0px 10px 0px;
+    width: 70%;
+    height: 100vh;
 }
 
 .subnav li {
-    margin-top: 20px;
+    margin-top: 8px;
     padding: 0.2em 1.5em;
 }
 
@@ -133,8 +137,8 @@ li {
 }
 
 .nav-icon {
-    width: 30px;
-    height: 30px;
+    width: 35px;
+    height: 35px;
     vertical-align: middle;
     margin-right: 8px;
 }
@@ -163,10 +167,20 @@ li {
  }
 
  .login-mobile{
-    margin-bottom: -20px;
+    margin-bottom: -10px;
  }
 
- 
+ .subnav li a {
+    width: 230px;  /*hover lengte verandren, kan ook in percent*/
+}
+
+.login-mobile,
+.signin-mobile, 
+.logout-mobile{
+    text-align: left;
+    display: block; 
+    width: auto; 
+ }
 
 @media only screen and (min-width: 1025px) {
     
@@ -195,6 +209,7 @@ li {
         border-bottom: 0px;
         display: flex; 
         margin-top: -30px;
+        height: 68.4px;
     }
 
     .subnav a {
@@ -233,7 +248,7 @@ li {
     .subnav li {
         border-top: 0px;
         padding: 0em;
-        margin-left: 0px;
+        margin-left: -1px;
         margin-top: 32px;
     }
 
@@ -249,6 +264,11 @@ li {
     #signin-mobile {
         display: none;
     }
+
+    .subnav li a {
+        width: 88%;
+    }
+    
 }
 
 @media only screen and (max-width: 768px) {
@@ -263,10 +283,10 @@ li {
     a.logout-button,
     a.login-button,
     a.signin-button {
-        width: 60%;
-        margin-left: 12%;
-        text-align: center;
-        margin-bottom: 12px;
+        max-width: 200px; 
+        margin-left: 0; 
+        text-align: center; 
+        margin-bottom: 12px; 
     }
 
     #icoon-display.nav-icon {
@@ -277,15 +297,14 @@ li {
         background-color: var(--main-color);
         color: var(--background-color);
         border-radius: 20px;
-        
     }
 
     .logout-mobile:hover,
     .login-mobile:hover,
     .signin-mobile:hover {
-        
         margin-left: 0px;
-    }
+    }  
+
 }
 
 @media only screen and (min-width: 769px) and (max-width: 1024px) {
@@ -300,9 +319,20 @@ li {
     a.logout-button,
     a.login-button,
     a.signin-button {
-        width: 60%;
-        margin-left: 20%;
-        text-align: center;
-        margin-bottom: 80px;
+        max-width: 200px; 
+        margin-left: 0; 
+        text-align: center; 
+        margin-bottom: 80px; 
     }
+
+    .subnav li:hover a {
+        background-color: var(--main-color);
+        color: var(--background-color);
+        border-radius: 20px;
+    }
+
+    .login-mobile{
+        margin-bottom: -80px;
+     }
+        
 }

@@ -13,7 +13,7 @@ $currentFile = basename($_SERVER['SCRIPT_FILENAME'], '.php');
     <input type="checkbox" id="burger">
     <ul class="subnav">
         <li <?php if (strpos($_SERVER['REQUEST_URI'], 'dashboard.php') !== false) echo 'class="active"'; ?>>
-            <a href="./dashboard.php"><img src="./images/iconen/mijn-mensenrechten.svg" alt="Mijn mensenrechten" class="nav-icon" id="icoon-display"> Mijn mensenrechten</a>
+            <a href="./dashboard.php"><img src="./images/iconen/mijn-mensenrechten.svg" alt="Thema's" class="nav-icon" id="icoon-display"> Mijn mensenrechten</a>
         </li>
         <li <?php if (strpos($_SERVER['REQUEST_URI'], 'thema2.php') !== false) echo 'class="active"'; ?>>
             <a href="./pages/thema2.php"><img src="./images/iconen/thema's.svg" alt="Thema's" class="nav-icon" id="icoon-display"> Thema's</a>
@@ -34,12 +34,12 @@ $currentFile = basename($_SERVER['SCRIPT_FILENAME'], '.php');
             <li>
         <a href="#">
             <img src="./images/iconen/notification.svg" alt="notificatie" class="nav-icon" id="icoon-display">
-            <span class="hidden-text">Notificatie</span>
+            <span class="hidden-text">Meldingen</span>
         </a>
     </li>
     <li>
         <a href="#">
-            <img src="./images/iconen/profile.svg" alt="Profiel" class="nav-icon" id="icoon-display">
+            <img src="./images/iconen/profiel.svg" alt="Profiel" class="nav-icon" id="icoon-display">
             <span class="hidden-text">Account</span>
         </a>
     </li>

@@ -14,7 +14,7 @@ $currentFile = basename($_SERVER['SCRIPT_FILENAME'], '.php');
     <ul class="subnav">
         <li <?php if (strpos($_SERVER['REQUEST_URI'], 'dashboard.php') !== false) echo 'class="active"'; ?>>
             <a href="../dashboard.php">
-                <img src="../images/iconen/mijn-mensenrechten.svg" alt="Mijn mensenrechten" class="nav-icon" id="icoon-display"> Mijn mensenrechten
+                <img src="../images/iconen/mijn-mensenrechten.png" alt="Mijn mensenrechten" class="nav-icon" id="icoon-display"> Mijn mensenrechten
             </a>
         </li>
         <li <?php if (strpos($_SERVER['REQUEST_URI'], 'thema2.php') !== false) echo 'class="active"'; ?>>
@@ -36,7 +36,7 @@ $currentFile = basename($_SERVER['SCRIPT_FILENAME'], '.php');
             <li>
         <a href="#">
             <img src="../images/iconen/notification.svg" alt="notificatie" class="nav-icon" id="icoon-display">
-            <span class="hidden-text">Notificatie</span>
+            <span class="hidden-text">Meldingen</span>
         </a>
     </li>
     <li>
