@@ -90,7 +90,7 @@ include_once(__DIR__ . DIRECTORY_SEPARATOR . "../classes/Themas2.php");
         </p>
 
     
-        <p>Heb je nog vragen, dan kun <a href="https://www.rechtbanken-tribunaux.be/nl/nederlandstalige-rechtbank-van-eerste-aanleg-brussel/info?page=n1335">hier</a> meer informatie vinden. </p>
+        <p>Heb je nog vragen, dan kun <a href="https://www.rechtbanken-tribunaux.be/nl/nederlandstalige-rechtbank-van-eerste-aanleg-brussel/info?page=n1335" target="_blank">hier</a> meer informatie vinden. </p>
         <br>
      
         </section>
