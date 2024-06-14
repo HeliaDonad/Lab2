@@ -110,7 +110,6 @@ ul {
 
 li {
     margin: 0;
-    margin-right: 20px; 
 }
 
 .actions {
@@ -159,8 +158,8 @@ li {
 .signin-button:hover,
 .logout-button:hover {
     background-color: var(--main-color);
-    color: white;
-}
+    color: white; 
+ }
 
 @media only screen and (min-width: 1025px) {
     .burger {
@@ -171,33 +170,30 @@ li {
         position: static;
         flex-direction: row;
         width: auto;
-        margin-left: 25px;
-        margin-right: -20px;
+        margin-left: 50px;
+        /* margin-right: -20px; */
         border-bottom: 0px;
         display: flex; 
-        margin-top: 0px;
+        margin-top: -30px;
     }
 
     .subnav a {
         text-decoration: none;
         color: var(--main-color); 
         display: inline-block; 
-        padding: 0.6em 1em;
-        margin-right: 25px;
+        padding: 0.6em;
         border-radius: 50px; 
         border: 2px solid transparent; 
         font-size: 14px;
         width: auto;
+        text-align: center;
     }
 
-    .subnav a:hover {
-        background-color: var(--main-color);
-        color: white;
-    }
 
     .subnav .active a {
         background-color: var(--main-color);
         color: white;
+        width: 100%;
     }
 
     #logout-mobile:hover {
@@ -212,12 +208,14 @@ li {
 
     .actions {
         display: flex;
-        margin-right: 10px;
+        margin-left: -40px;
     }
 
     .subnav li {
         border-top: 0px;
         padding: 0em;
+        margin-left: 12px;
+
     }
 
     #icoon-display {
