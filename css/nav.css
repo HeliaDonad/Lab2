@@ -193,7 +193,6 @@ li {
     .subnav .active a {
         background-color: var(--main-color);
         color: white;
-        width: 100%;
     }
 
     #logout-mobile:hover {
@@ -242,10 +241,9 @@ li {
 
     a.logout-button {
         width: 60%;
-        margin-left: 20%;
+        margin-left: 12%;
         text-align: center;
-        margin-top: 80px;
-        margin-bottom: 50px;
+        margin-bottom: 12px;
     }
 
 
@@ -267,5 +265,25 @@ li {
         border-radius: 20px;
         width: 80%;
     }
+
+}
+
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+
+    #display-logout {
+        display: none;
+    }
+ 
+    #icon_mobile {
+        display: none;
+    }
+
+    a.logout-button {
+        width: 60%;
+        margin-left: 20%;
+        text-align: center;
+        margin-bottom: 80px;
+    }
+
 
 }
