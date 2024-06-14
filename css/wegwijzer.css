@@ -13,10 +13,10 @@ h2 {
 }
 
 h3 {
-    margin-top: 120px;
+    margin-top: 150px;
     margin-bottom: 20px;
     color: var(--main-color);
-    font-size: var(--font-size-h3-mobile);
+    font-size: var(--font-size-h2-mobile);
     text-align: center;
 }
 

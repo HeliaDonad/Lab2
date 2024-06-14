@@ -20,9 +20,9 @@ while ($row = $result_zittingen->fetch(PDO::FETCH_ASSOC)) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Zittingen</title>
-    <link rel="stylesheet" href="../css/nav.css?48593">
-    <link rel="stylesheet" href="../css/zittingen.css?29998">
-    <link rel="stylesheet" href="../css/shared.css?88988">
+    <link rel="stylesheet" href="../css/nav.css?48693">
+    <link rel="stylesheet" href="../css/zittingen.css?10998">
+    <link rel="stylesheet" href="../css/shared.css?86988">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 </head>
 <body>
@@ -31,8 +31,7 @@ while ($row = $result_zittingen->fetch(PDO::FETCH_ASSOC)) {
         <h2>Zittingen</h2>
 
         <?php foreach ($zittingen as $zitting): ?>
-            <a href="zittingen_detail.php?id=<?php echo htmlspecialchars($zitting->getId()); ?>" class="zitting-link">
-                <div class="zitting">
+            <a href="zittingen_detail.php?id=<?php echo htmlspecialchars($zitting->getId()); ?>" class="zitting">
                     <h3><?php echo htmlspecialchars($zitting->getTitel()); ?></h3>
                     <p class="icon-text">
                         <img src="data:image/svg+xml;base64,<?php echo base64_encode($zitting->getInfoIcoon()); ?>" alt="<?php echo htmlspecialchars($zitting->getInfo()); ?>">
@@ -54,7 +53,6 @@ while ($row = $result_zittingen->fetch(PDO::FETCH_ASSOC)) {
                         <img src="data:image/svg+xml;base64,<?php echo base64_encode($zitting->getPlaatsIcoon()); ?>" alt="<?php echo htmlspecialchars($zitting->getPlaats()); ?>">
                         <?php echo htmlspecialchars($zitting->getPlaats()); ?>
                     </p>
-                </div>
             </a>
         <?php endforeach; ?>
 

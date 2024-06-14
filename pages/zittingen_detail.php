@@ -12,9 +12,8 @@ include_once(__DIR__ . DIRECTORY_SEPARATOR . "../classes/Themas2.php");
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Eerste Hulp Bij Mensenrechten</title>
     <link rel="stylesheet" href="../css/nav.css?55677">
-    <link rel="stylesheet" href="../css/thema2.css?93849">
     <link rel="stylesheet" href="../css/shared.css?18385">
-    <link rel="stylesheet" href="../css/thema2_detail.css?86985">
+    <link rel="stylesheet" href="../css/thema2_detail.css?76985">
 
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 </head>
@@ -26,7 +25,7 @@ include_once(__DIR__ . DIRECTORY_SEPARATOR . "../classes/Themas2.php");
 
 <main>
 <section class="content">            
-            <h2>Zitting over Redelijke Aanpassingen op de Werkplek</h2>
+            <h1>Zitting over Redelijke Aanpassingen op de Werkplek</h1>
             
             <p>Ben je geïnteresseerd in arbeidsrechten en wil je meer leren over de procedures rond redelijke aanpassingen voor werknemers met een handicap of chronische ziekte? Sluit je dan aan bij deze belangrijke zitting in de Rechtbank van België.
             <br>
