@@ -45,7 +45,7 @@ $currentFile = basename($_SERVER['SCRIPT_FILENAME'], '.php');
             <span class="hidden-text">Account</span>
         </a>
     </li>
-            <li class="logout-mobile" id="logout">
+    <li class="logout-mobile" id="logout">
                 <a href="../signin_login_logout/logout.php" id="logout-mobile" class="logout-button">Uitloggen</a>
             </li>
         <?php else: ?>
@@ -63,10 +63,10 @@ $currentFile = basename($_SERVER['SCRIPT_FILENAME'], '.php');
         <div id="icon_mobile" class="action-icon"><i class="material-icons">notifications</i></div>
         <!--<div class="action-icon"><i class="material-icons">settings</i></div>-->
         <div id="icon_mobile" class="action-icon"><i class="material-icons">account_circle</i></div>
-        <a class="logout-button" id="display-logout" href="./signin_login_logout/logout.php">Uitloggen</a>
+        <a class="logout-button" id="display-logout" href="../signin_login_logout/logout.php">Uitloggen</a>
     <?php else: ?>
-        <a class="login-button" id="display-logout" href="./signin_login_logout/login.php">Inloggen</a>
-        <a class="signin-button" id="display-logout" href="./signin_login_logout/signin.php">Registreren</a>
+        <a class="login-button" id="display-logout" href="../signin_login_logout/login.php">Inloggen</a>
+        <a class="signin-button" id="display-logout" href="../signin_login_logout/signin.php">Registreren</a>
     <?php endif; ?>
 </div>
 </header>
