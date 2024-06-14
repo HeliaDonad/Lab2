@@ -1,29 +1,35 @@
 <?php
 class Zitting {
+    private $id;
     private $titel;
     private $info;
     private $taal;
     private $datum;
     private $tijd;
     private $plaats;
-    private $infoIcoon;
-    private $taalIcoon;
-    private $datumIcoon;
-    private $tijdIcoon;
-    private $plaatsIcoon;
+    private $info_icoon;
+    private $taal_icoon;
+    private $datum_icoon;
+    private $tijd_icoon;
+    private $plaats_icoon;
 
-    public function __construct($titel, $info, $taal, $datum, $tijd, $plaats, $infoIcoon, $taalIcoon, $datumIcoon, $tijdIcoon, $plaatsIcoon) {
+    public function __construct($id, $titel, $info, $taal, $datum, $tijd, $plaats, $info_icoon, $taal_icoon, $datum_icoon, $tijd_icoon, $plaats_icoon) {
+        $this->id = $id;
         $this->titel = $titel;
         $this->info = $info;
         $this->taal = $taal;
         $this->datum = $datum;
         $this->tijd = $tijd;
         $this->plaats = $plaats;
-        $this->infoIcoon = $infoIcoon;
-        $this->taalIcoon = $taalIcoon;
-        $this->datumIcoon = $datumIcoon;
-        $this->tijdIcoon = $tijdIcoon;
-        $this->plaatsIcoon = $plaatsIcoon;
+        $this->info_icoon = $info_icoon;
+        $this->taal_icoon = $taal_icoon;
+        $this->datum_icoon = $datum_icoon;
+        $this->tijd_icoon = $tijd_icoon;
+        $this->plaats_icoon = $plaats_icoon;
+    }
+
+    public function getId() {
+        return $this->id;
     }
 
     public function getTitel() {
@@ -51,23 +57,23 @@ class Zitting {
     }
 
     public function getInfoIcoon() {
-        return $this->infoIcoon;
+        return $this->info_icoon;
     }
 
     public function getTaalIcoon() {
-        return $this->taalIcoon;
+        return $this->taal_icoon;
     }
 
     public function getDatumIcoon() {
-        return $this->datumIcoon;
+        return $this->datum_icoon;
     }
 
     public function getTijdIcoon() {
-        return $this->tijdIcoon;
+        return $this->tijd_icoon;
     }
 
     public function getPlaatsIcoon() {
-        return $this->plaatsIcoon;
+        return $this->plaats_icoon;
     }
 }
 ?>

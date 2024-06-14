@@ -9,8 +9,9 @@ $query_zittingen = "SELECT * FROM zittingen";
 $result_zittingen = $conn->query($query_zittingen);
 $zittingen = [];
 while ($row = $result_zittingen->fetch(PDO::FETCH_ASSOC)) {
-    $zittingen[] = new Zitting($row['titel'], $row['info'], $row['taal'], $row['datum'], $row['tijd'], $row['plaats'], $row['info_icoon'], $row['taal_icoon'], $row['datum_icoon'], $row['tijd_icoon'], $row['plaats_icoon']);
+    $zittingen[] = new Zitting($row['id'], $row['titel'], $row['info'], $row['taal'], $row['datum'], $row['tijd'], $row['plaats'], $row['info_icoon'], $row['taal_icoon'], $row['datum_icoon'], $row['tijd_icoon'], $row['plaats_icoon']);
 }
+
 ?>
 
 <!DOCTYPE html>
@@ -30,29 +31,31 @@ while ($row = $result_zittingen->fetch(PDO::FETCH_ASSOC)) {
         <h2>Zittingen</h2>
 
         <?php foreach ($zittingen as $zitting): ?>
-            <div class="zitting">
-                <h3><?php echo htmlspecialchars($zitting->getTitel()); ?></h3>
-                <p class="icon-text">
-                    <img src="data:image/svg+xml;base64,<?php echo base64_encode($zitting->getInfoIcoon()); ?>" alt="<?php echo htmlspecialchars($zitting->getInfo()); ?>">
-                    <?php echo htmlspecialchars($zitting->getInfo()); ?>
-                </p>
-                <p class="icon-text">
-                    <img src="data:image/svg+xml;base64,<?php echo base64_encode($zitting->getTaalIcoon()); ?>" alt="<?php echo htmlspecialchars($zitting->getTaal()); ?>">
-                    <?php echo htmlspecialchars($zitting->getTaal()); ?>
-                </p>
-                <p class="icon-text">
-                    <img src="data:image/svg+xml;base64,<?php echo base64_encode($zitting->getDatumIcoon()); ?>" alt="<?php echo htmlspecialchars($zitting->getDatum()); ?>">
-                    <?php echo htmlspecialchars($zitting->getDatum()); ?>
-                </p>
-                <p class="icon-text">
-                    <img src="data:image/svg+xml;base64,<?php echo base64_encode($zitting->getTijdIcoon()); ?>" alt="<?php echo htmlspecialchars($zitting->getTijd()); ?>">
-                    <?php echo htmlspecialchars($zitting->getTijd()); ?>
-                </p>
-                <p class="icon-text">
-                    <img src="data:image/svg+xml;base64,<?php echo base64_encode($zitting->getPlaatsIcoon()); ?>" alt="<?php echo htmlspecialchars($zitting->getPlaats()); ?>">
-                    <?php echo htmlspecialchars($zitting->getPlaats()); ?>
-                </p>
-            </div>
+            <a href="zittingen_detail.php?id=<?php echo htmlspecialchars($zitting->getId()); ?>" class="zitting-link">
+                <div class="zitting">
+                    <h3><?php echo htmlspecialchars($zitting->getTitel()); ?></h3>
+                    <p class="icon-text">
+                        <img src="data:image/svg+xml;base64,<?php echo base64_encode($zitting->getInfoIcoon()); ?>" alt="<?php echo htmlspecialchars($zitting->getInfo()); ?>">
+                        <?php echo htmlspecialchars($zitting->getInfo()); ?>
+                    </p>
+                    <p class="icon-text">
+                        <img src="data:image/svg+xml;base64,<?php echo base64_encode($zitting->getTaalIcoon()); ?>" alt="<?php echo htmlspecialchars($zitting->getTaal()); ?>">
+                        <?php echo htmlspecialchars($zitting->getTaal()); ?>
+                    </p>
+                    <p class="icon-text">
+                        <img src="data:image/svg+xml;base64,<?php echo base64_encode($zitting->getDatumIcoon()); ?>" alt="<?php echo htmlspecialchars($zitting->getDatum()); ?>">
+                        <?php echo htmlspecialchars($zitting->getDatum()); ?>
+                    </p>
+                    <p class="icon-text">
+                        <img src="data:image/svg+xml;base64,<?php echo base64_encode($zitting->getTijdIcoon()); ?>" alt="<?php echo htmlspecialchars($zitting->getTijd()); ?>">
+                        <?php echo htmlspecialchars($zitting->getTijd()); ?>
+                    </p>
+                    <p class="icon-text">
+                        <img src="data:image/svg+xml;base64,<?php echo base64_encode($zitting->getPlaatsIcoon()); ?>" alt="<?php echo htmlspecialchars($zitting->getPlaats()); ?>">
+                        <?php echo htmlspecialchars($zitting->getPlaats()); ?>
+                    </p>
+                </div>
+            </a>
         <?php endforeach; ?>
 
     </div>
