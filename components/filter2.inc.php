@@ -62,15 +62,25 @@
 </div>
 
 <!-- Engagement filter -->
+<!-- Engagement filter -->
 <div id="engagement-filter" class="filter-content">
-    <label><input type="checkbox" name="engagement" value="kort"> Kort werk van 1 of meer dagen</label>
-    <label><input type="checkbox" name="engagement" value="periode"> Bepaalde periode of tijdelijk werken</label>
-    <label><input type="checkbox" name="engagement" value="terugkerend"> Terugkerend engagement</label>
-    <label><input type="checkbox" name="engagement" value="af-te-spreken"> Af te spreken</label>
+    <div class="checkbox-balk" data-value="kort">
+        <label><input type="checkbox" name="engagement" value="kort"> Kort werk van 1 of meer dagen</label>
+    </div>
+    <div class="checkbox-balk" data-value="periode">
+        <label><input type="checkbox" name="engagement" value="periode"> Bepaalde periode of tijdelijk werken</label>
+    </div>
+    <div class="checkbox-balk" data-value="terugkerend">
+        <label><input type="checkbox" name="engagement" value="terugkerend"> Terugkerend engagement</label>
+    </div>
+    <div class="checkbox-balk" data-value="af-te-spreken">
+        <label><input type="checkbox" name="engagement" value="af-te-spreken"> Af te spreken</label>
+    </div>
     <div class="form-buttons">
         <button class="save-button">Opslaan</button>
     </div>
 </div>
+
 
 <!-- Meer filters -->
 <div id="meer-filters" class="filter-content">

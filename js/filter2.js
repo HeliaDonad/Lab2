@@ -38,7 +38,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Klik event voor elke opslaan knop in filters
     saveButtons.forEach(button => {
-        button.disabled = true; // Start met alle knoppen disabled
         button.addEventListener('click', function() {
             closeAllFilters();
             mainSaveButton.disabled = false;
@@ -76,6 +75,33 @@ document.addEventListener('DOMContentLoaded', function() {
                 }
             });
             mainSaveButton.disabled = !anyActive;
+        });
+    });
+
+    // Toggle functie voor checkbox-balken
+    const checkboxBalken = document.querySelectorAll('.checkbox-balk');
+    checkboxBalken.forEach(balk => {
+        const checkbox = balk.querySelector('input[type="checkbox"]');
+        
+        // Voeg een click event toe aan de balk
+        balk.addEventListener('click', function() {
+            checkbox.checked = !checkbox.checked; // Toggle de checkbox
+            
+            // Toggle de "selected" class op de balk
+            if (checkbox.checked) {
+                balk.classList.add('selected');
+            } else {
+                balk.classList.remove('selected');
+            }
+
+            // Activeer/deactiveer de bijbehorende save-button
+            let isActive = false;
+            checkboxBalken.forEach(balk => {
+                if (balk.classList.contains('selected')) {
+                    isActive = true;
+                }
+            });
+            mainSaveButton.disabled = !isActive;
         });
     });
 });
