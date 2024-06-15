@@ -1,0 +1,30 @@
+.voorwaarden {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--main-color);
+    height: 40vh; /* Optioneel: maakt de sectie de volledige hoogte van het scherm */
+}
+
+.voorwaarden h1 {
+    color: var(--main-color);
+}
+
+.txt {
+    margin: -50px 36px 0;
+}
+
+.txt_two {
+    margin: 24px 36px 0;
+
+}
+
+p {
+    margin: 36px;
+}
+
+.last_txt {
+    margin-bottom: 50px;
+}
+
+
