@@ -71,4 +71,5 @@ $currentFile = basename($_SERVER['SCRIPT_FILENAME'], '.php');
     <?php endif; ?>
 </div>
 </header>
-<script src="./navigation.js"></script>
+<script src="./js/navigation.js"></script>
+<script src="./js/button.js"></script>

@@ -105,7 +105,5 @@ if ($selectedFilterId === null || $selectedFilterId === '') {
         <?php endforeach; ?>
     </div>
 </div>
-
-<script src="button.js"></script>
 </body>
 </html>
