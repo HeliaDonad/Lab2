@@ -60,7 +60,6 @@ if ($selectedFilterId === null || $selectedFilterId === '') {
     <link rel="stylesheet" href="css/nav.css?24494">
     <link rel="stylesheet" href="css/dashboard.css?59814">
     <link rel="stylesheet" href="css/shared.css?18382">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 </head>
 <body>
 

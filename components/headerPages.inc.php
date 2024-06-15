@@ -34,7 +34,7 @@ $currentFile = basename($_SERVER['SCRIPT_FILENAME'], '.php');
         </li>
         <?php if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] === true): ?>
             <li>
-        <a href="#">
+            <a href="#">
             <img src="../images/iconen/meldingen_icon.svg" alt="notificatie" class="nav-icon" id="icoon-display">
             <span class="hidden-text">Meldingen</span>
         </a>

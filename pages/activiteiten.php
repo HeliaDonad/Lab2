@@ -20,7 +20,7 @@ while ($row = $result_themas->fetch(PDO::FETCH_ASSOC)) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Activiteiten rond mensenrechten</title>
-    <link rel="stylesheet" href="../css/nav.css">
+    <link rel="stylesheet" href="../css/nav.css?44567">
     <link rel="stylesheet" href="../css/activiteiten.css?98976">
     <link rel="stylesheet" href="../css/filter2.css?56489">
     <link rel="stylesheet" href="../css/shared.css">
