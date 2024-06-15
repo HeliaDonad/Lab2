@@ -22,7 +22,7 @@
         <div class="text-toggle">
             <p>English</p>
             <label class="switch">
-                <input type="checkbox">
+                <input type="checkbox" class="toggle-input">
                 <span class="slider round"></span>
             </label>
         </div>
@@ -33,7 +33,7 @@
         <div class="text-toggle">
             <p>Nederlands</p>
             <label class="switch">
-                <input type="checkbox" checked>
+                <input type="checkbox" class="toggle-input" checked>
                 <span class="slider round"></span>
             </label>
         </div>
@@ -44,7 +44,7 @@
         <div class="text-toggle">
             <p>Français</p>
             <label class="switch">
-                <input type="checkbox">
+                <input type="checkbox" class="toggle-input">
                 <span class="slider round"></span>
             </label>
         </div>
@@ -55,11 +55,12 @@
         <div class="text-toggle">
             <p>Deutsch</p>
             <label class="switch">
-                <input type="checkbox">
+                <input type="checkbox" class="toggle-input">
                 <span class="slider round"></span>
             </label>
         </div>
     </div>
+
 
 <script src="../js/toggle.js"></script>
 </body>

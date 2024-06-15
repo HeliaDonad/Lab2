@@ -1,11 +1,14 @@
-document.querySelectorAll('.toggle-checkbox').forEach(toggleCheckbox => {
-    toggleCheckbox.addEventListener('change', function() {
-        if (toggleCheckbox.checked) {
-            console.log(`Toggle ${toggleCheckbox.id} is ON`);
-            // Voeg hier de code toe die moet worden uitgevoerd wanneer de schakelaar aan is
-        } else {
-            console.log(`Toggle ${toggleCheckbox.id} is OFF`);
-            // Voeg hier de code toe die moet worden uitgevoerd wanneer de schakelaar uit is
-        }
+document.addEventListener('DOMContentLoaded', function() {
+    const toggleInputs = document.querySelectorAll('.toggle-input');
+
+    toggleInputs.forEach(input => {
+        input.addEventListener('change', function() {
+            // Zet alle andere toggles uit
+            toggleInputs.forEach(otherInput => {
+                if (otherInput !== input) {
+                    otherInput.checked = false;
+                }
+            });
+        });
     });
 });
