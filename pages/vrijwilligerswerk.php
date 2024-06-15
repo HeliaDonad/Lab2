@@ -29,7 +29,7 @@ while ($row = $result_vrijwilligerswerk->fetch(PDO::FETCH_ASSOC)) {
     <title>Vrijwilligerswerk</title>
     <link rel="stylesheet" href="../css/nav.css?89970">
     <link rel="stylesheet" href="../css/vrijwilligerswerk.css?99578">
-    <link rel="stylesheet" href="../css/filter2.css?88678">
+    <link rel="stylesheet" href="../css/filter2.css?80478">
     <link rel="stylesheet" href="../css/shared.css">
 </head>
 <body>

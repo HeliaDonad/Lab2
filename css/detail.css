@@ -108,6 +108,10 @@ p {
     p {
         font-size: var(--font-size-body);
     }
+
+    .text1 {
+        font-size: var(--font-size-h3);
+    }
 }
 
 @media only screen and (min-width: 1025px) {
