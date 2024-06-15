@@ -13,7 +13,7 @@
                 <span>Engagement</span>
             </div>
             <div class="filter" data-target="#meer-filters">
-                <span>Meer filters</span>
+                <span>Meer</span>
             </div>
             <button class="main-save-button">Opslaan</button>
         </div>

@@ -60,9 +60,12 @@ $currentFile = basename($_SERVER['SCRIPT_FILENAME'], '.php');
 </nav>
 <div class="actions">
     <?php if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] === true): ?>
-        <div id="icon_mobile" class="action-icon"><i class="material-icons">notifications</i></div>
-        <!--<div class="action-icon"><i class="material-icons">settings</i></div>-->
-        <div id="icon_mobile" class="action-icon"><i class="material-icons">account_circle</i></div>
+        <a class="material-icons" href="#">
+            <img src="./images/iconen/meldingen_icon.svg" alt="Profiel" class="action-icon" id="icon_mobile">
+        </a>
+        <a class="material-icons" href="#">
+            <img src="./images/iconen/profile_icon.svg" alt="Profiel" class="action-icon" id="icon_mobile">
+        </a>
         <a class="logout-button" id="display-logout" href="../signin_login_logout/logout.php">Uitloggen</a>
     <?php else: ?>
         <a class="login-button" id="display-logout" href="../signin_login_logout/login.php">Inloggen</a>
