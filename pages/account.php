@@ -10,5 +10,30 @@
 </head>
 <body>
     <?php include_once("../components/headerPages.inc.php"); ?>
+
+    <div class="container">
+        <h2>Mijn account</h2>
+        
+        <div class="button-bar">
+            <a href="account.php" class="button">
+                <img src="../images/iconen/profile_icon.svg" alt="Account icoon">
+                <p>Mijn account</p>
+            </a>
+            <a href="meldingen.php" class="button">
+                <img src="../images/iconen/meldingen_icon.svg" alt="Meldingen icoon">
+                <p>Meldingen</p>
+            </a>
+            <a href="taal.php" class="button">
+                <img src="../images/iconen/taal.svg" alt="Taal icoon">
+                <p>Taal</p>
+            </a>
+            <a href="voorwaarden.php" class="button">
+                <img src="../images/iconen/voorwaarden.svg" alt="Voorwaarden icoon">
+                <p>Voorwaarden</p>
+            </a>
+        </div>
+        
+    </div>
+
 </body>
 </html>

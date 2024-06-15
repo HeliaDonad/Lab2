@@ -7,13 +7,21 @@
 }
 
 .column{
-    margin-top: 150px;
+    margin-top: 130px;
     margin-bottom: 10px;
 }
 
 .pers{
     margin-top: -100px;
 }
+
+/*h2 {
+    margin-top: 150px;
+    margin-bottom: 20px;
+    color: var(--main-color);
+    font-size: var(--font-size-h2-mobile);
+    text-align: center;
+}*/
 
 h3 {
     color: var(--main-color);
