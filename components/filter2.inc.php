@@ -32,11 +32,13 @@
     // Loop over de $themas array om de thema's weer te geven
     foreach ($themas as $thema) {
         ?>
+        <div class="checkbox-balk">
         <label>
             <input type="checkbox" name="interesses" value="<?php echo htmlspecialchars($thema->getNaam()); ?>">
             <img src="data:image/svg+xml;base64,<?php echo base64_encode($thema->getIcoonData()); ?>" alt="<?php echo htmlspecialchars($thema->getNaam()); ?>">
             <?php echo htmlspecialchars($thema->getNaam()); ?>
         </label>
+        </div>
         <?php
     }
     ?>
@@ -47,13 +49,13 @@
 
 <!-- Locatie filter -->
 <div id="locatie-filter" class="filter-content">
-    <label for="postcode">Postcode of gemeente:</label>
+    <label class="tekst" for="postcode">Postcode of gemeente:</label>
     <input type="text" id="postcode" name="postcode">
     
-    <label for="buurten">Selecteer buurt(en):</label>
+    <label class="tekst" for="buurten">Selecteer buurt(en):</label>
     <input type="text" id="buurten" name="buurten">
 
-    <label for="afstand">Maximale afstand:</label>
+    <label class="tekst" for="afstand">Maximale afstand:</label>
     <input type="range" id="afstand" name="afstand" min="0" max="50" value="0">
     <span id="afstand-waarde">0km</span>
     <div class="form-buttons">
@@ -61,7 +63,6 @@
     </div>
 </div>
 
-<!-- Engagement filter -->
 <!-- Engagement filter -->
 <div id="engagement-filter" class="filter-content">
     <div class="checkbox-balk" data-value="kort">
@@ -84,7 +85,7 @@
 
 <!-- Meer filters -->
 <div id="meer-filters" class="filter-content">
-    <label for="taal">Selecteer taal:</label>
+    <label class="tekst" for="taal">Selecteer taal:</label>
     <select id="taal" name="taal">
         <option value="nederlands">Nederlands</option>
         <option value="frans">Frans</option>
@@ -92,20 +93,36 @@
         <option value="engels">Engels</option>
     </select>
 
-    <label>Toegankelijkheid:</label>
+    <label class="tekst">Toegankelijkheid:</label>
+    <div class="checkbox-balk">
     <label><input type="checkbox" name="toegankelijkheid" value="fysieke-beperkingen"> Fysieke beperkingen</label>
+    </div>
+    <div class="checkbox-balk">
     <label><input type="checkbox" name="toegankelijkheid" value="taal-leren"> Taal leren</label>
+    </div>
+    <div class="checkbox-balk">
     <label><input type="checkbox" name="toegankelijkheid" value="student"> Student</label>
+    </div>
+    <div class="checkbox-balk">
     <label><input type="checkbox" name="toegankelijkheid" value="psychische-kwetsbaarheid"> Psychische kwetsbaarheid</label>
+    </div>
+    <div class="checkbox-balk">
     <label><input type="checkbox" name="toegankelijkheid" value="mensen-met-strafblad"> Mensen met strafblad</label>
+    </div>
+    <div class="checkbox-balk">
     <label><input type="checkbox" name="toegankelijkheid" value="jong-dementie"> (Jong) dementie</label>
+    </div>
 
-    <label>Doelgroep:</label>
+    <label class="tekst">Doelgroep:</label>
+    <div class="checkbox-balk">
     <label><input type="checkbox" name="doelgroep" value="individu"> Individu</label>
+    </div>
+    <div class="checkbox-balk">
     <label><input type="checkbox" name="doelgroep" value="groepen"> Groepen</label>
+    </div>
 
-    <label for="datums">Wanneer wil je vrijwilligen?</label>
-    <input type="date" id="datums" name="datums">
+    <label class="tekst" for="datums">Wanneer wil je vrijwilligen?</label>
+    <input class="date" type="date" id="datums" name="datums">
     <div class="form-buttons">
         <button class="save-button">Opslaan</button>
     </div>

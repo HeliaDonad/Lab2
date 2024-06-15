@@ -85,11 +85,13 @@
 .filter-content input[type="range"],
 .filter-content input[type="date"],
 .filter-content select {
-    width: calc(100% - 10px); 
+    width: calc(100% - 20px); 
     padding: 5px;
     margin-bottom: 10px;
     font-size: 12px;
     box-sizing: border-box; 
+    margin-left: 10px;
+    color: var(--main-color);
 }
 
 .filter-content input[type="checkbox"] {
@@ -107,7 +109,7 @@
     font-size: 14px;
     border: 1px solid #ccc;
     border-radius: 4px;
-    margin-right: 10px;
+    margin-right: 20px;
     width: 150px;
 }
 
@@ -116,11 +118,11 @@
     align-items: center;
 }
 
-.save-button[disabled] {
+/*.save-button[disabled] {
     background-color: #EFF0F1; 
     color: #B1B1B1; 
     cursor: not-allowed; 
-}
+}*/
 
 .save-button {
     padding: 8px 16px;
@@ -148,7 +150,7 @@
 }
 
 .filter-content .form-buttons {
-    margin-top: 50px;
+    margin-top: 60px;
 }
 
 .main-save-button[disabled] {
@@ -160,7 +162,9 @@
 .filter-content .checkbox-balk {
     display: block;
     padding: 10px;
-    margin-bottom: 8px;
+    margin-top: 12px;
+    margin-left: 10px;
+    margin-right: 10px;
     cursor: pointer;
     border: 1px solid var(--main-color); /* Randkleur van de balk */
     border-radius: 4px;
@@ -173,12 +177,12 @@
 
 .filter-content .checkbox-balk.selected {
     background-color: var(--detail-color); /* Achtergrondkleur van de balk wanneer geselecteerd */
-    border-color: var(--detail-color); /* Randkleur van de balk wanneer geselecteerd */
+    /*border-color: var(--detail-color); */
 }
 
-.filter-content .checkbox-balk.selected label {
+/*.filter-content .checkbox-balk.selected label {
     color: white; 
-}
+} */
 
 .filter-content .checkbox-balk label {
     display: block;
@@ -189,6 +193,17 @@
 
 .filter-content .checkbox-balk input {
     display: none; /* Verberg de originele checkbox */
+}
+
+.tekst{
+    font-size: var(--font-size-body-mobile);
+    margin-left: 10px;
+    margin-top: 20px;
+}
+
+span {
+    font-size: var(--font-size-body-mobile);
+    color: var(--main-color);
 }
 
 
