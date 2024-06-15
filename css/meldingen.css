@@ -1,0 +1,36 @@
+.meldingen {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--main-color);
+    height: 40vh; /* Optioneel: maakt de sectie de volledige hoogte van het scherm */
+}
+
+
+.meldingen h1 {
+    margin-top: 0;
+}
+
+.content {
+    text-align: left;
+    margin: 0 36px 20px 36px;
+
+    border-radius: 16px;
+    padding: 2px 24px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+}
+
+h3 {
+    color: var(--main-color);
+    margin-top: -75px;
+    margin-left: 36px;
+    margin-bottom: 10px; 
+}
+
+.content p {
+    padding: 10px 0; 
+}
+
+.date {
+    margin-top: 36px;
+}
