@@ -29,18 +29,18 @@ $currentFile = basename($_SERVER['SCRIPT_FILENAME'], '.php');
         <li <?php if (strpos($_SERVER['REQUEST_URI'], 'activiteiten.php') !== false) echo 'class="active"'; ?>>
             <a href="../pages/activiteiten.php"><img src="../images/iconen/activiteiten_icon.svg" alt="Activiteiten" class="nav-icon" id="icoon-display"> Activiteiten</a>
         </li>
-        <li>
-            <a href="#"><img src="../images/iconen/contact_icon.svg" alt="Contact" class="nav-icon" id="icoon-display"> Contact</a>
+        <li <?php if (strpos($_SERVER['REQUEST_URI'], 'contact.php') !== false) echo 'class="active"'; ?>>
+            <a href="../pages/contact.php"><img src="../images/iconen/contact_icon.svg" alt="Contact" class="nav-icon" id="icoon-display"> Contact</a>
         </li>
         <?php if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] === true): ?>
             <li>
-            <a href="#">
+            <a href="../pages/meldingen.php">
             <img src="../images/iconen/meldingen_icon.svg" alt="notificatie" class="nav-icon" id="icoon-display">
             <span class="hidden-text">Meldingen</span>
         </a>
     </li>
     <li>
-        <a href="#">
+        <a href="../pages/account.php">
             <img src="../images/iconen/profile_icon.svg" alt="Profiel" class="nav-icon" id="icoon-display">
             <span class="hidden-text">Account</span>
         </a>
@@ -60,10 +60,10 @@ $currentFile = basename($_SERVER['SCRIPT_FILENAME'], '.php');
 </nav>
 <div class="actions">
     <?php if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] === true): ?>
-        <a class="material-icons" href="#">
+        <a class="material-icons" href="../pages/meldingen.php">
             <img src="../images/iconen/meldingen_icon.svg" alt="Profiel" class="action-icon" id="icon_mobile">
         </a>
-        <a class="material-icons" href="#">
+        <a class="material-icons" href="../pages/account.php">
             <img src="../images/iconen/profile_icon.svg" alt="Profiel" class="action-icon" id="icon_mobile">
         </a>
         <a class="logout-button" id="display-logout" href="../signin_login_logout/logout.php">Uitloggen</a>
