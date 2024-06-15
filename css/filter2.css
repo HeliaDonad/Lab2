@@ -145,6 +145,12 @@
     margin-top: 50px;
 }
 
+.main-save-button[disabled] {
+    background-color: #EFF0F1; 
+    color: #B1B1B1; 
+    cursor: not-allowed; 
+}
+
 
 @media only screen and (min-width: 768px) {
 
