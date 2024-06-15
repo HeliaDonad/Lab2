@@ -32,68 +32,6 @@ while ($row = $result_themas->fetch(PDO::FETCH_ASSOC)) {
         <h2>Vrijwilligerswerk</h2>
         <?php include_once("../components/filter2.inc.php"); ?>
         
-        <script>
- document.addEventListener('DOMContentLoaded', function() {
-    // Toggle filter content
-    const filterElements = document.querySelectorAll('.filter');
-    const afstandSlider = document.getElementById('afstand');
-    const afstandValue = document.getElementById('afstand-waarde');
-    const saveButtons = document.querySelectorAll('.save-button');
-    const mainSaveButton = document.querySelector('.main-save-button');
-
-    // Functie om alle filters te sluiten
-    function closeAllFilters() {
-        document.querySelectorAll('.filter-content').forEach(content => {
-            content.style.display = 'none';
-        });
-    }
-
-    // Klik event voor elke filter
-    filterElements.forEach(filter => {
-        filter.addEventListener('click', function() {
-            const target = document.querySelector(this.getAttribute('data-target'));
-            if (target) {
-                const isActive = target.style.display === 'block';
-                closeAllFilters();
-                filterElements.forEach(el => el.classList.remove('active'));
-                if (!isActive) {
-                    target.style.display = 'block';
-                    this.classList.add('active');
-                }
-            }
-        });
-    });
-
-    // Display the range value for afstand
-    if (afstandSlider && afstandValue) {
-        afstandSlider.addEventListener('input', function() {
-            afstandValue.textContent = `${this.value}km`;
-        });
-    }
-
-    // Klik event voor elke opslaan knop in filters
-    saveButtons.forEach(button => {
-        button.addEventListener('click', function() {
-            closeAllFilters();
-            mainSaveButton.disabled = false;
-        });
-    });
-
-    // Controleren of een filter waarde heeft om de main save button te activeren
-    document.querySelectorAll('.filter-content').forEach(content => {
-        content.addEventListener('input', function() {
-            let isActive = false;
-            content.querySelectorAll('input, select').forEach(input => {
-                if (input.type === 'checkbox' && input.checked) {
-                    isActive = true;
-                } else if (input.type !== 'checkbox' && input.value) {
-                    isActive = true;
-                }
-            });
-            mainSaveButton.disabled = !isActive;
-        });
-    });
-});
-        </script>
+        <script src="../js/filter2.js"></script>
 </body>
 </html>

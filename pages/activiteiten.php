@@ -32,6 +32,6 @@ while ($row = $result_themas->fetch(PDO::FETCH_ASSOC)) {
         <h2>Activiteiten rond mensenrechten</h2>
         <?php include_once("../components/filter2.inc.php"); ?>
         
-        <script src="./filter2.js"></script>
+        <script src="../js/filter2.js"></script>
 </body>
 </html>
