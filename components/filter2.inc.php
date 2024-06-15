@@ -19,7 +19,7 @@
 </div>
 
 <!-- Zoeken filter -->
-<div id="zoeken-filter" class="filter-content">
+<div id="zoeken-filter" class="filter-content" class="zoek-input">
     <input type="text" placeholder="Zoeken...">
     <div class="form-buttons">
         <button class="save-button">Opslaan</button>

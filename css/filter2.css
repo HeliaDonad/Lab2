@@ -124,6 +124,10 @@
     cursor: not-allowed; 
 }*/
 
+#zoeken-filter .zoek-input{
+    padding-top: 20px;
+}
+
 .save-button {
     padding: 8px 16px;
     font-size: var(--font-size-body-mobile);
