@@ -23,7 +23,6 @@ while ($row = $result_zittingen->fetch(PDO::FETCH_ASSOC)) {
     <link rel="stylesheet" href="../css/nav.css?48683">
     <link rel="stylesheet" href="../css/zittingen.css?87998">
     <link rel="stylesheet" href="../css/shared.css?86988">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 </head>
 <body>
     <?php include_once("../components/headerPages.inc.php"); ?>

@@ -49,7 +49,6 @@ while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
     <link rel="stylesheet" href="../css/nav.css?48598">
     <link rel="stylesheet" href="../css/detail.css?19735">
     <link rel="stylesheet" href="../css/shared.css?18845">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 </head>
 <body>
 

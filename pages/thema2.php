@@ -27,7 +27,6 @@ while ($row = $result_themas->fetch(PDO::FETCH_ASSOC)) {
     <link rel="stylesheet" href="../css/nav.css?58578">
     <link rel="stylesheet" href="../css/thema2.css?83849">
     <link rel="stylesheet" href="../css/shared.css?18385">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 </head>
 <body>
 

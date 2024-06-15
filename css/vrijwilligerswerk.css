@@ -16,6 +16,60 @@ p {
     font-size: var(--font-size-body-mobile);
 }
 
+.container2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+.button-bar {
+    display: flex;
+    flex-direction: column;
+    width: 220px;
+    margin-bottom: 100px;
+}
+
+.button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    margin-bottom: 16px;
+    /*box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);*/
+    text-decoration: none;
+    height: 300px;
+    transition: all 0.3s ease;
+    margin-top: 30px;
+}
+
+.button .text {
+    padding: 10px;
+    border-radius: 5px;
+    font-size: var(--font-size-body-mobile);
+    transition: opacity 0.3s ease;
+    opacity: 0;
+    font-weight: bold;
+    z-index: 1;
+    color: white;
+}
+
+.button:hover .text {
+    opacity: 1;
+}
+
+.button:hover {
+    filter: brightness(70%);
+    /*opacity: 0.5;*/
+}
+
 @media only screen and (min-width: 768px) {
     h2 {
         font-size: var(--font-size-h2);
@@ -23,5 +77,54 @@ p {
 
     p {
         font-size: var(--font-size-body);
+    }
+
+    .button-bar {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr); 
+        gap: 40px;
+        width: 100%;
+        max-width: 1200px; 
+    }
+
+    .button {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+        transition: transform 0.6s;
+        transform-style: preserve-3d;
+        margin-bottom: -10px;
+    }
+
+    
+    .button .text {
+        font-size: var(--font-size-body);
+    }
+
+}
+
+@media only screen and (min-width: 1025px) {
+    .button-bar {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr); 
+        width: 100%;
+        max-width: 1200px; 
+    }
+
+    .button {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+        transition: transform 0.6s;
+        transform-style: preserve-3d;
+    }
+
+    .button .text {
+        margin-top: 10px;
+        text-align: center;
     }
 }
