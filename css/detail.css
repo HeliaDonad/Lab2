@@ -104,6 +104,10 @@ p {
     .container {
         margin: 0px 50px;
     }
+
+    p {
+        font-size: var(--font-size-body);
+    }
 }
 
 @media only screen and (min-width: 1025px) {

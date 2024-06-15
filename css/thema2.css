@@ -139,6 +139,12 @@ h2 {
     h2 {
         font-size: var(--font-size-h2);
     }
+
+    p {
+        margin-left: 50px;
+        margin-right: 50px;
+        font-size: var(--font-size-body);
+    }
 }
 
 @media only screen and (min-width: 1025px) {
@@ -171,6 +177,12 @@ h2 {
         height: 60px;
         margin-bottom: 10px;
         margin-top: 15px;
+    }
+
+    p {
+        margin-left: 120px;
+        margin-right: 120px;
+        font-size: var(--font-size-body);
     }
 }
 

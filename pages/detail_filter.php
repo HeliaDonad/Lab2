@@ -61,6 +61,7 @@ while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
     <span class="button-text">Mijn wegwijzer</span>
 </a>
     <h2><?php echo htmlspecialchars($thema->getNaam()); ?></h2>
+    <p class="uitleg"><?php echo htmlspecialchars($thema->getUitleg()); ?></p>
 <div>
     <div class="button-bar">
         <?php foreach ($organisaties as $organisatie): ?>

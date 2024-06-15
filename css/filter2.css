@@ -152,8 +152,19 @@
     }
 
     .filter span {
-        font-size: 14px;
+        font-size: var(--font-size-body);
     }
+
+    .save-button,
+    .main-save-button {
+        padding: 8px 16px;
+        font-size: var(--font-size-body);
+    }
+
+    .main-save-button {
+        margin-right: 10px;
+    }
+    
 
     /*.filter-content label {
         font-size: 14px;

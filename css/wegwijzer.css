@@ -20,7 +20,7 @@ h3 {
     text-align: center;
 }
 
-p {
+p, form label {
     margin-bottom: 20px;
     font-size: var(--font-size-body-mobile);
 }
@@ -110,6 +110,11 @@ input.antwoord-selector {
 
     .container {
         margin: 0px 50px;
+    }
+
+    p, form label {
+        margin-bottom: 20px;
+        font-size: var(--font-size-body);
     }
 }
 

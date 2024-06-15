@@ -21,8 +21,8 @@ while ($row = $result_themas->fetch(PDO::FETCH_ASSOC)) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Activiteiten rond mensenrechten</title>
     <link rel="stylesheet" href="../css/nav.css">
-    <link rel="stylesheet" href="../css/activiteiten.css?88976">
-    <link rel="stylesheet" href="../css/filter2.css">
+    <link rel="stylesheet" href="../css/activiteiten.css?98976">
+    <link rel="stylesheet" href="../css/filter2.css?56489">
     <link rel="stylesheet" href="../css/shared.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 </head>

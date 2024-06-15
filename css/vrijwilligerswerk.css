@@ -12,8 +12,16 @@ h2 {
     text-align: center;
 }
 
+p {
+    font-size: var(--font-size-body-mobile);
+}
+
 @media only screen and (min-width: 768px) {
     h2 {
         font-size: var(--font-size-h2);
+    }
+
+    p {
+        font-size: var(--font-size-body);
     }
 }

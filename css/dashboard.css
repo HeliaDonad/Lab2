@@ -139,6 +139,12 @@ h2 {
     h2 {
         font-size: var(--font-size-h2);
     }
+
+    p {
+        margin-left: 50px;
+        margin-right: 50px;
+        font-size: var(--font-size-body);
+    }
 }
 
 @media only screen and (min-width: 1025px) {
@@ -206,6 +212,13 @@ h2 {
 /*.button:not(.wegwijzer):hover {
     transform: rotateY(360deg);
 }*/
+
+
+p {
+    margin-left: 120px;
+    margin-right: 120px;
+    font-size: var(--font-size-body);
+}
 
 
 }
