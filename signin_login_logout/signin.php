@@ -34,7 +34,9 @@ if (!empty($_POST)) {
                 if ($result) {
                     session_start();
                     $_SESSION['loggedin'] = true;
-                    header("Location: login.php");
+                    $_SESSION['user_email'] = $email; // Set user_email in session
+                    header("Location: ../dashboard.php");
+                    exit();
                 } else {
                     $error = "Er is een fout opgetreden tijdens het aanmaken van het account";
                 }
