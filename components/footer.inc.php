@@ -2,7 +2,7 @@
     <div class="footer-container">
         <div class="footer-section about">
             <h4>Over EHBM</h4>
-            <p style="margin-left: 0px; margin-right:0px">EHBM is een online wegwijzer die gebruikers helpt de juiste organisatie te vinden. Ons platform biedt gedetailleerde informatie voor een veilige en gebruiksvriendelijke ervaring.</p>
+            <p style="margin-left: 0px; margin-right:0px; font-size: var(--font-size-small);">EHBM is een online wegwijzer die gebruikers helpt de juiste organisatie te vinden. Ons platform biedt gedetailleerde informatie voor een veilige en gebruiksvriendelijke ervaring.</p>
         </div>
         <div class="footer-section links">
             <h4>Nuttige Links</h4>
@@ -16,9 +16,9 @@
         </div>
         <div class="footer-section contact">
             <h4>Contact</h4>
-            <p style="margin-left: 0px; margin-right:0px">Email: <a href="mailto:support@ehbm.com">support@ehbm.com</a></p>
-            <p style="margin-left: 0px; margin-right:0px">Telefoon: +31 123 456 789</p>
-            <p style="margin-left: 0px; margin-right:0px">Adres: Voorbeeldstraat 1, 1234 AB, Amsterdam</p>
+            <p style="margin-left: 0px; margin-right:0px; font-size: var(--font-size-body-small);">Email: <a href="mailto:support@ehbm.com">support@ehbm.com</a></p>
+            <p style="margin-left: 0px; margin-right:0px ; font-size: var(--font-size-body-small);">Telefoon: +31 123 456 789</p>
+            <p style="margin-left: 0px; margin-right:0px ; font-size: var(--font-size-body-small);">Adres: Voorbeeldstraat 1, 1234 AB, Amsterdam</p>
         </div>
         <div class="footer-section social">
             <h4>Volg ons</h4>

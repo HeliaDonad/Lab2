@@ -68,3 +68,7 @@ footer {
         margin-right: 0px;
     }
 }*/
+
+li{
+    font-size: var(--font-size-small);
+}
