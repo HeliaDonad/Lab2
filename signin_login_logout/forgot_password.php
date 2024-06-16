@@ -1,6 +1,8 @@
 <?php 
 include_once(__DIR__ . DIRECTORY_SEPARATOR . "../classes/Db.php");
 
+$message = ""; // Initialize the message variable
+
 if(!empty($_POST)){
     $email = $_POST['email'];
     $conn = Db::getConnection();
@@ -37,19 +39,21 @@ if(!empty($_POST)){
 <body>
 <div class="container">
     <main>
+        <?php if(empty($message)): ?>
         <form action="" method="post">
             <h1>Wachtwoord vergeten</h1>
-            <?php if(!empty($message)): ?> 
-            <div class="form__error">
-                <p><?php echo $message; ?></p>
-            </div>
-            <?php endif; ?>
             <div class="form__field">
                 <label for="email">Voer uw emailadres in:</label>
                 <input type="text" id="email" name="email" required>
             </div>
             <input type="submit" value="Verzenden" class="btn btn--primary">
         </form>
+        <?php else: ?>
+        <div class="form__message">
+            <p><?php echo $message; ?></p>
+            <a href="login.php">Terug naar login</a>
+        </div>
+        <?php endif; ?>
     </main>
     <div class="image">
         <img src="" alt="afbeelding">
