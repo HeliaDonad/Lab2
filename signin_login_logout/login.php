@@ -68,11 +68,11 @@ if(!empty($_POST)){
             </div>
             <div class="form__field">
                 <label for="Password">Wachtwoord</label>
-                <a href="forgot_password.php" class="forgot-password-link">Wachtwoord vergeten?</a>
                 <input type="password" name="password" id="password" required>
                 <span class="toggle-password" onclick="togglePasswordVisibility()">
                     <img id="eye-icon" src="../images/iconen/eye-closed.svg" alt="eye">
                 </span>
+                <a href="forgot_password.php" class="forgot-password-link">Wachtwoord vergeten?</a>
             </div>
             <div class="form__field">
                 <input type="submit" value="Inloggen" class="btn btn--primary">   

@@ -1,30 +1,73 @@
-.voorwaarden {
+.container {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
+    margin-left: 50px;
+    margin-right: 50px;
+    justify-content: center;
+}
+
+h2 {
+    margin-top: 150px;
+    margin-bottom: 20px;
     color: var(--main-color);
-    height: 40vh; /* Optioneel: maakt de sectie de volledige hoogte van het scherm */
+    font-size: var(--font-size-h2-mobile);
+    text-align: center;
 }
 
-.voorwaarden h1 {
+.block {
+    display: flex;
+    flex-direction: column;
+    width: 300px; 
+    margin-bottom: 100px;
+}
+
+h3 {
     color: var(--main-color);
+    /*margin-left: 36px;*/
+    margin-bottom: 10px; 
+    font-size: var(--font-size-h3-mobile);
 }
 
-.txt {
-    margin: -50px 36px 0;
+.date {
+    margin-top: 36px;
 }
 
-.txt_two {
-    margin: 24px 36px 0;
-
+.button p {
+    font-size: var(--font-size-body-mobile);
+    margin: 0;
+    flex: 1; 
+    margin-left: 5px;
+    color: var(--main-color);
+    padding: 5px 0;
 }
 
-p {
-    margin: 36px;
+@media only screen and (min-width: 768px) {
+    h2 {
+        font-size: var(--font-size-h2);
+    }
+
+    .block {
+        width: 500px; 
+    }
+
+    h3 {
+        font-size: var(--font-size-h3);
+    }
+
+    .content p{
+        padding: 10px 0;
+        font-size: var(--font-size-body);
+    }
+
+    p {
+        font-size: var(--font-size-body);
+    }
 }
 
-.last_txt {
-    margin-bottom: 50px;
+@media only screen and (min-width: 1024px) {
+
+    .block {
+        width: 800px; 
+    }
 }
-
-
