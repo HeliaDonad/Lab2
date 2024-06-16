@@ -1,4 +1,4 @@
-<?php 
+<?php
 include_once(__DIR__ . DIRECTORY_SEPARATOR . "../classes/Db.php");
 
 function canLogin($pEmail, $pPassword){
@@ -21,8 +21,10 @@ if(!empty($_POST)){
 
     if(canLogin($email, $password)) {
         session_start();
-        $_SESSION['loggedin'] = true; 
+        $_SESSION['loggedin'] = true;
+        $_SESSION['user_email'] = $email;  // Set user_email in session
         header("Location: ../dashboard.php");
+        exit();
     } else {
         $error = "Ongeldig email of passwoord. Probeer nog eens."; 
     }
@@ -58,7 +60,6 @@ if(!empty($_POST)){
                 <a href="forgot_password.php" class="forgot-password-link">Wachtwoord vergeten?</a>
                 <input type="password" name="password" required>
             </div>
-
 
             <div class="form__field">
                 <input type="submit" value="Inloggen" class="btn btn--primary">   

@@ -1,5 +1,7 @@
 <?php
-session_start();
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
 $currentFile = basename($_SERVER['SCRIPT_FILENAME'], '.php');
 ?>
 <!--<link rel="stylesheet" href="../css/nav.css">-->
@@ -34,18 +36,18 @@ $currentFile = basename($_SERVER['SCRIPT_FILENAME'], '.php');
         </li>
         <?php if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] === true): ?>
             <li>
-            <a href="../pages/meldingen.php">
-            <img src="../images/iconen/meldingen_icon.svg" alt="notificatie" class="nav-icon" id="icoon-display">
-            <span class="hidden-text">Meldingen</span>
-        </a>
-    </li>
-    <li>
-        <a href="../pages/account.php">
-            <img src="../images/iconen/profile_icon.svg" alt="Profiel" class="nav-icon" id="icoon-display">
-            <span class="hidden-text">Account</span>
-        </a>
-    </li>
-    <li class="logout-mobile" id="logout">
+                <a href="../pages/meldingen.php">
+                    <img src="../images/iconen/meldingen_icon.svg" alt="notificatie" class="nav-icon" id="icoon-display">
+                    <span class="hidden-text">Meldingen</span>
+                </a>
+            </li>
+            <li>
+                <a href="../pages/account.php">
+                    <img src="../images/iconen/profile_icon.svg" alt="Profiel" class="nav-icon" id="icoon-display">
+                    <span class="hidden-text">Account</span>
+                </a>
+            </li>
+            <li class="logout-mobile" id="logout">
                 <a href="../signin_login_logout/logout.php" id="logout-mobile" class="logout-button">Uitloggen</a>
             </li>
         <?php else: ?>

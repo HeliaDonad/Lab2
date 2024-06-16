@@ -56,6 +56,7 @@ h2 {
 .logout {
     color: var(--main-color); /* Adjust color as needed */
     text-decoration: none; /* Ensure no underline */
+    font-size: var(--font-size-body-mobile);
 }
 
 p {
@@ -76,6 +77,10 @@ p {
     }
 
     p {
+        font-size: var(--font-size-body);
+    }
+
+    .logout {
         font-size: var(--font-size-body);
     }
 }
