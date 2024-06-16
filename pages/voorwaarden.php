@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="../css/nav.css?80970">
     <link rel="stylesheet" href="../css/shared.css">
     <link rel="stylesheet" href="../css/voorwaarden.css?02569">
+    <link rel="stylesheet" href="../css/footer.css?02593">
 
 
 </head>
@@ -61,6 +62,8 @@
         </div>
     </div> 
 </div>
+
+<?php include_once("../components/footer.php"); ?>
 
 </body>
 </html>

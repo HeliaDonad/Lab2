@@ -1,3 +1,9 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
 footer {
     margin-top: 100px;
     background-color: var(--main-color);
@@ -47,48 +53,17 @@ footer {
 .socials {
     display: flex;
     flex-direction: column;
-}
-
-.footer-section .social a {
-    margin: 16px 0;
-    transition: color 0.3s;
-}
-
-
-.footer-section .social a:hover {
-    color: #ecf0f1;
+    gap: 13px;
+    margin-bottom: 16px;
 }
 
 .footer-bottom {
     text-align: center;
     padding: 12px;
     background-color: #0c264f;
-    margin-top: 30px;
 }
 
 .footer-bottom p {
     margin: 0;
     color: var(--background-color);
-
-}
-
-
-.footer-section .social a.facebook:hover {
-    color: #3b5998;
-}
-
-.footer-section .social a.twitter:hover {
-    color: #55acee;
-}
-
-.footer-section .social a.instagram:hover {
-    color: #e4405f;
-}
-
-.footer-section .social a.linkedin:hover {
-    color: #0077b5;
-}
-
-.footer-section .social a i {
-    margin-right: 8px;
 }

@@ -27,6 +27,8 @@ while ($row = $result_themas->fetch(PDO::FETCH_ASSOC)) {
     <link rel="stylesheet" href="../css/nav.css?58578">
     <link rel="stylesheet" href="../css/thema2.css?83849">
     <link rel="stylesheet" href="../css/shared.css?18385">
+    <link rel="stylesheet" href="../css/footer.css?02593">
+
 </head>
 <body>
 
@@ -46,7 +48,7 @@ while ($row = $result_themas->fetch(PDO::FETCH_ASSOC)) {
         <?php endforeach; ?>
     </div>
 </div>
-
 <script src="button.js"></script>
+<?php include_once("../components/footer.php"); ?>
 </body>
 </html>

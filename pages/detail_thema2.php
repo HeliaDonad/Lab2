@@ -14,6 +14,8 @@ include_once(__DIR__ . DIRECTORY_SEPARATOR . "../classes/Themas2.php");
     <link rel="stylesheet" href="../css/nav.css?55677">
     <link rel="stylesheet" href="../css/shared.css?18385">
     <link rel="stylesheet" href="../css/thema2_detail.css?86985">
+    <link rel="stylesheet" href="../css/footer.css?02593">
+
 </head>
 <body>
 
@@ -63,6 +65,8 @@ include_once(__DIR__ . DIRECTORY_SEPARATOR . "../classes/Themas2.php");
             <p>Het thema ‘mensenrechten en bedrijven’ is in volle ontwikkeling, en het FIRM volgt deze ontwikkelingen zowel op Belgisch als op Europees en internationaal vlak van nabij op. Het FIRM adviseert de federale wetgever over mogelijke verbeteringen aan bestaande en toekomstige wetgeving, en organiseert ook tal van opleidingen en informatie over de acties van de diverse actoren om mensenrechten te beschermen.</p>
         </section>
     </main>
+
+    <?php include_once("../components/footer.php"); ?>
 
 </body>
 </html>

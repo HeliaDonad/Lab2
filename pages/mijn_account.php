@@ -23,6 +23,8 @@ $email = $user->getEmailByEmail($userEmail);
     <link rel="stylesheet" href="../css/nav.css?80970">
     <link rel="stylesheet" href="../css/mijn_account.css?86968">
     <link rel="stylesheet" href="../css/shared.css">
+    <link rel="stylesheet" href="../css/footer.css?02593">
+
 </head>
 <body>
 <?php include_once("../components/headerPages.inc.php"); ?>
@@ -46,5 +48,8 @@ $email = $user->getEmailByEmail($userEmail);
         </a>
     </div>
 </div>
+
+<?php include_once("../components/footer.php"); ?>
+
 </body>
 </html>

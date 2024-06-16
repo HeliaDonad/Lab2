@@ -2,7 +2,7 @@
     <div class="footer-container">
         <div class="footer-section about">
             <h4>Over EHBM</h4>
-            <p>EHBM is een platform dat gebruikers verbindt met hoogwaardige diensten. Ons doel is om een veilige en gebruiksvriendelijke ervaring te bieden aan al onze gebruikers.</p>
+            <p>EHBM is een online wegwijzer die gebruikers helpt de juiste organisatie te vinden. Ons platform biedt gedetailleerde informatie voor een veilige en gebruiksvriendelijke ervaring.</p>
         </div>
         <div class="footer-section links">
             <h4>Nuttige Links</h4>

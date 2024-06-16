@@ -35,6 +35,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <link rel="stylesheet" href="../css/nav.css?48593">
     <link rel="stylesheet" href="../css/grote_wegwijzer.css?88790">
     <link rel="stylesheet" href="../css/shared.css">
+    <link rel="stylesheet" href="../css/footer.css?02593">
+
 </head>
 <body>
     <?php include_once("../components/headerPages.inc.php"); ?>
@@ -79,5 +81,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             });
         });
     </script>
+
+<?php include_once("../components/footer.php"); ?>
+
 </body>
 </html>

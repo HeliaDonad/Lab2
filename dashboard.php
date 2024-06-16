@@ -60,6 +60,7 @@ if ($selectedFilterId === null || $selectedFilterId === '') {
     <link rel="stylesheet" href="css/nav.css?24494">
     <link rel="stylesheet" href="css/dashboard.css?59814">
     <link rel="stylesheet" href="css/shared.css?18382">
+    <link rel="stylesheet" href="css/footer.css">
 </head>
 <body>
 
@@ -105,5 +106,7 @@ if ($selectedFilterId === null || $selectedFilterId === '') {
         <?php endforeach; ?>
     </div>
 </div>
+
+<?php include_once("./components/footer.php"); ?>
 </body>
 </html>

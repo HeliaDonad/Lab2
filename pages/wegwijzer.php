@@ -61,6 +61,8 @@ if ($action) {
     <link rel="stylesheet" href="../css/nav.css?48999">
     <link rel="stylesheet" href="../css/wegwijzer.css?94554">
     <link rel="stylesheet" href="../css/shared.css">
+    <link rel="stylesheet" href="../css/footer.css?02593">
+
 </head>
 <body>
     <?php include_once("../components/headerPages.inc.php"); ?>
@@ -136,5 +138,8 @@ if ($action) {
             });
         });
     </script>
+
+<?php include_once("../components/footer.php"); ?>
+
 </body>
 </html>

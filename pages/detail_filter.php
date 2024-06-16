@@ -79,5 +79,8 @@ while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
         <?php endforeach; ?>
     </div>
 </div>
+
+<?php include_once("../components/footer.php"); ?>
+
 </body>
 </html>

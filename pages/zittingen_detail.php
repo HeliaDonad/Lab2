@@ -14,6 +14,8 @@ include_once(__DIR__ . DIRECTORY_SEPARATOR . "../classes/Themas2.php");
     <link rel="stylesheet" href="../css/nav.css?55677">
     <link rel="stylesheet" href="../css/shared.css?18385">
     <link rel="stylesheet" href="../css/thema2_detail.css?76985">
+    <link rel="stylesheet" href="../css/footer.css?02593">
+
 </head>
 <body>
 
@@ -92,6 +94,7 @@ include_once(__DIR__ . DIRECTORY_SEPARATOR . "../classes/Themas2.php");
      
         </section>
     </main>
+    <?php include_once("../components/footer.php"); ?>
 
 </body>
 </html>

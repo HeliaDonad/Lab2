@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="../css/nav.css?80970">
     <link rel="stylesheet" href="../css/meldingen.css?06978">
     <link rel="stylesheet" href="../css/shared.css">
+    <link rel="stylesheet" href="../css/footer.css?02593">
+
 </head>
 <body>
     <?php include_once("../components/headerPages.inc.php"); ?>
@@ -48,5 +50,8 @@
             </div>
         </div>
     </div>
+
+    <?php include_once("../components/footer.php"); ?>
+
 </body>
 </html>

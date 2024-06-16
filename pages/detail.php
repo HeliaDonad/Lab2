@@ -1,4 +1,7 @@
 <?php
+
+use PSpell\Dictionary;
+
 include_once(__DIR__ . DIRECTORY_SEPARATOR . "../classes/Db.php");
 include_once(__DIR__ . DIRECTORY_SEPARATOR . "../classes/Thema.php");
 include_once(__DIR__ . DIRECTORY_SEPARATOR . "../classes/Organisatie.php");
@@ -75,5 +78,8 @@ while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
         <?php endforeach; ?>
     </div>
 </div>
+
+<?php include_once("../components/footer.php"); ?>
+
 </body>
 </html>

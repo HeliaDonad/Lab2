@@ -31,6 +31,8 @@ while ($row = $result_activiteiten->fetch(PDO::FETCH_ASSOC)) {
     <link rel="stylesheet" href="../css/activiteiten.css?97578">
     <link rel="stylesheet" href="../css/filter2.css?06978">
     <link rel="stylesheet" href="../css/shared.css">
+    <link rel="stylesheet" href="../css/footer.css?02593">
+
 </head>
 <body>
     <?php include_once("../components/headerPages.inc.php"); ?>
@@ -47,8 +49,11 @@ while ($row = $result_activiteiten->fetch(PDO::FETCH_ASSOC)) {
                 </a>
             <?php endforeach; ?>
         </div>
-    </div>       
-        <script src="../js/filter2.js"></script>
-    </div>
+    </div>   
+    <script src="../js/filter2.js"></script>
+</div>
+
+
+<?php include_once("../components/footer.php"); ?>    
 </body>
 </html>

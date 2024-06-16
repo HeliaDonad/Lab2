@@ -23,6 +23,7 @@ while ($row = $result_zittingen->fetch(PDO::FETCH_ASSOC)) {
     <link rel="stylesheet" href="../css/nav.css?48683">
     <link rel="stylesheet" href="../css/zittingen.css?80998">
     <link rel="stylesheet" href="../css/shared.css?86988">
+    <link rel="stylesheet" href="../css/footer.css?02593">
 </head>
 <body>
     <?php include_once("../components/headerPages.inc.php"); ?>
@@ -56,5 +57,8 @@ while ($row = $result_zittingen->fetch(PDO::FETCH_ASSOC)) {
         <?php endforeach; ?>
 
     </div>
+
+    <?php include_once("../components/footer.php"); ?>
+
 </body>
 </html>

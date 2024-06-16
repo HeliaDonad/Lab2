@@ -35,6 +35,8 @@ if(!empty($_POST)){
     <title>Wachtwoord vergeten</title>
     <link rel="stylesheet" href="../css/signin_login.css?12664">
     <link rel="stylesheet" href="../css/shared.css?23454">
+    <link rel="stylesheet" href="../css/footer.css?02593">
+
 </head>
 <body>
 <div class="container">
@@ -59,5 +61,7 @@ if(!empty($_POST)){
         <img src="" alt="afbeelding">
     </div>
 </div>
+
+
 </body>
 </html>

@@ -31,6 +31,8 @@ while ($row = $result_vrijwilligerswerk->fetch(PDO::FETCH_ASSOC)) {
     <link rel="stylesheet" href="../css/vrijwilligerswerk.css?99578">
     <link rel="stylesheet" href="../css/filter2.css?80478">
     <link rel="stylesheet" href="../css/shared.css">
+    <link rel="stylesheet" href="../css/footer.css?02593">
+
 </head>
 <body>
     <?php include_once("../components/headerPages.inc.php"); ?>
@@ -50,5 +52,7 @@ while ($row = $result_vrijwilligerswerk->fetch(PDO::FETCH_ASSOC)) {
     </div>       
         <script src="../js/filter2.js"></script>
     </div>
+    <?php include_once("../components/footer.php"); ?>
+
 </body>
 </html>
