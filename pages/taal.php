@@ -64,7 +64,7 @@
         </div>
     </div>
 
-    <?php include_once("../components/footer.php"); ?>
+    <?php include_once("../components/footer.inc.php"); ?>
     <script src="../js/toggle.js"></script>
 </body>
 </html>

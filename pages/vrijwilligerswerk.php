@@ -52,7 +52,7 @@ while ($row = $result_vrijwilligerswerk->fetch(PDO::FETCH_ASSOC)) {
     </div>       
         <script src="../js/filter2.js"></script>
     </div>
-    <?php include_once("../components/footer.php"); ?>
+    <?php include_once("../components/footer.inc.php"); ?>
 
 </body>
 </html>

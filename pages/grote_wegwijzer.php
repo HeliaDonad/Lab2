@@ -82,7 +82,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         });
     </script>
 
-<?php include_once("../components/footer.php"); ?>
+<?php include_once("../components/footer.inc.php"); ?>
 
 </body>
 </html>

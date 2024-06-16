@@ -66,7 +66,7 @@ include_once(__DIR__ . DIRECTORY_SEPARATOR . "../classes/Themas2.php");
         </section>
     </main>
 
-    <?php include_once("../components/footer.php"); ?>
+    <?php include_once("../components/footer.inc.php"); ?>
 
 </body>
 </html>

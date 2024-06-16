@@ -58,7 +58,7 @@ while ($row = $result_zittingen->fetch(PDO::FETCH_ASSOC)) {
 
     </div>
 
-    <?php include_once("../components/footer.php"); ?>
+    <?php include_once("../components/footer.inc.php"); ?>
 
 </body>
 </html>

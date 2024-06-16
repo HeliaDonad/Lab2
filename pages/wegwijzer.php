@@ -139,7 +139,7 @@ if ($action) {
         });
     </script>
 
-<?php include_once("../components/footer.php"); ?>
+<?php include_once("../components/footer.inc.php"); ?>
 
 </body>
 </html>

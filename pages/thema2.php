@@ -26,8 +26,8 @@ while ($row = $result_themas->fetch(PDO::FETCH_ASSOC)) {
     <title>Eerste Hulp Bij Mensenrechten</title>
     <link rel="stylesheet" href="../css/nav.css?58578">
     <link rel="stylesheet" href="../css/thema2.css?83849">
-    <link rel="stylesheet" href="../css/shared.css?18385">
     <link rel="stylesheet" href="../css/footer.css?02593">
+    <link rel="stylesheet" href="../css/shared.css?18385">
 
 </head>
 <body>
@@ -49,6 +49,6 @@ while ($row = $result_themas->fetch(PDO::FETCH_ASSOC)) {
     </div>
 </div>
 <script src="button.js"></script>
-<?php include_once("../components/footer.php"); ?>
+<?php include_once("../components/footer.inc.php"); ?>
 </body>
 </html>

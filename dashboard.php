@@ -59,8 +59,8 @@ if ($selectedFilterId === null || $selectedFilterId === '') {
     <title>Eerste Hulp Bij Mensenrechten</title>
     <link rel="stylesheet" href="css/nav.css?24494">
     <link rel="stylesheet" href="css/dashboard.css?59814">
-    <link rel="stylesheet" href="css/shared.css?18382">
     <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/shared.css?18382">
 </head>
 <body>
 
@@ -107,6 +107,6 @@ if ($selectedFilterId === null || $selectedFilterId === '') {
     </div>
 </div>
 
-<?php include_once("./components/footer.php"); ?>
+<?php include_once("./components/footer.inc.php"); ?>
 </body>
 </html>
