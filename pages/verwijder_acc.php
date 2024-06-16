@@ -46,7 +46,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 <body>
 <div class="container">
     <main>
-        <form action="" method="post">
+        <form id="deleteAccountForm" action="" method="post">
             <h1>Account Verwijderen</h1>
             <p>Om uw account te verwijderen, moet u eerst uw huidige wachtwoord invoeren.</p>
             <?php if(!empty($error)): ?> 
@@ -62,12 +62,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 </span>
             </div>
             <div class="form__field">
-                <input type="submit" value="Verwijder Account" class="btn btn--primary btn-margin">   
+                <input type="submit" value="Verwijder Account" class="btn btn--primary btn-margin" onclick="return confirmDelete()">   
             </div>
         </form>
     </main>  
 </div>
-</body>
 <script>
     function togglePasswordVisibility(inputId, iconId) {
         var passwordField = document.getElementById(inputId);
@@ -81,5 +80,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             eyeIcon.src = '../images/iconen/eye-closed.svg';
         }
     }
+
+    function confirmDelete() {
+        return confirm("Bent u zeker dat u uw account wilt verwijderen?");
+    }
 </script>
+</body>
 </html>
