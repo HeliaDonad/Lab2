@@ -61,7 +61,7 @@ h3 {
     flex: 1; 
     margin-left: 5px;
     color: var(--main-color);
-    padding: 10px 0;
+    padding: 5px 0;
 }
 
 
@@ -77,9 +77,13 @@ h3 {
     h3 {
         font-size: var(--font-size-h3);
     }
+
+    .button p{
+        padding: 10px 0;
+    }
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 1024px) {
 
     .button-bar {
         width: 800px; 

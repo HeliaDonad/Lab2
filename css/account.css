@@ -19,7 +19,7 @@ h2 {
     display: flex;
     flex-direction: column;
     width: 300px; 
-    margin-bottom: 100px;
+    /*margin-bottom: 100px;*/
 }
 
 .button {
@@ -57,9 +57,13 @@ h2 {
     .button-bar {
         width: 500px; 
     }
+
+    .button p{
+        padding: 10px 0;
+    }
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 1024px) {
 
     .button-bar {
         width: 800px; 

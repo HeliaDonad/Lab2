@@ -89,6 +89,27 @@ a:hover {
     height: auto;
 }
 
+.form__field {
+    margin-bottom: 15px;
+    position: relative; 
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: var(--color-black);
+}
+
+.forgot-password-link {
+    position: absolute;
+    top: -6px;
+    right: 0;
+    font-size: 12px; 
+    color: var(--main-color); 
+    text-decoration: none;
+}
+
+
 @media only screen and (min-width: 768px) {
     .image {
         width: 50%;

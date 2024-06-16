@@ -34,7 +34,7 @@ if(!empty($_POST)){
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="../css/signin_login.css?12664">
+    <link rel="stylesheet" href="../css/signin_login.css?92664">
     <link rel="stylesheet" href="../css/shared.css?23454">
 </head>
 <body>
@@ -50,12 +50,15 @@ if(!empty($_POST)){
             <?php endif; ?>
             <div class="form__field">
                 <label for="Email">Email</label>
-                <input type="text" name="email">
+                <input type="text" name="email" required>
             </div>
             <div class="form__field">
+            <div class="form__field">
                 <label for="Password">Wachtwoord</label>
-                <input type="password" name="password">
+                <a href="forgot_password.php" class="forgot-password-link">Wachtwoord vergeten?</a>
+                <input type="password" name="password" required>
             </div>
+
 
             <div class="form__field">
                 <input type="submit" value="Inloggen" class="btn btn--primary">   
