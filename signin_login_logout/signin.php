@@ -1,7 +1,7 @@
 <?php 
 include_once(__DIR__ . DIRECTORY_SEPARATOR . "../classes/Db.php");
 
-if(!empty($_POST)){
+if (!empty($_POST)) {
     $email = $_POST['email'];
     $password = $_POST['password'];
     $confirmPassword = $_POST['confirm_password']; 
@@ -14,16 +14,31 @@ if(!empty($_POST)){
             // Als het e-mailadres niet geldig is, foutmelding 
             $error = "Ongeldig e-mailadres";
         } else {
-            $options = [
-                'cost' => 15
-            ];
-            $passwordHash = password_hash($password, PASSWORD_DEFAULT, $options);
             $conn = Db::getConnection();
-            $query = "INSERT INTO users (email, password) VALUES ('$email', '$passwordHash')";
-            session_start();
-            $_SESSION['loggedin'] = true;
-            $result = $conn->query($query);
-            header("Location: ../dashboard.php");
+
+            // Controleer of het e-mailadres al bestaat
+            $checkQuery = "SELECT email FROM users WHERE email = :email";
+            $stmt = $conn->prepare($checkQuery);
+            $stmt->execute(['email' => $email]);
+
+            if ($stmt->rowCount() > 0) {
+                $error = "E-mailadres is al in gebruik";
+            } else {
+                $options = ['cost' => 15];
+                $passwordHash = password_hash($password, PASSWORD_DEFAULT, $options);
+
+                $query = "INSERT INTO users (email, password) VALUES (:email, :password)";
+                $stmt = $conn->prepare($query);
+                $result = $stmt->execute(['email' => $email, 'password' => $passwordHash]);
+
+                if ($result) {
+                    session_start();
+                    $_SESSION['loggedin'] = true;
+                    header("Location: login.php");
+                } else {
+                    $error = "Er is een fout opgetreden tijdens het aanmaken van het account";
+                }
+            }
         }
     }
 }

@@ -58,7 +58,7 @@ if ($selectedFilterId === null || $selectedFilterId === '') {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Eerste Hulp Bij Mensenrechten</title>
     <link rel="stylesheet" href="css/nav.css?24494">
-    <link rel="stylesheet" href="css/dashboard.css?59814">
+    <link rel="stylesheet" href="css/dashboard.css?50914">
     <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="css/shared.css?18382">
 </head>
