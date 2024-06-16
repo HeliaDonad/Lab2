@@ -1,5 +1,7 @@
 <?php
-session_start();
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
 $currentFile = basename($_SERVER['SCRIPT_FILENAME'], '.php');
 ?>
 <!--<link rel="stylesheet" href="../css/nav.css">-->

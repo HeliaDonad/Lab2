@@ -36,8 +36,20 @@ if(!empty($_POST)){
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="../css/signin_login.css?92664">
+    <link rel="stylesheet" href="../css/signin_login.css?99664">
     <link rel="stylesheet" href="../css/shared.css?23454">
+    <style>
+        .form__field {
+            position: relative;
+        }
+        .toggle-password {
+            position: absolute;
+            top: 50%;
+            right: 10px;
+            transform: translateY(-50%);
+            cursor: pointer;
+        }
+    </style>
 </head>
 <body>
 <div class="container">
@@ -55,12 +67,13 @@ if(!empty($_POST)){
                 <input type="text" name="email" required>
             </div>
             <div class="form__field">
-            <div class="form__field">
                 <label for="Password">Wachtwoord</label>
                 <a href="forgot_password.php" class="forgot-password-link">Wachtwoord vergeten?</a>
-                <input type="password" name="password" required>
+                <input type="password" name="password" id="password" required>
+                <span class="toggle-password" onclick="togglePasswordVisibility()">
+                    <img id="eye-icon" src="../images/iconen/eye-closed.svg" alt="eye">
+                </span>
             </div>
-
             <div class="form__field">
                 <input type="submit" value="Inloggen" class="btn btn--primary">   
             </div>
@@ -68,7 +81,8 @@ if(!empty($_POST)){
         </form>
     </main>  
     <div class="image">
-            <img src="" alt="afbeelding">
+        <img src="" alt="afbeelding">
     </div>
 </body>
+<script src="../js/eye.js"></script>
 </html>

@@ -34,7 +34,7 @@ if(!empty($_POST)){
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="../css/signin_login.css?12385">
+    <link rel="stylesheet" href="../css/signin_login.css?92385">
     <link rel="stylesheet" href="../css/shared.css?12345">
 </head>
 <body>
@@ -53,14 +53,20 @@ if(!empty($_POST)){
                 <input type="text" name="email">
             </div>
             <div class="form__field">
-                <label for="Password">Wachtwoord</label>
-                <input type="password" name="password">
-            </div>
             <div class="form__field">
-                <label for="ConfirmPassword">Bevestig wachtwoord</label>
-                <input type="password" name="confirm_password"> 
-            </div>
-
+        <label for="Password">Wachtwoord</label>
+        <input type="password" name="password" id="password" required>
+        <span class="toggle-password" onclick="togglePasswordVisibility('password', 'eye-icon-1')">
+        <img id="eye-icon-1" src="../images/iconen/eye-closed.svg" alt="eye">
+        </span>
+        </div>
+        <div class="form__field">
+            <label for="ConfirmPassword">Bevestig wachtwoord</label>
+            <input type="password" name="confirm_password" id="confirm_password" required>
+            <span class="toggle-password" onclick="togglePasswordVisibility('confirm_password', 'eye-icon-2')">
+            <img id="eye-icon-2" src="../images/iconen/eye-closed.svg" alt="eye">
+            </span>
+        </div>
             <div class="form__field">
                 <input type="submit" value="Aanmelden" class="btn btn--primary">   
             </div>
@@ -72,3 +78,18 @@ if(!empty($_POST)){
     </div>
 </body>
 </html>
+<script>
+    function togglePasswordVisibility(inputId, iconId) {
+        var passwordField = document.getElementById(inputId);
+        var eyeIcon = document.getElementById(iconId);
+
+        if (passwordField.type === 'password') {
+            passwordField.type = 'text';
+            eyeIcon.src = '../images/iconen/eye-open.svg';
+        } else {
+            passwordField.type = 'password';
+            eyeIcon.src = '../images/iconen/eye-closed.svg';
+        }
+    }
+</script>
+
