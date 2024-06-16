@@ -1,6 +1,6 @@
 .container {
-    margin-left: 118px;
-    margin-right: 118px;
+    margin-left: 50px;
+    margin-right: 50px;
 }
 
 h2 {
@@ -18,6 +18,10 @@ h2 {
     color: var(--main-color);
 }
 
+/*.taal h1 {
+    margin-top: 0;
+} */
+
 p{
     font-size: var(--font-size-body-mobile);
     color: var(--main-color);
@@ -26,14 +30,16 @@ p{
 .content {
     display: flex;
     align-items: center;
-    margin: 0 36px 20px 36px;
-    border-radius: 10px;
+    margin: 0 12px 20px 12px;
+    border-radius: 16px;
     padding: 2px 24px;
-    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2); 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
 }
 
 .content img {
-    margin-right: 20px; 
+    margin-right: 15px; /* Ruimte tussen de afbeelding en de tekst */
+    width: 30px; 
+    height: 30px;
 }
 
 .text-toggle {
@@ -49,8 +55,8 @@ p{
 .switch {
     position: relative;
     display: inline-block;
-    width: 60px;
-    height: 34px;
+    width: 51px;
+    height: 24px;
 }
 
 .switch input { 
@@ -75,8 +81,8 @@ p{
 .slider:before {
     position: absolute;
     content: "";
-    height: 26px;
-    width: 26px;
+    height: 16px;
+    width: 16px;
     left: 4px;
     bottom: 4px;
     background-color: white;
@@ -102,7 +108,7 @@ input:checked + .slider:before {
 /* Media query voor desktop */
 @media (min-width: 768px) {
     .content {
-        margin: 0 136px 20px 136px; /* Margin 136px aan beide zijden op desktop */
+        margin: 0 100px 20px 100px; /* Margin 136px aan beide zijden op desktop */
     }
 
     h2 {
@@ -112,11 +118,17 @@ input:checked + .slider:before {
     p{
         font-size: var(--font-size-body);
     }
+
+    .content img {
+        margin-right: 20px; /* Ruimte tussen de afbeelding en de tekst */
+        width: 40px; 
+        height: 40px;
+    }
     
 }
 
 @media (min-width: 1024px) {
     .content {
-        margin: 0 250px 20px 250px; /* Margin 136px aan beide zijden op desktop */
+        margin: 0 200px 20px 200px; 
     }
 }

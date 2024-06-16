@@ -36,21 +36,8 @@ if(!empty($_POST)){
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="../css/signin_login.css?99664">
+    <link rel="stylesheet" href="../css/signin_login.css?89664">
     <link rel="stylesheet" href="../css/shared.css?23454">
-
-    <style>
-        .form__field {
-            position: relative;
-        }
-        .toggle-password {
-            position: absolute;
-            top: 50%;
-            right: 10px;
-            transform: translateY(-50%);
-            cursor: pointer;
-        }
-    </style>
 </head>
 <body>
 <div class="container">
@@ -76,7 +63,7 @@ if(!empty($_POST)){
                 <a href="forgot_password.php" class="forgot-password-link">Wachtwoord vergeten?</a>
             </div>
             <div class="form__field">
-                <input type="submit" value="Inloggen" class="btn btn--primary">   
+                <input type="submit" value="Inloggen" class="btn btn--primary btn-margin">   
             </div>
             <a href="signin.php">Ik heb nog geen account</a>
         </form>

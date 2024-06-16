@@ -34,7 +34,7 @@ if(!empty($_POST)){
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="../css/signin_login.css?92385">
+    <link rel="stylesheet" href="../css/signin_login.css?88385">
     <link rel="stylesheet" href="../css/shared.css?12345">
 </head>
 <body>
