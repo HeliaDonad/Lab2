@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Account</title>
     <link rel="stylesheet" href="../css/nav.css?80970">
-    <link rel="stylesheet" href="../css/account.css?86978">
+    <link rel="stylesheet" href="../css/account.css?49978">
     <link rel="stylesheet" href="../css/shared.css">
 </head>
 <body>
@@ -15,7 +15,7 @@
         <h2>Mijn account</h2>
         
         <div class="button-bar">
-            <a href="account.php" class="button">
+            <a href="mijn_account.php" class="button">
                 <img src="../images/iconen/profile_icon.svg" alt="Account icoon">
                 <p>Mijn account</p>
             </a>

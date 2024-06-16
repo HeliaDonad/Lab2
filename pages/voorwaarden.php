@@ -30,7 +30,7 @@
 
     <div class="txt_two">
         <h4>2. Accountregistratie</h4>
-        <p>2.1 Accountgegevens: U bent verantwoordelijk voor het verstrekken van accurate en actuele informatie bij het registreren voor een account bij EHBM.
+        <p>2.1 Accountgegevens: U bent verantwoordelijk voor het verstrekken van accurate en actuele informatie bij het Aanmelden voor een account bij EHBM.
         <p>2.2 Accountbeveiliging: U bent verantwoordelijk voor het handhaven van de vertrouwelijkheid van uw accountinformatie en voor alle activiteiten die plaatsvinden onder uw account.</p>
     </div>
 

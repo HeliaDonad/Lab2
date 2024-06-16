@@ -80,6 +80,11 @@ h3 {
 
     .button p{
         padding: 10px 0;
+        font-size: var(--font-size-body);
+    }
+
+    p {
+        font-size: var(--font-size-body);
     }
 }
 

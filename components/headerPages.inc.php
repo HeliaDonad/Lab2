@@ -53,7 +53,7 @@ $currentFile = basename($_SERVER['SCRIPT_FILENAME'], '.php');
                 <a href="../signin_login_logout/login.php" id="login-mobile" class="login-button">Inloggen</a>
             </li>
             <li class="signin-mobile" id="signin">
-                <a href="../signin_login_logout/signin.php" id="signin-mobile" class="signin-button">Registreren</a>
+                <a href="../signin_login_logout/signin.php" id="signin-mobile" class="signin-button">Aanmelden</a>
             </li>
         <?php endif; ?>
     </ul>
@@ -69,7 +69,7 @@ $currentFile = basename($_SERVER['SCRIPT_FILENAME'], '.php');
         <a class="logout-button" id="display-logout" href="../signin_login_logout/logout.php">Uitloggen</a>
     <?php else: ?>
         <a class="login-button" id="display-logout" href="../signin_login_logout/login.php">Inloggen</a>
-        <a class="signin-button" id="display-logout" href="../signin_login_logout/signin.php">Registreren</a>
+        <a class="signin-button" id="display-logout" href="../signin_login_logout/signin.php">Aanmelden</a>
     <?php endif; ?>
 </div>
 </header>

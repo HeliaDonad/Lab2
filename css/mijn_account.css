@@ -18,8 +18,7 @@ h2 {
 .button-bar {
     display: flex;
     flex-direction: column;
-    width: 300px; 
-    /*margin-bottom: 100px;*/
+    width: 300px; /* Aanpassen naar gewenste breedte */
 }
 
 .button {
@@ -33,6 +32,7 @@ h2 {
     cursor: pointer;
     text-decoration: none; 
     color: inherit; 
+    position: relative; /* Ensure positioning context for child elements */
 }
 
 .button img {
@@ -48,9 +48,18 @@ h2 {
     color: var(--main-color);
 }
 
-p{
+.logout-link {
+    margin-left: auto; /* Align to the right */
+    margin-right: 10px;
+}
+
+.logout {
+    color: var(--main-color); /* Adjust color as needed */
+    text-decoration: none; /* Ensure no underline */
+}
+
+p {
     font-size: var(--font-size-body-mobile);
-    color: var(--main-color);
 }
 
 @media only screen and (min-width: 768px) {
@@ -59,10 +68,10 @@ p{
     }
 
     .button-bar {
-        width: 500px; 
+        width: 500px; /* Aanpassen naar gewenste breedte */
     }
 
-    .button p{
+    .button p {
         padding: 10px 0;
     }
 
@@ -72,8 +81,7 @@ p{
 }
 
 @media only screen and (min-width: 1024px) {
-
     .button-bar {
-        width: 800px; 
+        width: 800px; /* Aanpassen naar gewenste breedte */
     }
 }
