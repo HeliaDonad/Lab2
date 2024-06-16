@@ -40,8 +40,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Account Verwijderen</title>
-    <link rel="stylesheet" href="../css/verwijder_acc.css?12345">
-    <link rel="stylesheet" href="../css/shared.css?23454">
+    <link rel="stylesheet" href="../css/verwijder_acc.css?15345">
+    <link rel="stylesheet" href="../css/shared.css?29454">
 </head>
 <body>
 <div class="container">

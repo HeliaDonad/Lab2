@@ -1,4 +1,4 @@
-/* verwijder_acc.css */
+
 
 body {
     font-family: Arial, sans-serif;
@@ -14,17 +14,6 @@ body {
     height: 100vh;
 }
 
-main {
-    width: 100%;
-    max-width: 400px;
-    padding: 20px;
-    box-sizing: border-box;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
-
 form {
     width: 100%;
     max-width: 300px;
@@ -33,12 +22,13 @@ form {
 h1 {
     margin-bottom: 20px;
     color: var(--main-color);
+    font-size: var(--font-size-h1-mobile);
 }
 
 .form__error p {
     color: red;
     margin-bottom: 20px;
-    font-size: var(--font-size-small);
+    font-size: var(--font-size-body-mobile);
 }
 
 .form__field {
@@ -101,8 +91,30 @@ a:hover {
     cursor: pointer;
 }
 
+/*p{
+    font-size: var(--font-size-body-mobile);
+}*/
+
+p{
+    font-size: var(--font-size-body);
+}
+
 @media only screen and (min-width: 768px) {
-    main {
-        max-width: 600px;
+
+    form {
+        max-width: 500px;
     }
+
+    h1 {
+        font-size: var(--font-size-h1);
+    }
+
+    .form__error p {
+        font-size: var(--font-size-body);
+    }
+
+    p {
+        font-size: var(--font-size-body);
+    }
+
 }
