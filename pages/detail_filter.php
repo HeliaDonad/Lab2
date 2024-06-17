@@ -47,8 +47,9 @@ while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?php echo htmlspecialchars($thema->getNaam()); ?> - Organisaties</title>
     <link rel="stylesheet" href="../css/nav.css?48598">
-    <link rel="stylesheet" href="../css/detail.css?18735">
+    <link rel="stylesheet" href="../css/detail.css?18035">
     <link rel="stylesheet" href="../css/shared.css?19845">
+    <link rel="stylesheet" href="../css/footer.css?02593">
 </head>
 <body>
 
@@ -59,26 +60,26 @@ while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
     <img src="../images/iconen/mijnwegwijzer.svg" alt="Mijn wegwijzer">
     <span class="button-text">Mijn wegwijzer</span>
 </a>
-    <h2><?php echo htmlspecialchars($thema->getNaam()); ?></h2>
-    <p class="uitleg"><?php echo htmlspecialchars($thema->getUitleg()); ?></p>
-<div>
+<h2><?php echo htmlspecialchars($thema->getNaam()); ?></h2>
+        <p class="uitleg"><?php echo htmlspecialchars($thema->getUitleg()); ?></p>
     <div class="button-bar">
         <?php foreach ($organisaties as $organisatie): ?>
             <div class="button">
-            <a href="<?php echo htmlspecialchars($organisatie->getUrl()); ?>"> 
-                <span class="text1"><?php echo htmlspecialchars($organisatie->getNaam()); ?></span>
-            </a>
-            <p><?php echo htmlspecialchars($organisatie->getBodyTekst()); ?></p>
-            <a href="<?php echo htmlspecialchars($organisatie->getKnopUrl()); ?>" class="button2">
-                <span class="text2"><?php echo htmlspecialchars($organisatie->getKnopTekst()); ?></span>
-            </a>
-            <a href="<?php echo htmlspecialchars($organisatie->getContactUrl()); ?>">
-                <p><?php echo htmlspecialchars($organisatie->getContactTekst()); ?></p>
-            </a>
+                <a href="<?php echo htmlspecialchars($organisatie->getUrl()); ?>"> 
+                    <span class="text1"><?php echo htmlspecialchars($organisatie->getNaam()); ?></span>
+                </a>
+                <p><?php echo htmlspecialchars($organisatie->getBodyTekst()); ?></p>
+                <a href="<?php echo htmlspecialchars($organisatie->getKnopUrl()); ?>" class="button2">
+                    <span class="text2"><?php echo htmlspecialchars($organisatie->getKnopTekst()); ?></span>
+                </a>
+                <a href="<?php echo htmlspecialchars($organisatie->getContactUrl()); ?>">
+                    <p><?php echo htmlspecialchars($organisatie->getContactTekst()); ?></p>
+                </a>
             </div>
         <?php endforeach; ?>
     </div>
 </div>
+
 
 <?php include_once("../components/footer.inc.php"); ?>
 
