@@ -21,7 +21,7 @@ $email = $user->getEmailByEmail($userEmail);
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mijn account</title>
     <link rel="stylesheet" href="../css/nav.css?80970">
-    <link rel="stylesheet" href="../css/mijn_account.css?88968">
+    <link rel="stylesheet" href="../css/mijn_account.css?78968">
     <link rel="stylesheet" href="../css/shared.css">
     <link rel="stylesheet" href="../css/footer.css?02593">
 

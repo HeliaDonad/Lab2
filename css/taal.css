@@ -124,11 +124,20 @@ input:checked + .slider:before {
         width: 40px; 
         height: 40px;
     }
-    
 }
 
 @media (min-width: 1024px) {
     .content {
         margin: 0 200px 20px 200px; 
+    }
+}
+
+@media only screen and (max-width: 499px){
+    .container {
+        height: 100vh;
+    }
+
+    h2 {
+        margin-top: 200px;
     }
 }

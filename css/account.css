@@ -77,3 +77,16 @@ p{
         width: 800px; 
     }
 }
+
+@media only screen and (max-width: 499px){
+    .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+
+    h2 {
+        margin-top: 50px;
+    }
+}
