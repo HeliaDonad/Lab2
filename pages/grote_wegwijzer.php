@@ -21,7 +21,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if (empty($vraag2)) {
         $showVraag2 = true;
     } else {
-        header("Location: wegwijzer.php?thema_id=1");
+        header("Location: wegwijzer.php?thema_id=1&filter_id=1");
         exit;
     }
 }
@@ -33,7 +33,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Wegwijzer - Grote Wegwijzer</title>
     <link rel="stylesheet" href="../css/nav.css?48593">
-    <link rel="stylesheet" href="../css/grote_wegwijzer.css?88790">
+    <link rel="stylesheet" href="../css/grote_wegwijzer.css?98790">
     <link rel="stylesheet" href="../css/shared.css">
     <link rel="stylesheet" href="../css/footer.css?02593">
 

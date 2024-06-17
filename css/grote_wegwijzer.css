@@ -78,7 +78,7 @@ label.antwoord-label {
 
 textarea.antwoord-selector {
     margin-bottom: 70px;
-    margin-top: 10px;
+    margin-top: 20px;
     width: 100%;
     padding: 10px;
     border-radius: 5px;
@@ -107,5 +107,18 @@ textarea.antwoord-selector {
 }
 
 @media only screen and (max-width: 499px) {
+    .vraag-content{
+        margin: 10px;
+    }
 
+    .volgende-btn {
+        right: 30px; 
+        bottom: 10px; 
+    }
+
+    #volgende-btn[disabled] {
+        right: 30px; 
+        bottom: 10px; 
+    }
+    
 }
