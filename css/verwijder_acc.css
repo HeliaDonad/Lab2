@@ -19,10 +19,18 @@ form {
     max-width: 300px;
 }
 
-h1 {
+/*h1 {
     margin-bottom: 20px;
     color: var(--main-color);
     font-size: var(--font-size-h1-mobile);
+} */
+
+h2 {
+    margin-top: 80px;
+    margin-bottom: 20px;
+    color: var(--main-color);
+    font-size: var(--font-size-h2-mobile);
+    text-align: center;
 }
 
 .form__error p {
@@ -105,9 +113,9 @@ p{
         max-width: 500px;
     }
 
-    h1 {
+    /*h1 {
         font-size: var(--font-size-h1);
-    }
+    } */
 
     .form__error p {
         font-size: var(--font-size-body);
@@ -115,6 +123,10 @@ p{
 
     p {
         font-size: var(--font-size-body);
+    }
+
+    h2 {
+        font-size: var(--font-size-h2);
     }
 
 }

@@ -40,14 +40,17 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Account Verwijderen</title>
-    <link rel="stylesheet" href="../css/verwijder_acc.css?15345">
+    <link rel="stylesheet" href="../css/verwijder_acc.css?99345">
     <link rel="stylesheet" href="../css/shared.css?29454">
+    <link rel="stylesheet" href="../css/nav.css?80970">
+    <link rel="stylesheet" href="../css/footer.css?02593">
 </head>
 <body>
+<?php include_once("../components/headerPages.inc.php"); ?>
 <div class="container">
     <main>
         <form id="deleteAccountForm" action="" method="post">
-            <h1>Account Verwijderen</h1>
+            <h2>Account Verwijderen</h2>
             <p>Om uw account te verwijderen, moet u eerst uw huidige wachtwoord invoeren.</p>
             <?php if(!empty($error)): ?> 
             <div class="form__error">
@@ -85,5 +88,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         return confirm("Bent u zeker dat u uw account wilt verwijderen?");
     }
 </script>
+<?php include_once("../components/footer.inc.php"); ?>
 </body>
 </html>
