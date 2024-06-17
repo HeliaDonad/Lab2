@@ -122,6 +122,6 @@ p {
 
 @media only screen and (max-width: 499px) {
     .button-bar {
-        width: 330px;
+        width: 300px;
     }
 }

@@ -21,7 +21,7 @@ while ($row = $result_zittingen->fetch(PDO::FETCH_ASSOC)) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Zittingen</title>
     <link rel="stylesheet" href="../css/nav.css?48683">
-    <link rel="stylesheet" href="../css/zittingen.css?80998">
+    <link rel="stylesheet" href="../css/zittingen.css?89998">
     <link rel="stylesheet" href="../css/shared.css?86988">
     <link rel="stylesheet" href="../css/footer.css?02593">
 </head>

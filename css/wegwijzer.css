@@ -128,5 +128,22 @@ input.antwoord-selector {
 }
 
 @media only screen and (max-width: 499px) {
+    .vraag-content{
+        margin: 10px;
+    }
 
+    form  {
+        margin-bottom: 50px;
+    }
+
+    .volgende-btn {
+        right: 10px; 
+        bottom: 10px; 
+    }
+
+    #volgende-btn[disabled] {
+        right: 10px; 
+        bottom: 10px; 
+    }
+    
 }
