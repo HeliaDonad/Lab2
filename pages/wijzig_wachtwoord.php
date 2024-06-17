@@ -45,7 +45,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Wijzig Wachtwoord</title>
-    <link rel="stylesheet" href="../css/wijzig_wachtwoord.css?99345">
+    <link rel="stylesheet" href="../css/wijzig_wachtwoord.css?89345">
     <link rel="stylesheet" href="../css/shared.css?29454">
     <link rel="stylesheet" href="../css/nav.css?80970">
     <link rel="stylesheet" href="../css/footer.css?02593">

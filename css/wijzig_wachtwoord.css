@@ -44,6 +44,7 @@ label {
     display: block;
     margin-bottom: 5px;
     color: var(--color-black);
+    font-size: var(--font-size-body-mobile);
 }
 
 input[type="password"] {
@@ -85,7 +86,7 @@ input[type="submit"]:hover {
 }
 
 p {
-    font-size: var(--font-size-body);
+    font-size: var(--font-size-body-mobile);
 }
 
 @media only screen and (min-width: 768px) {
@@ -103,5 +104,15 @@ p {
 
     h2 {
         font-size: var(--font-size-h2);
+    }
+
+    label{
+        font-size: var(--font-size-body);
+    }
+}
+
+@media only screen and (max-width: 499px){
+    h2 {
+        margin-top: 50px;
     }
 }
