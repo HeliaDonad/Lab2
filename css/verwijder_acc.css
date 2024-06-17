@@ -75,18 +75,6 @@ input[type="submit"]:hover {
     background-color: var(--main-color);
 }
 
-a {
-    display: block;
-    text-align: center;
-    margin-top: 10px;
-    color: var(--main-color);
-    text-decoration: none;
-}
-
-a:hover {
-    text-decoration: underline;
-}
-
 .btn-margin {
     margin-top: 24px;
 }
