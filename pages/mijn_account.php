@@ -38,7 +38,7 @@ $email = $user->getEmailByEmail($userEmail);
                 <a href="../signin_login_logout/logout.php" class="logout">Log uit</a>
             </div>
         </div>
-        <a href="wachtwoord_wijzigen.php" class="button">
+        <a href="wijzig_wachtwoord.php" class="button">
             <img src="../images/iconen/wachtwoord_wijzigen.svg" alt="Wachtwoord wijzigen icoon">
             <p>Wachtwoord wijzigen</p>
         </a>
