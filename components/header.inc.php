@@ -13,7 +13,7 @@ $currentFile = basename($_SERVER['SCRIPT_FILENAME'], '.php');
     <label class="burger" for="burger">&#9776;</label>
     <label class="close" for="burger">&times;</label>
     <input type="checkbox" id="burger">
-    <ul class="subnav">
+    <ul style="list-style-type: none; display:flex;" class="subnav">
         <li <?php if (strpos($_SERVER['REQUEST_URI'], 'dashboard.php') !== false) echo 'class="active"'; ?>>
             <a href="./dashboard.php"><img src="./images/iconen/mensenrechten.svg" alt="Thema's" class="nav-icon" id="icoon-display"> Mijn mensenrechten</a>
         </li>

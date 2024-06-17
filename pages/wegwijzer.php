@@ -58,10 +58,10 @@ if ($action) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?php echo htmlspecialchars($thema->getNaam()); ?> - Wegwijzer</title>
-    <link rel="stylesheet" href="../css/nav.css?48999">
-    <link rel="stylesheet" href="../css/wegwijzer.css?94554">
+    <link rel="stylesheet" href="../css/wegwijzer.css?98054">
     <link rel="stylesheet" href="../css/shared.css">
     <link rel="stylesheet" href="../css/footer.css?02593">
+    <link rel="stylesheet" href="../css/nav.css?48989">
 
 </head>
 <body>
@@ -103,10 +103,10 @@ if ($action) {
                     </a>
                     <p><?php echo htmlspecialchars($contact_tekst); ?></p>
                     <?php if ($organisaties): ?>
-                        <ul>
+                        <ul class="organisaties">
                             <?php foreach ($organisaties as $organisatie): ?>
                                 <li>
-                                    <a href="<?php echo htmlspecialchars($organisatie['url']); ?>"><?php echo htmlspecialchars($organisatie['naam']); ?></a>
+                                    <a style="display: block; margin-bottom: 20px;" href="<?php echo htmlspecialchars($organisatie['url']); ?>"><?php echo htmlspecialchars($organisatie['naam']); ?></a>
                                 </li>
                             <?php endforeach; ?>
                         </ul>
