@@ -18,8 +18,8 @@ h2 {
 .block {
     display: flex;
     flex-direction: column;
-    width: 300px; 
-    margin-bottom: 100px;
+    width: 400px; 
+    margin-bottom: 0px;
 }
 
 h3 {
@@ -69,5 +69,11 @@ h3 {
 
     .block {
         width: 800px; 
+    }
+}
+
+@media only screen and (max-width: 499px){
+    .block{
+        width: 300px;
     }
 }

@@ -6,7 +6,7 @@
     <title>Meldingen</title>
     <link rel="stylesheet" href="../css/nav.css?80970">
     <link rel="stylesheet" href="../css/shared.css">
-    <link rel="stylesheet" href="../css/voorwaarden.css?02569">
+    <link rel="stylesheet" href="../css/voorwaarden.css?55569">
     <link rel="stylesheet" href="../css/footer.css?02593">
 
 

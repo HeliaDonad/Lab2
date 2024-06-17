@@ -9,7 +9,8 @@ h1 {
 }
 
 h2 {
-    margin-top: 56px;
+    font-size: 1.2rem;
+    margin-top: 50px;
 }
 
 p {
@@ -70,6 +71,10 @@ content h2 {
 
     .content {
         margin: 100px 24px;
+    }
+
+    h2 {
+        font-size: 1.4rem;
     }
 
 }

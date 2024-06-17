@@ -58,7 +58,7 @@ if ($action) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?php echo htmlspecialchars($thema->getNaam()); ?> - Wegwijzer</title>
-    <link rel="stylesheet" href="../css/wegwijzer.css?98054">
+    <link rel="stylesheet" href="../css/wegwijzer.css?87754">
     <link rel="stylesheet" href="../css/shared.css">
     <link rel="stylesheet" href="../css/footer.css?02593">
     <link rel="stylesheet" href="../css/nav.css?48989">
