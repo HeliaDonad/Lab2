@@ -47,6 +47,7 @@ label {
     font-size: var(--font-size-body-mobile);
 }
 
+input[type="text"],
 input[type="password"] {
     width: calc(100% - 22px);
     padding: 10px;

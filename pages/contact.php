@@ -52,7 +52,7 @@ $conn = Db::getConnection();
                     <img src="../images/iconen/mail.svg" alt="Mail icoon">
                     <p>Helia Donadello<br><a href="mailto:helia.donadello@ehbm-psdh.be">helia.donadello@ehbm-psdh.be</a></p>
                 </div>
-                <div style="margin-bottom: 100px;" class="info-text">
+                <div style="margin-bottom: 150px;" class="info-text">
                     <img src="../images/iconen/contact_icon.svg" alt="Telefoon icoon">
                     <p><a href="tel:+32475981624">04 75 98 16 24</a></p>
                 </div>

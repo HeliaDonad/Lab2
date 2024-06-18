@@ -16,7 +16,7 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
     <title>Meldingen</title>
     <link rel="stylesheet" href="../css/nav.css?80970">
     <link rel="stylesheet" href="../css/shared.css">
-    <link rel="stylesheet" href="../css/taal.css?92566">
+    <link rel="stylesheet" href="../css/taal.css?42566">
     <link rel="stylesheet" href="../css/footer.css?02593">
 
 </head>

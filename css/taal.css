@@ -105,6 +105,10 @@ input:checked + .slider:before {
     transform: translateX(26px);
 }
 
+.button-bar{
+    margin-bottom: 150px;
+}
+
 /* Media query voor desktop */
 @media (min-width: 768px) {
     .content {

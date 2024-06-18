@@ -19,6 +19,7 @@ h2 {
     display: flex;
     flex-direction: column;
     width: 300px; /* Aanpassen naar gewenste breedte */
+    margin-bottom: 100px;
 }
 
 .button {
@@ -46,6 +47,7 @@ h2 {
     flex: 1; 
     margin-left: 5px;
     color: var(--main-color);
+    padding: 10px 0;
 }
 
 .logout-link {
@@ -70,10 +72,6 @@ p {
 
     .button-bar {
         width: 500px; /* Aanpassen naar gewenste breedte */
-    }
-
-    .button p {
-        padding: 10px 0;
     }
 
     p {

@@ -29,16 +29,6 @@ h1 {
     font-size: var(--font-size-small);
 }
 
-.form__field {
-    margin-bottom: 15px;
-}
-
-label {
-    display: block;
-    margin-bottom: 5px;
-    color: var(--color-black);
-}
-
 input[type="text"],
 input[type="password"] {
     width: calc(100% - 22px);
