@@ -1,7 +1,5 @@
 <?php
 
-use PSpell\Dictionary;
-
 include_once(__DIR__ . DIRECTORY_SEPARATOR . "../classes/Db.php");
 include_once(__DIR__ . DIRECTORY_SEPARATOR . "../classes/Thema.php");
 include_once(__DIR__ . DIRECTORY_SEPARATOR . "../classes/Organisatie.php");

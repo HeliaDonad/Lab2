@@ -1,7 +1,11 @@
 <?php
+include_once(__DIR__ . DIRECTORY_SEPARATOR . "../classes/Db.php");
+
 if (session_status() === PHP_SESSION_NONE) {
     session_start();
 }
+
+$conn = Db::getConnection();
 $currentFile = basename($_SERVER['SCRIPT_FILENAME'], '.php');
 ?>
 <!--<link rel="stylesheet" href="../css/nav.css">-->
