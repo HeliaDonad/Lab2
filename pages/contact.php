@@ -1,3 +1,10 @@
+<?php
+session_start();
+include_once(__DIR__ . DIRECTORY_SEPARATOR . "../classes/Db.php");
+
+$conn = Db::getConnection();
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>

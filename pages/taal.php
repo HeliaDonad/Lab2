@@ -1,4 +1,14 @@
-<!DOCTYPE html>
+<?php
+session_start();
+include_once(__DIR__ . DIRECTORY_SEPARATOR . "../classes/Db.php");
+
+$conn = Db::getConnection();
+
+if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
+    header('Location: ../signin_login_logout/login.php');
+    exit();
+}
+?><!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">

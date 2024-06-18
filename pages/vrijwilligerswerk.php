@@ -1,8 +1,11 @@
 <?php
+session_start();
 include_once(__DIR__ . DIRECTORY_SEPARATOR . "../classes/Db.php");
 include_once(__DIR__ . DIRECTORY_SEPARATOR . "../classes/Thema.php");
 
 // Databaseverbinding
+/*$conn = Db::getConnection();*/
+
 $conn = Db::getConnection();
 
 $query_themas = "SELECT id, naam, icoon FROM themas ORDER BY sort_order";

@@ -1,9 +1,9 @@
 <?php
-if (session_status() === PHP_SESSION_NONE) {
-    session_start();
-}
+session_start();
 include_once(__DIR__ . DIRECTORY_SEPARATOR . "../classes/Db.php");
 include_once(__DIR__ . DIRECTORY_SEPARATOR . "../classes/User.php");
+
+$conn = Db::getConnection();
 
 if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
     header('Location: ../signin_login_logout/login.php');

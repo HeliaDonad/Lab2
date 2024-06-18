@@ -1,4 +1,5 @@
 <?php 
+session_start();
 include_once(__DIR__ . DIRECTORY_SEPARATOR . "../classes/Db.php");
 
 if (!empty($_POST)) {

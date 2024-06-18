@@ -1,4 +1,5 @@
 <?php 
+session_start();
 include_once(__DIR__ . DIRECTORY_SEPARATOR . "../classes/Db.php");
 
 $message = ""; // Initialize the message variable

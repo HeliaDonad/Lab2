@@ -1,4 +1,5 @@
 <?php
+session_start();
 include_once(__DIR__ . DIRECTORY_SEPARATOR . "../classes/Db.php");
 
 function canLogin($pEmail, $pPassword){
@@ -14,8 +15,6 @@ function canLogin($pEmail, $pPassword){
         return false;
     }
 }
-
-session_start();
 
 if(!empty($_POST)){
     $email = $_POST['email'];

@@ -1,4 +1,5 @@
 <?php
+session_start();
 include_once(__DIR__ . DIRECTORY_SEPARATOR . "../classes/Db.php");
 include_once(__DIR__ . DIRECTORY_SEPARATOR . "../classes/Thema.php");
 include_once(__DIR__ . DIRECTORY_SEPARATOR . "../classes/Wegwijzer.php");
@@ -8,13 +9,15 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
     exit("NO SESSION");
 }*/
 
+$conn = Db::getConnection();
+
 if (!isset($_GET['thema_id'])) {
     exit("Thema ID niet opgegeven");
 }
 
 $thema_id = intval($_GET['thema_id']);
 
-$conn = Db::getConnection();
+/*$conn = Db::getConnection();*/
 $thema = Thema::getThemaById($thema_id);
 
 // Haal het filter-id op uit de database

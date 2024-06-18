@@ -1,6 +1,9 @@
 <?php
+session_start();
 include_once(__DIR__ . DIRECTORY_SEPARATOR . "../classes/Db.php");
 include_once(__DIR__ . DIRECTORY_SEPARATOR . "../classes/Zitting.php");
+
+/*$conn = Db::getConnection();*/
 
 $conn = Db::getConnection();
 

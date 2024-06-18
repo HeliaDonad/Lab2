@@ -1,4 +1,5 @@
 <?php
+session_start();
 include_once(__DIR__ . DIRECTORY_SEPARATOR . "../classes/Db.php");
 include_once(__DIR__ . DIRECTORY_SEPARATOR . "../classes/Themas2.php");
 
@@ -6,6 +7,8 @@ include_once(__DIR__ . DIRECTORY_SEPARATOR . "../classes/Themas2.php");
 if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
     exit("NO SESSION");
 }*/
+
+/*$conn = Db::getConnection();*/
 
 $conn = Db::getConnection();
 

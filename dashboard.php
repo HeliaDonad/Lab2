@@ -2,6 +2,8 @@
 include_once(__DIR__ . DIRECTORY_SEPARATOR . "./classes/Db.php");
 include_once(__DIR__ . DIRECTORY_SEPARATOR . "./classes/Thema.php");
 
+session_start();
+
 $conn = Db::getConnection();
 
 // Query voor het ophalen van filters

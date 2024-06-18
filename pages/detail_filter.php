@@ -1,4 +1,5 @@
 <?php
+session_start();
 include_once(__DIR__ . DIRECTORY_SEPARATOR . "../classes/Db.php");
 include_once(__DIR__ . DIRECTORY_SEPARATOR . "../classes/Thema.php");
 include_once(__DIR__ . DIRECTORY_SEPARATOR . "../classes/Organisatie.php");
@@ -9,6 +10,8 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
     exit("NO SESSION");
 }*/
 
+$conn = Db::getConnection();
+
 if (!isset($_GET['thema_id']) || !isset($_GET['filter_id'])) {
     exit("Thema ID of filter ID niet opgegeven");
 }
@@ -16,7 +19,7 @@ if (!isset($_GET['thema_id']) || !isset($_GET['filter_id'])) {
 $thema_id = intval($_GET['thema_id']);
 $filter_id = intval($_GET['filter_id']);
 
-$conn = Db::getConnection();
+/*$conn = Db::getConnection();*/
 
 $query = "SELECT * FROM themas WHERE id = :thema_id";
 $stmt = $conn->prepare($query);
