@@ -15,7 +15,7 @@ $currentFile = basename($_SERVER['SCRIPT_FILENAME'], '.php');
     <input type="checkbox" id="burger">
     <ul style="list-style-type: none; display:flex;" class="subnav">
         <li <?php if (strpos($_SERVER['REQUEST_URI'], 'dashboard.php') !== false) echo 'class="active"'; ?>>
-            <a href="./dashboard.php"><img src="./images/iconen/mensenrechten.svg" alt="Thema's" class="nav-icon" id="icoon-display"> Mijn mensenrechten</a>
+            <a href="./dashboard.php"><img src="./images/iconen/mensenrechten.svg" alt="Mijn mensenrechten" class="nav-icon" id="icoon-display"> Mijn mensenrechten</a>
         </li>
         <li <?php if (strpos($_SERVER['REQUEST_URI'], 'thema2.php') !== false) echo 'class="active"'; ?>>
             <a href="./pages/thema2.php"><img src="./images/iconen/thema's.svg" alt="Thema's" class="nav-icon" id="icoon-display"> Thema's</a>
@@ -34,17 +34,17 @@ $currentFile = basename($_SERVER['SCRIPT_FILENAME'], '.php');
         </li>
         <?php if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] === true): ?>
             <li>
-        <a href="./pages/meldingen.php">
-            <img src="./images/iconen/meldingen_icon.svg" alt="notificatie" class="nav-icon" id="icoon-display">
-            <span class="hidden-text">Meldingen</span>
-        </a>
-    </li>
-    <li>
-        <a href="./pages/account.php">
-            <img src="./images/iconen/profile_icon.svg" alt="Profiel" class="nav-icon" id="icoon-display">
-            <span class="hidden-text">Account</span>
-        </a>
-    </li>
+                <a href="./pages/meldingen.php">
+                    <img src="./images/iconen/meldingen_icon.svg" alt="Meldingen" class="nav-icon" id="icoon-display">
+                    <span class="hidden-text">Meldingen</span>
+                </a>
+            </li>
+            <li>
+                <a href="./pages/account.php">
+                    <img src="./images/iconen/profile_icon.svg" alt="Profiel" class="nav-icon" id="icoon-display">
+                    <span class="hidden-text">Account</span>
+                </a>
+            </li>
             <li class="logout-mobile" id="logout">
                 <a href="./signin_login_logout/logout.php" id="logout-mobile" class="logout-button">Uitloggen</a>
             </li>
@@ -61,15 +61,15 @@ $currentFile = basename($_SERVER['SCRIPT_FILENAME'], '.php');
 <div class="actions">
     <?php if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] === true): ?>
         <a class="material-icons" href="./pages/meldingen.php">
-            <img src="./images/iconen/meldingen_icon.svg" alt="Profiel" class="action-icon" id="icon_mobile">
+            <img src="./images/iconen/meldingen_icon.svg" alt="Meldingen" class="action-icon" id="icon_mobile">
         </a>
         <a class="material-icons" href="./pages/account.php">
             <img src="./images/iconen/profile_icon.svg" alt="Profiel" class="action-icon" id="icon_mobile">
         </a>
         <a class="logout-button" id="display-logout" href="./signin_login_logout/logout.php">Uitloggen</a>
     <?php else: ?>
-        <a class="login-button" id="display-logout" href="./signin_login_logout/login.php">Inloggen</a>
-        <a class="signin-button" id="display-logout" href="./signin_login_logout/signin.php">Aanmelden</a>
+        <a class="login-button" id="display-login" href="./signin_login_logout/login.php">Inloggen</a>
+        <a class="signin-button" id="display-signin" href="./signin_login_logout/signin.php">Aanmelden</a>
     <?php endif; ?>
 </div>
 </header>
