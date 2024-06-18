@@ -63,18 +63,18 @@ $conn = Db::getConnection();
     </ul>
 </nav>
 <div class="actions">
-    <?php if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] === true): ?>
-        <a class="material-icons" href="../pages/meldingen.php">
-            <img src="../images/iconen/meldingen_icon.svg" alt="Profiel" class="action-icon" id="icon_mobile">
-        </a>
-        <a class="material-icons" href="../pages/account.php">
-            <img src="../images/iconen/profile_icon.svg" alt="Profiel" class="action-icon" id="icon_mobile">
-        </a>
-        <a class="logout-button" id="display-logout" href="../signin_login_logout/logout.php">Uitloggen</a>
-    <?php else: ?>
-        <a class="login-button" id="display-logout" href="../signin_login_logout/login.php">Inloggen</a>
-        <a class="signin-button" id="display-logout" href="../signin_login_logout/signin.php">Aanmelden</a>
-    <?php endif; ?>
+<?php if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true): ?>
+            <a class="login-button" id="display-logout" href="../signin_login_logout/login.php">Inloggen</a>
+            <a class="signin-button" id="display-logout" href="../signin_login_logout/signin.php">Aanmelden</a>
+        <?php else: ?>
+            <a class="material-icons" href="../pages/meldingen.php">
+                <img src="./images/iconen/meldingen_icon.svg" alt="Profiel" class="action-icon" id="icon_mobile">
+            </a>
+            <a class="material-icons" href="../pages/account.php">
+                <img src="./images/iconen/profile_icon.svg" alt="Profiel" class="action-icon" id="icon_mobile">
+            </a>
+            <a class="logout-button" id="display-logout" href="../signin_login_logout/logout.php">Uitloggen</a>
+<?php endif; ?>
 </div>
 </header>
 <script src="../js/navigation.js"></script>
