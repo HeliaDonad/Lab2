@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="../css/footer.css?02593">
 </head>
 <body>
+    
     <?php include_once("../components/headerPages.inc.php"); ?>
 
     <div class="container">

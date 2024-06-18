@@ -62,7 +62,6 @@ if ($action) {
     <link rel="stylesheet" href="../css/shared.css">
     <link rel="stylesheet" href="../css/footer.css?02593">
     <link rel="stylesheet" href="../css/nav.css?48989">
-
 </head>
 <body>
     <?php include_once("../components/headerPages.inc.php"); ?>
@@ -98,7 +97,7 @@ if ($action) {
             <?php if ($action_instructies): ?>
                 <div class="antwoord-content">
                     <p><?php echo htmlspecialchars($action_instructies); ?></p>
-                    <a href="<?php echo htmlspecialchars($knop_url); ?>" class="button2">
+                    <a href="<?php echo htmlspecialchars($knop_url); ?>" class="button2" target="_blank">
                         <span class="text2"><?php echo htmlspecialchars($knop_tekst); ?></span>
                     </a>
                     <p><?php echo htmlspecialchars($contact_tekst); ?></p>
@@ -106,7 +105,7 @@ if ($action) {
                         <ul class="organisaties">
                             <?php foreach ($organisaties as $organisatie): ?>
                                 <li>
-                                    <a style="display: block; margin-bottom: 20px;" href="<?php echo htmlspecialchars($organisatie['url']); ?>"><?php echo htmlspecialchars($organisatie['naam']); ?></a>
+                                    <a style="display: block; margin-bottom: 20px;" href="<?php echo htmlspecialchars($organisatie['url']); ?>" target="_blank"><?php echo htmlspecialchars($organisatie['naam']); ?> </a>
                                 </li>
                             <?php endforeach; ?>
                         </ul>

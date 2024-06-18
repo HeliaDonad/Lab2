@@ -65,21 +65,20 @@ while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
     <div class="button-bar">
         <?php foreach ($organisaties as $organisatie): ?>
             <div class="button">
-                <a href="<?php echo htmlspecialchars($organisatie->getUrl()); ?>"> 
+                <a href="<?php echo htmlspecialchars($organisatie->getUrl()); ?>" target="_blank">
                     <span class="text1"><?php echo htmlspecialchars($organisatie->getNaam()); ?></span>
                 </a>
                 <p><?php echo htmlspecialchars($organisatie->getBodyTekst()); ?></p>
-                <a href="<?php echo htmlspecialchars($organisatie->getKnopUrl()); ?>" class="button2">
+                <a href="<?php echo htmlspecialchars($organisatie->getKnopUrl()); ?>" class="button2" target="_blank">
                     <span class="text2"><?php echo htmlspecialchars($organisatie->getKnopTekst()); ?></span>
                 </a>
-                <a href="<?php echo htmlspecialchars($organisatie->getContactUrl()); ?>">
+                <a href="<?php echo htmlspecialchars($organisatie->getContactUrl()); ?>" target="_blank">
                     <p><?php echo htmlspecialchars($organisatie->getContactTekst()); ?></p>
                 </a>
             </div>
         <?php endforeach; ?>
     </div>
 </div>
-
 
 <?php include_once("../components/footer.inc.php"); ?>
 
