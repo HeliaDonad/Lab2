@@ -18,7 +18,7 @@ $currentFile = basename($_SERVER['SCRIPT_FILENAME'], '.php');
             <a href="./dashboard.php"><img src="./images/iconen/mensenrechten.svg" alt="Thema's" class="nav-icon" id="icoon-display"> Mijn mensenrechten</a>
         </li>
         <li <?php if (strpos($_SERVER['REQUEST_URI'], 'thema2.php') !== false) echo 'class="active"'; ?>>
-            <a href="./pages/thema2.php"><img src="./images/iconen/thema's.svg" alt="Thema's" class="nav-icon" id="icoon-display"> Thema's</a>
+            <a href="./pages/thema2.php"><img src="./images/iconen/thema.svg" alt="Thema's" class="nav-icon" id="icoon-display"> Thema's</a>
         </li>
         <li <?php if (strpos($_SERVER['REQUEST_URI'], 'zittingen.php') !== false) echo 'class="active"'; ?>>
             <a href="./pages/zittingen.php"><img src="./images/iconen/zittingen.svg" alt="Zittingen" class="nav-icon" id="icoon-display"> Zittingen</a>
@@ -34,17 +34,17 @@ $currentFile = basename($_SERVER['SCRIPT_FILENAME'], '.php');
         </li>
         <?php if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] === true): ?>
             <li>
-        <a href="./pages/meldingen.php">
-            <img src="./images/iconen/meldingen_icon.svg" alt="notificatie" class="nav-icon" id="icoon-display">
-            <span class="hidden-text">Meldingen</span>
-        </a>
-    </li>
-    <li>
-        <a href="./pages/account.php">
-            <img src="./images/iconen/profile_icon.svg" alt="Profiel" class="nav-icon" id="icoon-display">
-            <span class="hidden-text">Account</span>
-        </a>
-    </li>
+                <a href="./pages/meldingen.php">
+                    <img src="./images/iconen/meldingen_icon.svg" alt="notificatie" class="nav-icon" id="icoon-display">
+                    <span class="hidden-text">Meldingen</span>
+                </a>
+            </li>
+            <li>
+                <a href="./pages/account.php">
+                    <img src="./images/iconen/profile_icon.svg" alt="Profiel" class="nav-icon" id="icoon-display">
+                    <span class="hidden-text">Account</span>
+                </a>
+            </li>
             <li class="logout-mobile" id="logout">
                 <a href="./signin_login_logout/logout.php" id="logout-mobile" class="logout-button">Uitloggen</a>
             </li>

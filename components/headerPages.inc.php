@@ -20,7 +20,7 @@ $currentFile = basename($_SERVER['SCRIPT_FILENAME'], '.php');
             </a>
         </li>
         <li <?php if (strpos($_SERVER['REQUEST_URI'], 'thema2.php') !== false) echo 'class="active"'; ?>>
-            <a href="../pages/thema2.php"><img src="../images/iconen/thema's.svg" alt="Thema's" class="nav-icon" id="icoon-display"> Thema's</a>
+            <a href="../pages/thema2.php"><img src="../images/iconen/thema.svg" alt="Thema's" class="nav-icon" id="icoon-display"> Thema's</a>
         </li>
         <li <?php if (strpos($_SERVER['REQUEST_URI'], 'zittingen.php') !== false) echo 'class="active"'; ?>>
             <a href="../pages/zittingen.php"><img src="../images/iconen/zittingen.svg" alt="Zittingen" class="nav-icon" id="icoon-display"> Zittingen</a>
