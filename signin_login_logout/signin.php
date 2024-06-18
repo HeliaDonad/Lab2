@@ -44,8 +44,7 @@ if (!empty($_POST)) {
         }
     }
 }
-?>
-<!DOCTYPE html>
+?><!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -58,7 +57,7 @@ if (!empty($_POST)) {
 <div class="container">
     <main>
         <form action="" method="post">
-        <img class="logoL" src="../images/general/LogoL.svg" alt="logo">
+            <img class="logoL" src="../images/general/LogoL.svg" alt="logo">
             <h1>Maak een account aan.</h1>
             <?php if(isset($error)): ?>
             <div class="form__error">
@@ -66,24 +65,23 @@ if (!empty($_POST)) {
             </div>
             <?php endif; ?>
             <div class="form__field">
-                <label for="Email">Email</label>
-                <input type="text" name="email">
+                <label for="email">Email</label>
+                <input type="text" name="email" id="email" required>
             </div>
             <div class="form__field">
+                <label for="password">Wachtwoord</label>
+                <input type="password" name="password" id="password" required>
+                <span class="toggle-password" onclick="togglePasswordVisibility('password', 'eye-icon-1')">
+                    <img id="eye-icon-1" src="../images/iconen/eye-closed.svg" alt="eye">
+                </span>
+            </div>
             <div class="form__field">
-        <label for="Password">Wachtwoord</label>
-        <input type="password" name="password" id="password" required>
-        <span class="toggle-password" onclick="togglePasswordVisibility('password', 'eye-icon-1')">
-        <img id="eye-icon-1" src="../images/iconen/eye-closed.svg" alt="eye">
-        </span>
-        </div>
-        <div class="form__field">
-            <label for="ConfirmPassword">Bevestig wachtwoord</label>
-            <input type="password" name="confirm_password" id="confirm_password" required>
-            <span class="toggle-password" onclick="togglePasswordVisibility('confirm_password', 'eye-icon-2')">
-            <img id="eye-icon-2" src="../images/iconen/eye-closed.svg" alt="eye">
-            </span>
-        </div>
+                <label for="confirm_password">Bevestig wachtwoord</label>
+                <input type="password" name="confirm_password" id="confirm_password" required>
+                <span class="toggle-password" onclick="togglePasswordVisibility('confirm_password', 'eye-icon-2')">
+                    <img id="eye-icon-2" src="../images/iconen/eye-closed.svg" alt="eye">
+                </span>
+            </div>
             <div class="form__field">
                 <input type="submit" value="Aanmelden" class="btn btn--primary">   
             </div>
@@ -91,7 +89,7 @@ if (!empty($_POST)) {
         </form>
     </main>  
     <div class="image">
-            <img src="" alt="afbeelding">
+        <img src="" alt="afbeelding">
     </div>
 </body>
 </html>
@@ -109,4 +107,3 @@ if (!empty($_POST)) {
         }
     }
 </script>
-

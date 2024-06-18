@@ -51,11 +51,11 @@ if(!empty($_POST)){
             </div>
             <?php endif; ?>
             <div class="form__field">
-                <label for="Email">Email</label>
-                <input type="text" name="email" required>
+                <label for="email">Email</label>
+                <input type="text" name="email" id="email" required>
             </div>
             <div class="form__field">
-                <label for="Password">Wachtwoord</label>
+                <label for="password">Wachtwoord</label>
                 <input type="password" name="password" id="password" required>
                 <span class="toggle-password" onclick="togglePasswordVisibility()">
                     <img id="eye-icon" src="../images/iconen/eye-closed.svg" alt="eye">
