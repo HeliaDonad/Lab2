@@ -5,6 +5,12 @@ include_once(__DIR__ . DIRECTORY_SEPARATOR . "../classes/Themas2.php");
 
 $conn = Db::getConnection();
 
+if (!isset($_GET['thema_id']) || $_GET['thema_id'] != 1) {
+
+    header("Location: ./thema2.php");
+    exit;
+}
+
 ?>
 
 <!DOCTYPE html>
