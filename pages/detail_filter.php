@@ -50,7 +50,7 @@ while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?php echo htmlspecialchars($thema->getNaam()); ?> - Organisaties</title>
     <link rel="stylesheet" href="../css/nav.css?48598">
-    <link rel="stylesheet" href="../css/detail.css?18035">
+    <link rel="stylesheet" href="../css/detail.css?15035">
     <link rel="stylesheet" href="../css/shared.css?19845">
     <link rel="stylesheet" href="../css/footer.css?02593">
 </head>

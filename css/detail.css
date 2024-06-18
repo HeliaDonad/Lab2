@@ -65,7 +65,7 @@ p {
     border-radius: 10px;
     text-decoration: none;
     color: #fff; 
-    position: fixed;
+    position: absolute;
     top: 100px;
     right: 50px;
     display: inline-block;
@@ -123,5 +123,9 @@ p {
 @media only screen and (max-width: 499px) {
     .button-bar {
         width: 300px;
+    }
+
+    .wegwijzer-button {
+        right: 38px;
     }
 }
