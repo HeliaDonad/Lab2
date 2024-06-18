@@ -68,7 +68,7 @@ if ($selectedFilterId === null || $selectedFilterId === '') {
 
 <?php include_once("./components/header.inc.php"); ?>
 
-<a href="/LAB2/signin_login_logout/logout.php">Log Out</a>
+<a href="/LAB2/signin_login_logout/logout.php">Log Out</a> // al dit moet weg van de files en css aanpassen
 
 <!-- Filter Section -->
 <div class="filter-container">
