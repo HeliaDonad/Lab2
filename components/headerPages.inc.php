@@ -7,17 +7,18 @@
     <label class="close" for="burger">&times;</label>
     <input type="checkbox" id="burger">
     <ul style="list-style-type: none; display:flex;" class="subnav">
-        <li <?php if (strpos($_SERVER['REQUEST_URI'], 'dashboard.php') !== false) echo 'class="active"'; ?>>
-            <a href="../dashboard.php">
-                <img src="../images/iconen/mensenrechten.svg" alt="Mijn mensenrechten" class="nav-icon" id="icoon-display"> Mijn mensenrechten
-            </a>
-        </li>
+    <li <?php if (strpos($_SERVER['REQUEST_URI'], 'detail.php') !== false || strpos($_SERVER['REQUEST_URI'], 'grote_wegwijzer.php') !== false || strpos($_SERVER['REQUEST_URI'], 'detail_filter.php') !== false) echo 'class="active"'; ?>>
+                <a href="../dashboard.php">
+                    <img src="../images/iconen/mensenrechten.svg" alt="Mijn mensenrechten" class="nav-icon" id="icoon-display"> Mijn mensenrechten
+                </a>
+    </li>
         <li <?php if (strpos($_SERVER['REQUEST_URI'], 'thema2.php') !== false) echo 'class="active"'; ?>>
             <a href="../pages/thema2.php"><img src="../images/iconen/thema's.svg" alt="Thema's" class="nav-icon" id="icoon-display"> Thema's</a>
         </li>
-        <li <?php if (strpos($_SERVER['REQUEST_URI'], 'zittingen.php') !== false) echo 'class="active"'; ?>>
-            <a href="../pages/zittingen.php"><img src="../images/iconen/zittingen.svg" alt="Zittingen" class="nav-icon" id="icoon-display"> Zittingen</a>
-        </li>
+         <!-- Actieve klasse voor Zittingen link -->
+         <li <?php if (strpos($_SERVER['REQUEST_URI'], 'zittingen.php') !== false || strpos($_SERVER['REQUEST_URI'], 'zittingen_detail.php') !== false) echo 'class="active"'; ?>>
+                <a href="../pages/zittingen.php"><img src="../images/iconen/zittingen.svg" alt="Zittingen" class="nav-icon" id="icoon-display"> Zittingen</a>
+            </li>
         <li <?php if (strpos($_SERVER['REQUEST_URI'], 'vrijwilligerswerk.php') !== false) echo 'class="active"'; ?>>
             <a href="../pages/vrijwilligerswerk.php"><img src="../images/iconen/vrijwilligerswerk_icon.svg" alt="Vrijwilligerswerk" class="nav-icon" id="icoon-display"> Vrijwilligerswerk</a>
         </li>
@@ -29,7 +30,7 @@
         </li>
         <?php if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] === true): ?>
             <li>
-                <a href="../pages/meldingen.php">
+                <a href="../pages/meldingen.php" >
                     <img src="../images/iconen/meldingen_icon.svg" alt="notificatie" class="nav-icon" id="icoon-display">
                     <span class="hidden-text">Meldingen</span>
                 </a>
