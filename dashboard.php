@@ -100,7 +100,7 @@ if ($selectedFilterId === null || $selectedFilterId === '') {
                     <img src="data:image/svg+xml;base64,<?php echo base64_encode($thema->getIcoonData()); ?>" alt="<?php echo htmlspecialchars($thema->getNaam()); ?>"> 
                 </a>
             <?php else: ?>
-                <a href="./pages/detail.php?thema_id=<?php echo $thema->getId(); ?>" class="button" data-hover="<?php echo htmlspecialchars($thema->getHover()); ?>"> 
+                <a href="./pages/dashboard_detail.php?thema_id=<?php echo $thema->getId(); ?>" class="button" data-hover="<?php echo htmlspecialchars($thema->getHover()); ?>"> 
                     <span class="text"><?php echo htmlspecialchars($thema->getNaam()); ?></span>
                     <img src="data:image/svg+xml;base64,<?php echo base64_encode($thema->getIcoonData()); ?>" alt="<?php echo htmlspecialchars($thema->getNaam()); ?>">
                 </a>

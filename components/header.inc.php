@@ -7,16 +7,13 @@
     <label class="close" for="burger">&times;</label>
     <input type="checkbox" id="burger">
     <ul style="list-style-type: none; display:flex;" class="subnav">
-        <li <?php if (strpos($_SERVER['REQUEST_URI'], 'dashboard.php') !== false) echo 'class="active"'; ?>>
+        <li <?php if (strpos($_SERVER['REQUEST_URI'], 'dashboard.php') !== false || strpos($_SERVER['REQUEST_URI'], 'dashboard_detail.php') !== false || strpos($_SERVER['REQUEST_URI'], 'grote_wegwijzer.php') !== false || strpos($_SERVER['REQUEST_URI'], 'detail_filter.php') !== false || strpos($_SERVER['REQUEST_URI'], 'wegwijzer.php') !== false) echo 'class="active"'; ?>>
             <a href="./dashboard.php"><img src="./images/iconen/mensenrechten.svg" alt="Thema's" class="nav-icon" id="icoon-display"> Mijn mensenrechten</a>
         </li>
-        <li <?php if (strpos($_SERVER['REQUEST_URI'], 'thema2.php') !== false) echo 'class="active"'; ?>>
+        <li <?php if (strpos($_SERVER['REQUEST_URI'], 'thema2.php') !== false || strpos($_SERVER['REQUEST_URI'], 'detail_thema2.php') !== false) echo 'class="active"'; ?>>
             <a href="./pages/thema2.php"><img src="./images/iconen/thema's.svg" alt="Thema's" class="nav-icon" id="icoon-display"> Thema's</a>
         </li>
-        <li <?php if (strpos($_SERVER['REQUEST_URI'], 'zittingen.php') !== false) echo 'class="active"'; ?>>
-            <a href="./pages/zittingen.php"><img src="./images/iconen/zittingen.svg" alt="Zittingen" class="nav-icon" id="icoon-display"> Zittingen</a>
-        </li>
-        <li <?php if (strpos($_SERVER['REQUEST_URI'], 'vrijwilligerswerk.php') !== false) echo 'class="active"'; ?>>
+        <li <?php if (strpos($_SERVER['REQUEST_URI'], 'zittingen.php') !== false || strpos($_SERVER['REQUEST_URI'], 'zittingen_detail.php') !== false) echo 'class="active"'; ?>>
             <a href="./pages/vrijwilligerswerk.php"><img src="./images/iconen/vrijwilligerswerk_icon.svg" alt="Vrijwilligerswerk" class="nav-icon" id="icoon-display"> Vrijwilligerswerk</a>
         </li>
         <li <?php if (strpos($_SERVER['REQUEST_URI'], 'activiteiten.php') !== false) echo 'class="active"'; ?>>
