@@ -7,11 +7,9 @@
     <label class="close" for="burger">&times;</label>
     <input type="checkbox" id="burger">
     <ul style="list-style-type: none; display:flex;" class="subnav">
-    <li <?php if (strpos($_SERVER['REQUEST_URI'], 'dashboard.php') !== false || strpos($_SERVER['REQUEST_URI'], 'dashboard_detail.php') !== false || strpos($_SERVER['REQUEST_URI'], 'grote_wegwijzer.php') !== false || strpos($_SERVER['REQUEST_URI'], 'detail_filter.php') !== false || strpos($_SERVER['REQUEST_URI'], 'wegwijzer.php') !== false) echo 'class="active"'; ?>>
-                <a href="../dashboard.php">
-                    <img src="../images/iconen/mensenrechten.svg" alt="Mijn mensenrechten" class="nav-icon" id="icoon-display"> Mijn mensenrechten
-                </a>
-    </li>
+        <li <?php if (strpos($_SERVER['REQUEST_URI'], 'dashboard.php') !== false || strpos($_SERVER['REQUEST_URI'], 'dashboard_detail.php') !== false || strpos($_SERVER['REQUEST_URI'], 'grote_wegwijzer.php') !== false || strpos($_SERVER['REQUEST_URI'], 'detail_filter.php') !== false || strpos($_SERVER['REQUEST_URI'], 'wegwijzer.php') !== false) echo 'class="active"'; ?>>
+            <a href="../dashboard.php"><img src="../images/iconen/mensenrechten.svg" alt="Mijn mensenrechten" class="nav-icon" id="icoon-display"> Mijn mensenrechten</a>
+        </li>
         <li <?php if (strpos($_SERVER['REQUEST_URI'], 'thema2.php') !== false || strpos($_SERVER['REQUEST_URI'], 'detail_thema2.php') !== false) echo 'class="active"'; ?>>
             <a href="../pages/thema2.php"><img src="../images/iconen/thema's.svg" alt="Thema's" class="nav-icon" id="icoon-display"> Thema's</a>
         </li>
