@@ -17,8 +17,8 @@
         </li>
          <!-- Actieve klasse voor Zittingen link -->
          <li <?php if (strpos($_SERVER['REQUEST_URI'], 'zittingen.php') !== false || strpos($_SERVER['REQUEST_URI'], 'zittingen_detail.php') !== false) echo 'class="active"'; ?>>
-                <a href="../pages/zittingen.php"><img src="../images/iconen/zittingen.svg" alt="Zittingen" class="nav-icon" id="icoon-display"> Zittingen</a>
-            </li>
+            <a href="../pages/zittingen.php"><img src="../images/iconen/zittingen.svg" alt="Zittingen" class="nav-icon" id="icoon-display"> Zittingen</a>
+        </li>
         <li <?php if (strpos($_SERVER['REQUEST_URI'], 'vrijwilligerswerk.php') !== false) echo 'class="active"'; ?>>
             <a href="../pages/vrijwilligerswerk.php"><img src="../images/iconen/vrijwilligerswerk_icon.svg" alt="Vrijwilligerswerk" class="nav-icon" id="icoon-display"> Vrijwilligerswerk</a>
         </li>

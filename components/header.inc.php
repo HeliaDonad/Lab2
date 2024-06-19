@@ -14,7 +14,10 @@
             <a href="./pages/thema2.php"><img src="./images/iconen/thema's.svg" alt="Thema's" class="nav-icon" id="icoon-display"> Thema's</a>
         </li>
         <li <?php if (strpos($_SERVER['REQUEST_URI'], 'zittingen.php') !== false || strpos($_SERVER['REQUEST_URI'], 'zittingen_detail.php') !== false) echo 'class="active"'; ?>>
-            <a href="./pages/vrijwilligerswerk.php"><img src="./images/iconen/vrijwilligerswerk_icon.svg" alt="Vrijwilligerswerk" class="nav-icon" id="icoon-display"> Vrijwilligerswerk</a>
+            <a href="./pages/zittingen.php"><img src="../images/iconen/zittingen.svg" alt="Zittingen" class="nav-icon" id="icoon-display"> Zittingen</a>
+        </li>
+        <li <?php if (strpos($_SERVER['REQUEST_URI'], 'vrijwilligerswerk.php') !== false) echo 'class="active"'; ?>>
+            <a href="./pages/vrijwilligerswerk.php"><img src="../images/iconen/vrijwilligerswerk_icon.svg" alt="Vrijwilligerswerk" class="nav-icon" id="icoon-display"> Vrijwilligerswerk</a>
         </li>
         <li <?php if (strpos($_SERVER['REQUEST_URI'], 'activiteiten.php') !== false) echo 'class="active"'; ?>>
             <a href="./pages/activiteiten.php"><img src="./images/iconen/activiteiten_icon.svg" alt="Activiteiten" class="nav-icon" id="icoon-display"> Activiteiten</a>
