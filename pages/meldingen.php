@@ -19,7 +19,8 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
     <link rel="stylesheet" href="../css/meldingen.css?77978">
     <link rel="stylesheet" href="../css/shared.css">
     <link rel="stylesheet" href="../css/footer.css?02593">
-
+    
+    <link rel="icon" href="../images/favicon/favicon.svg" type="image/svg+xml">
 </head>
 <body>
     <?php include_once("../components/headerPages.inc.php"); ?>

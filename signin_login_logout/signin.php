@@ -53,6 +53,8 @@ if (!empty($_POST)) {
     <title>Document</title>
     <link rel="stylesheet" href="../css/signin_login.css?88385">
     <link rel="stylesheet" href="../css/shared.css?12345">
+
+    <link rel="icon" href="../images/favicon/favicon.svg" type="image/svg+xml">
 </head>
 <body>
 <div class="container">

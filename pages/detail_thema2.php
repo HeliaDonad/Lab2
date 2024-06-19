@@ -24,6 +24,7 @@ if (!isset($_GET['thema_id']) || $_GET['thema_id'] != 1) {
     <link rel="stylesheet" href="../css/thema2_detail.css?80985">
     <link rel="stylesheet" href="../css/footer.css?02593">
 
+    <link rel="icon" href="../images/favicon/favicon.svg" type="image/svg+xml">
 </head>
 <body>
 

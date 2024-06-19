@@ -53,6 +53,8 @@ while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
     <link rel="stylesheet" href="../css/detail.css?15035">
     <link rel="stylesheet" href="../css/shared.css?19845">
     <link rel="stylesheet" href="../css/footer.css?02593">
+
+    <link rel="icon" href="../images/favicon/favicon.svg" type="image/svg+xml">
 </head>
 <body>
 

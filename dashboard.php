@@ -63,6 +63,8 @@ if ($selectedFilterId === null || $selectedFilterId === '') {
     <link rel="stylesheet" href="css/dashboard.css?77914">
     <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="css/shared.css?18382">
+
+    <link rel="icon" href="./images/favicon/favicon.svg" type="image/svg+xml">
 </head>
 <body>
 

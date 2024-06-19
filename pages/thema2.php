@@ -32,6 +32,7 @@ while ($row = $result_themas->fetch(PDO::FETCH_ASSOC)) {
     <link rel="stylesheet" href="../css/footer.css?02593">
     <link rel="stylesheet" href="../css/shared.css?18385">
 
+    <link rel="icon" href="../images/favicon/favicon.svg" type="image/svg+xml">
 </head>
 <body>
 

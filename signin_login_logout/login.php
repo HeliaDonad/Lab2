@@ -39,6 +39,8 @@ if(!empty($_POST)){
     <title>Document</title>
     <link rel="stylesheet" href="../css/signin_login.css?89664">
     <link rel="stylesheet" href="../css/shared.css?23454">
+
+    <link rel="icon" href="../images/favicon/favicon.svg" type="image/svg+xml">
 </head>
 <body>
 <div class="container">

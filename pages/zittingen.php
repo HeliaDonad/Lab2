@@ -27,6 +27,8 @@ while ($row = $result_zittingen->fetch(PDO::FETCH_ASSOC)) {
     <link rel="stylesheet" href="../css/zittingen.css?89998">
     <link rel="stylesheet" href="../css/shared.css?86988">
     <link rel="stylesheet" href="../css/footer.css?02593">
+
+    <link rel="icon" href="../images/favicon/favicon.svg" type="image/svg+xml">
 </head>
 <body>
     <?php include_once("../components/headerPages.inc.php"); ?>

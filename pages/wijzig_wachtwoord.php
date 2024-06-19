@@ -51,6 +51,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <link rel="stylesheet" href="../css/shared.css?29454">
     <link rel="stylesheet" href="../css/nav.css?80970">
     <link rel="stylesheet" href="../css/footer.css?02593">
+
+    <link rel="icon" href="../images/favicon/favicon.svg" type="image/svg+xml">
 </head>
 <body>
 <?php include_once("../components/headerPages.inc.php"); ?>
